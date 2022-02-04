@@ -1,0 +1,334 @@
+@import url("../main/main.css");
+.description-header-phone {
+  display: none;
+  margin: 10px 10% 20px 10%;
+  font-size: 2em;
+  text-align: center;
+  border-bottom: 4px solid var(--darker-background-color);
+  background: var(--header-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-page .description {
+  margin: 20px 0 0 10%;
+  font-size: 1.3em;
+}
+
+.main-page .description p {
+  padding: 0;
+  margin: 20px;
+  text-indent: 25px;
+}
+
+.main-page .description .description-header {
+  font-size: 1.7em;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  border-bottom: 4px solid var(--darker-background-color);
+  background: var(--header-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-page .photo-block {
+  min-width: 350px;
+  max-width: 350px;
+  background-color: white;
+  margin: 10px 10% 0 50px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 0 1em 1em 0;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-left: solid var(--color-variation1) 8px;
+}
+
+.main-page .photo-block .photo-name {
+  font-weight: bold;
+  font-size: 1.8em;
+  background: var(--header-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-page .photo-block .photo-image {
+  margin: 10px 0 0 0;
+  width: 80%;
+  border-radius: 1em;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.main-page .photo-block .contacts-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-page .photo-block .contacts-section ul {
+  text-align: left;
+}
+
+.main-page .photo-block .contacts-section li {
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  height: 50px;
+  line-height: 50px;
+  margin: 3px 0 3px 0;
+  background: var(--darker-background-color);
+  padding-left: 15px;
+  border-radius: 0.2em;
+}
+
+.main-page .photo-block .contacts-section par {
+  padding-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-text-decoration: underline var(--color-variation1) 7px;
+          text-decoration: underline var(--color-variation1) 7px;
+  margin: 0;
+}
+
+.main-page .photo-block .contacts-section .contact-gmail .image-gmail {
+  width: 8%;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+.main-page .photo-block .contacts-section .contact-discord .image-discord {
+  width: 8%;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+.main-page .photo-block .contacts-section .contact-telegram .image-telegram {
+  width: 8%;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+.main-page .photo-block .contacts-section .contact-skype .image-skype {
+  width: 8%;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+.skills-section {
+  margin: 10px 10% 20px 10%;
+}
+
+.skills-section .skills-header {
+  font-size: 2em;
+  text-align: center;
+  border-bottom: 4px solid var(--darker-background-color);
+  background: var(--header-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skills-section .skills-icons-section .skill-header {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-indent: 40px;
+}
+
+.skills-section .skills-icons-section .programming-skills, .skills-section .skills-icons-section .physics-skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 200px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-row-gap: 30px;
+  grid-column-gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card, .skills-section .skills-icons-section .physics-skills .skill-card {
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 200px;
+  margin: 0 50px 0 50px;
+  padding: 10px;
+  text-align: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-radius: 0 0.5em 0.5em 0;
+  position: relative;
+  background: white;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  -webkit-transition-duration: 450ms;
+          transition-duration: 450ms;
+  cursor: pointer;
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card img, .skills-section .skills-icons-section .physics-skills .skill-card img {
+  width: 40%;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  opacity: 1;
+  -webkit-transition-duration: 450ms;
+          transition-duration: 450ms;
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card .XNA, .skills-section .skills-icons-section .physics-skills .skill-card .XNA {
+  width: 90%;
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card .skill-card-header, .skills-section .skills-icons-section .physics-skills .skill-card .skill-card-header {
+  background: var(--darker-background-color);
+  font-size: 1.35em;
+  -webkit-transition-duration: 450ms;
+          transition-duration: 450ms;
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  opacity: 1;
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card .skill-card-description, .skills-section .skills-icons-section .physics-skills .skill-card .skill-card-description {
+  opacity: 0;
+  -webkit-transition-duration: 450ms;
+          transition-duration: 450ms;
+  position: absolute;
+  font-size: 0.9em;
+  top: 0;
+  width: 90%;
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card:nth-child(5n), .skills-section .skills-icons-section .physics-skills .skill-card:nth-child(5n) {
+  border-left: solid var(--link-red) 5px;
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card:nth-child(5n+1), .skills-section .skills-icons-section .physics-skills .skill-card:nth-child(5n+1) {
+  border-left: solid var(--link-blue) 5px;
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card:nth-child(5n+2), .skills-section .skills-icons-section .physics-skills .skill-card:nth-child(5n+2) {
+  border-left: solid var(--link-green) 5px;
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card:nth-child(5n+3), .skills-section .skills-icons-section .physics-skills .skill-card:nth-child(5n+3) {
+  border-left: solid var(--link-orange) 5px;
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card:nth-child(5n+4), .skills-section .skills-icons-section .physics-skills .skill-card:nth-child(5n+4) {
+  border-left: solid var(--link-yellow) 5px;
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card:hover, .skills-section .skills-icons-section .physics-skills .skill-card:hover {
+  background: var(--darker-background-color);
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card:hover .skill-card-header, .skills-section .skills-icons-section .programming-skills .skill-card:hover img, .skills-section .skills-icons-section .physics-skills .skill-card:hover .skill-card-header, .skills-section .skills-icons-section .physics-skills .skill-card:hover img {
+  opacity: 0;
+}
+
+.skills-section .skills-icons-section .programming-skills .skill-card:hover .skill-card-description, .skills-section .skills-icons-section .physics-skills .skill-card:hover .skill-card-description {
+  opacity: 1;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 1;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  .description-header-phone {
+    display: block;
+  }
+  .main-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .main-page .photo-block {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin: auto;
+  }
+  .main-page .description {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+    font-size: 1.1em;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .main-page .description .description-header {
+    display: none;
+  }
+  .skills-section .skill-header {
+    text-align: left;
+  }
+}
+/*# sourceMappingURL=main-page.css.map */

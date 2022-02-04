@@ -1,0 +1,157 @@
+@import url("../main/main.css");
+.table-header {
+  font-size: 3em;
+  margin: auto;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  -webkit-text-decoration: underline var(--color-variation1) 7px;
+          text-decoration: underline var(--color-variation1) 7px;
+}
+
+.table-description {
+  font-size: 1.5em;
+  margin: auto;
+  padding: 10px 10% 0 10%;
+}
+
+.table-description .yellow-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--gold-color);
+}
+
+.table-description .gray-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  background: var(--silver-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.table-description .orange-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  background: var(--bronze-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.achievement-table-phone {
+  display: none;
+}
+
+.achievement-table, .achievement-table-phone {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1.2em;
+  min-width: 400px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-top: 50px;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.achievement-table td, .achievement-table-phone td {
+  padding: 20px 25px;
+}
+
+.achievement-table .achievement-thead, .achievement-table-phone .achievement-thead {
+  font-weight: bold;
+  background: var(--main-color-gradient);
+  color: white;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.achievement-table .achievement-tbody, .achievement-table-phone .achievement-tbody {
+  color: var(--black-text-color);
+  text-align: center;
+}
+
+.achievement-table .achievement-tbody tr, .achievement-table-phone .achievement-tbody tr {
+  border-bottom: 2px solid #949494;
+}
+
+.achievement-table .achievement-tbody tr:last-of-type, .achievement-table-phone .achievement-tbody tr:last-of-type {
+  border-bottom: 5px solid var(--main-color);
+}
+
+.achievement-table .achievement-tbody tr:nth-child(2n + 1), .achievement-table-phone .achievement-tbody tr:nth-child(2n + 1) {
+  background-color: var(--background-color);
+}
+
+.achievement-table .achievement-tbody tr:nth-child(2n + 2), .achievement-table-phone .achievement-tbody tr:nth-child(2n + 2) {
+  background-color: var(--darker-background-color);
+}
+
+.achievement-table .achievement-tbody .neutral, .achievement-table-phone .achievement-tbody .neutral {
+  background: -webkit-gradient(linear, left top, right top, from(#d2d2d2), to(#fafafa));
+  background: linear-gradient(to right, #d2d2d2, #fafafa);
+  font-weight: bold;
+}
+
+.achievement-table .achievement-tbody .bronze-medal, .achievement-table-phone .achievement-tbody .bronze-medal {
+  background: var(--bronze-gradient);
+  font-weight: bold;
+}
+
+.achievement-table .achievement-tbody .silver-medal, .achievement-table-phone .achievement-tbody .silver-medal {
+  background: var(--silver-gradient);
+  font-weight: bold;
+}
+
+.achievement-table .achievement-tbody .gold-medal, .achievement-table-phone .achievement-tbody .gold-medal {
+  background: var(--gold-gradient);
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1130px) {
+  .achievement-table {
+    display: none;
+  }
+  .achievement-table-phone {
+    display: table;
+    font-size: 1em;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .achievement-table-phone .achievement-thead {
+    font-size: 1.05em;
+  }
+  .achievement-table-phone .achievement-tbody tr {
+    border-bottom: 10px solid var(--darker-background-color);
+  }
+  .achievement-table-phone .achievement-tbody tr .bronze-medal-phone {
+    font-weight: bold;
+    background: var(--bronze-gradient);
+    margin: 5px;
+    border-radius: 0.5em;
+  }
+  .achievement-table-phone .achievement-tbody tr .silver-medal-phone {
+    font-weight: bold;
+    background: var(--silver-gradient);
+    margin: 5px;
+    border-radius: 0.5em;
+  }
+  .achievement-table-phone .achievement-tbody tr .gold-medal-phone {
+    font-weight: bold;
+    background: var(--gold-gradient);
+    margin: 5px;
+    border-radius: 0.5em;
+  }
+  .table-description {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0px 10px 0 10px;
+  }
+}
+/*# sourceMappingURL=table-page.css.map */
