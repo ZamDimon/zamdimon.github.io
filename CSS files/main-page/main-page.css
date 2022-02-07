@@ -113,28 +113,39 @@
   margin: 0;
 }
 
-.main-page .photo-block .contacts-section .contact-gmail .image-gmail {
+.main-page .photo-block .contacts-section .contact-option {
+  -webkit-transition-duration: 450ms;
+          transition-duration: 450ms;
+  cursor: pointer;
+}
+
+.main-page .photo-block .contacts-section .contact-option .image-gmail {
   width: 8%;
   padding-right: 3px;
   vertical-align: middle;
 }
 
-.main-page .photo-block .contacts-section .contact-discord .image-discord {
+.main-page .photo-block .contacts-section .contact-option .image-linkedin {
   width: 8%;
   padding-right: 3px;
   vertical-align: middle;
 }
 
-.main-page .photo-block .contacts-section .contact-telegram .image-telegram {
+.main-page .photo-block .contacts-section .contact-option .image-telegram {
   width: 8%;
   padding-right: 3px;
   vertical-align: middle;
 }
 
-.main-page .photo-block .contacts-section .contact-skype .image-skype {
+.main-page .photo-block .contacts-section .contact-option .image-github {
   width: 8%;
   padding-right: 3px;
   vertical-align: middle;
+}
+
+.main-page .photo-block .contacts-section .contact-option:hover {
+  background: var(--dark-background-color);
+  color: white;
 }
 
 .skills-section {
@@ -150,18 +161,11 @@
   -webkit-text-fill-color: transparent;
 }
 
-.skills-section .skills-icons-section .skill-header {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  text-indent: 40px;
-}
-
-.skills-section .skills-icons-section .programming-skills, .skills-section .skills-icons-section .physics-skills {
+.skills-section .skills-icons-section {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(200px, 200px))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  -ms-grid-columns: (minmax(175px, 175px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(175px, 175px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -172,10 +176,10 @@
           align-items: center;
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card, .skills-section .skills-icons-section .physics-skills .skill-card {
-  min-width: 200px;
-  max-width: 200px;
-  min-height: 200px;
+.skills-section .skills-icons-section .skill-card {
+  min-width: 175px;
+  max-width: 175px;
+  min-height: 175px;
   margin: 0 50px 0 50px;
   padding: 10px;
   text-align: center;
@@ -191,7 +195,7 @@
   cursor: pointer;
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card img, .skills-section .skills-icons-section .physics-skills .skill-card img {
+.skills-section .skills-icons-section .skill-card img {
   width: 40%;
   padding: 0;
   margin-left: auto;
@@ -202,11 +206,19 @@
           transition-duration: 450ms;
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card .XNA, .skills-section .skills-icons-section .physics-skills .skill-card .XNA {
+.skills-section .skills-icons-section .skill-card .XNA {
   width: 90%;
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card .skill-card-header, .skills-section .skills-icons-section .physics-skills .skill-card .skill-card-header {
+.skills-section .skills-icons-section .skill-card .Postgre {
+  width: 60%;
+}
+
+.skills-section .skills-icons-section .skill-card .Docker {
+  width: 75%;
+}
+
+.skills-section .skills-icons-section .skill-card .skill-card-header {
   background: var(--darker-background-color);
   font-size: 1.35em;
   -webkit-transition-duration: 450ms;
@@ -217,7 +229,7 @@
   opacity: 1;
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card .skill-card-description, .skills-section .skills-icons-section .physics-skills .skill-card .skill-card-description {
+.skills-section .skills-icons-section .skill-card .skill-card-description {
   opacity: 0;
   -webkit-transition-duration: 450ms;
           transition-duration: 450ms;
@@ -227,35 +239,35 @@
   width: 90%;
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card:nth-child(5n), .skills-section .skills-icons-section .physics-skills .skill-card:nth-child(5n) {
+.skills-section .skills-icons-section .skill-card:nth-child(5n) {
   border-left: solid var(--link-red) 5px;
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card:nth-child(5n+1), .skills-section .skills-icons-section .physics-skills .skill-card:nth-child(5n+1) {
+.skills-section .skills-icons-section .skill-card:nth-child(5n+1) {
   border-left: solid var(--link-blue) 5px;
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card:nth-child(5n+2), .skills-section .skills-icons-section .physics-skills .skill-card:nth-child(5n+2) {
+.skills-section .skills-icons-section .skill-card:nth-child(5n+2) {
   border-left: solid var(--link-green) 5px;
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card:nth-child(5n+3), .skills-section .skills-icons-section .physics-skills .skill-card:nth-child(5n+3) {
+.skills-section .skills-icons-section .skill-card:nth-child(5n+3) {
   border-left: solid var(--link-orange) 5px;
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card:nth-child(5n+4), .skills-section .skills-icons-section .physics-skills .skill-card:nth-child(5n+4) {
+.skills-section .skills-icons-section .skill-card:nth-child(5n+4) {
   border-left: solid var(--link-yellow) 5px;
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card:hover, .skills-section .skills-icons-section .physics-skills .skill-card:hover {
+.skills-section .skills-icons-section .skill-card:hover {
   background: var(--darker-background-color);
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card:hover .skill-card-header, .skills-section .skills-icons-section .programming-skills .skill-card:hover img, .skills-section .skills-icons-section .physics-skills .skill-card:hover .skill-card-header, .skills-section .skills-icons-section .physics-skills .skill-card:hover img {
+.skills-section .skills-icons-section .skill-card:hover .skill-card-header, .skills-section .skills-icons-section .skill-card:hover img {
   opacity: 0;
 }
 
-.skills-section .skills-icons-section .programming-skills .skill-card:hover .skill-card-description, .skills-section .skills-icons-section .physics-skills .skill-card:hover .skill-card-description {
+.skills-section .skills-icons-section .skill-card:hover .skill-card-description {
   opacity: 1;
 }
 

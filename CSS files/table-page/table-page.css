@@ -44,6 +44,30 @@
   display: none;
 }
 
+.achievement-table .achievement {
+  width: 30%;
+}
+
+.achievement-table .year {
+  width: 10%;
+}
+
+.achievement-table .subject {
+  width: 20%;
+}
+
+.achievement-table .level {
+  width: 15%;
+}
+
+.achievement-table .place {
+  width: 19%;
+}
+
+.achievement-table .medal {
+  width: 6%;
+}
+
 .achievement-table, .achievement-table-phone {
   border-collapse: collapse;
   margin: 25px 0;
@@ -91,10 +115,17 @@
   background-color: var(--darker-background-color);
 }
 
-.achievement-table .achievement-tbody .neutral, .achievement-table-phone .achievement-tbody .neutral {
-  background: -webkit-gradient(linear, left top, right top, from(#d2d2d2), to(#fafafa));
-  background: linear-gradient(to right, #d2d2d2, #fafafa);
+.achievement-table .achievement-tbody .medal-title, .achievement-table-phone .achievement-tbody .medal-title {
   font-weight: bold;
+}
+
+.achievement-table .achievement-tbody .neutral, .achievement-table-phone .achievement-tbody .neutral {
+  font-weight: bold;
+}
+
+.achievement-table .achievement-tbody .neutral .neutral-medal-image, .achievement-table-phone .achievement-tbody .neutral .neutral-medal-image {
+  width: 100%;
+  vertical-align: middle;
 }
 
 .achievement-table .achievement-tbody .bronze-medal, .achievement-table-phone .achievement-tbody .bronze-medal {
@@ -102,14 +133,29 @@
   font-weight: bold;
 }
 
+.achievement-table .achievement-tbody .bronze-medal .bronze-medal-image, .achievement-table-phone .achievement-tbody .bronze-medal .bronze-medal-image {
+  width: 100%;
+  vertical-align: middle;
+}
+
 .achievement-table .achievement-tbody .silver-medal, .achievement-table-phone .achievement-tbody .silver-medal {
   background: var(--silver-gradient);
   font-weight: bold;
 }
 
+.achievement-table .achievement-tbody .silver-medal .silver-medal-image, .achievement-table-phone .achievement-tbody .silver-medal .silver-medal-image {
+  width: 100%;
+  vertical-align: middle;
+}
+
 .achievement-table .achievement-tbody .gold-medal, .achievement-table-phone .achievement-tbody .gold-medal {
   background: var(--gold-gradient);
   font-weight: bold;
+}
+
+.achievement-table .achievement-tbody .gold-medal .gold-medal-image, .achievement-table-phone .achievement-tbody .gold-medal .gold-medal-image {
+  width: 100%;
+  vertical-align: middle;
 }
 
 @media only screen and (max-width: 1130px) {

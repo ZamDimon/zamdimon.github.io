@@ -27,7 +27,8 @@
 
                 <p>
                     Hello! I am a former Ukrainian student of 
-                <a href = "https://pml27.klasna.com/ru/site/index.html" id = "link-green">Kharkiv Physics and Mathematics Lyceum No. 27</a>. Currently, I am the <a href = "https://www.ugs.foundation" id = "link-yellow"> Ukraine Global Scholars 501</a>(c)(3) finalist.
+                <a href = "https://pml27.klasna.com/ru/site/index.html" id = "link-green">Kharkiv Physics and Mathematics Lyceum No. 27</a>. Currently, I am the <a href = "https://www.ugs.foundation" id = "link-yellow"> Ukraine Global Scholars 501</a>(c)(3) finalist 
+                    and Karazin Natinal University student, majoring in Applied Mathematics.
                     My main interests are Programming, Game Development, and Physics.
                 </p>
                 <p>
@@ -54,23 +55,42 @@
                     <par>Contacts:</par>
 
                     <ul>
-                        <li class = "contact-gmail">
+                        <li class = "contact-option">
                             <img src = "Images/Icons/Contacts/gmail_icon.svg" class = "image-gmail">
                             zamdmytro@gmail.com
                         </li>
-                        <li class = "contact-discord">
-                            <img src = "Images/Icons/Contacts/discord_icon.svg" class = "image-discord">
-                            ZamDimon#7842
+                        <li class = "contact-option">
+                            <img src = "Images/Icons/Contacts/linkedin_icon.svg" class = "image-linkedin">
+                            zamdimon
                         </li>
-                        <li class = "contact-telegram">
+                        <li class = "contact-option">
+                            <img src = "Images/Projects/Source icons/github.svg" class = "image-github">
+                            ZamDimon
+                        </li>
+                        <li class = "contact-option">
                             <img src = "Images/Icons/Contacts/telegram_icon.svg" class = "image-telegram">
                             @ZamDimon
                         </li>
-                        <li class = "contact-skype">
-                            <img src = "Images/Icons/Contacts/skype_icon.svg" class = "image-skype">
-                            dzaharok
-                        </li>
                     </ul>
+
+                    <script>
+                        document.getElementsByClassName('contact-option')[0]
+                            .addEventListener('click', function (event) {
+                                window.open("mailto:zamdmytro@gmail.com");
+                         });
+                         document.getElementsByClassName('contact-option')[1]
+                            .addEventListener('click', function (event) {
+                                window.open("https://www.linkedin.com/in/zamdimon/");
+                         });
+                         document.getElementsByClassName('contact-option')[2]
+                            .addEventListener('click', function (event) {
+                                window.open("https://github.com/ZamDimon");
+                         });
+                         document.getElementsByClassName('contact-option')[3]
+                            .addEventListener('click', function (event) {
+                                window.open("https://t.me/ZamDimon");
+                         });
+                    </script>
                 </div>
             </div>
         </div>
@@ -79,84 +99,103 @@
             <h1 class = "skills-header"> My skills </h1>
             
             <div class="skills-icons-section">
-                <div class = "skill-header"> Programming and Gamedev: </div>
+                <div class="skill-card">
+                    <img src="Images/Icons/Skills/unity_icon.svg"> <br> 
+                    <p class = "skill-card-header"> Unity </p>
 
-                <div class="programming-skills">
-                    <div class="skill-card">
-                        <img src="Images/Icons/Skills/unity_icon.svg"> <br> 
-                        <p class = "skill-card-header"> Unity </p>
-
-                        <p class="skill-card-description">
-                            Worked in Unity 6 years. Made numerous game project, the biggest of which is <a href="https://www.youtube.com/watch?v=A6j2XfqPh4k&feature=youtu.be" id="link-orange">Inside the dark</a>
-                        </p>
-                    </div>
-
-                    <div class="skill-card">
-                        <img src="Images/Icons/Skills/XNA_icon.svg" class = "XNA"> <br>
-                        <p class = "skill-card-header"> XNA </p>
-
-                        <p class="skill-card-description">
-                            Used for small games and computer modelling projects. Main tool that I used in my research.
-                        </p>
-                    </div>
-
-                    <div class="skill-card">
-                        <img src="Images/Icons/Skills/Csharp_icon.svg"> <br>
-                        <p class = "skill-card-header"> C# </p>
-
-                        <p class="skill-card-description">
-                            Programmed 6 years in Unity, Windows Forms and XNA using C#. My strongest programming language.  
-                        </p>
-                    </div>
-
-                    <div class="skill-card">
-                        <img src="Images/Icons/Skills/Cplus_icon.svg"> <br>
-                        <p class = "skill-card-header"> C++ </p>
-
-                        <p class="skill-card-description">
-                            Used C++ for Olympiads 4 years, where I got three 2nd degree diplomas regionally.
-                        </p>
-                    </div>
-                    
-                    <div class="skill-card">
-                        <img src="Images/Icons/Skills/python_icon.svg"> <br>
-                        <p class = "skill-card-header"> Python </p>
-
-                        <p class="skill-card-description">
-                            Started using this language about a year ago. Used this language to make <a href="https://github.com/HeHelios/IsingModel" id="link-blue">Ising model</a> together with MIT student.  
-                        </p>
-                    </div>
-
-                    <div class="skill-card">
-                        <img src="Images/Icons/Skills/html_icon.svg"> <br>
-                        <p class = "skill-card-header"> HTML and CSS </p>
-
-                        <p class="skill-card-description">
-                            Used it just for creating this website, but I'm looking forward to exploring it further :)
-                        </p>
-                    </div>
+                    <p class="skill-card-description">
+                        Worked in Unity 6 years. Made numerous game project, the biggest of which is <a href="https://www.youtube.com/watch?v=A6j2XfqPh4k&feature=youtu.be" id="link-orange">Inside the dark</a>
+                    </p>
                 </div>
 
-                <div class = "skill-header"> Physics: </div>
+                <div class="skill-card">
+                    <img src="Images/Icons/Skills/XNA_icon.svg" class = "XNA"> <br>
+                    <p class = "skill-card-header"> XNA </p>
 
-                <div class="physics-skills">
-                    <div class="skill-card">
-                        <img src="Images/Icons/Skills/mathematica_icon.svg"> <br> 
-                        <p class = "skill-card-header">Wolfram Mathematica</p>
+                    <p class="skill-card-description">
+                        Used for small games and computer modelling projects. Main tool that I used in my research.
+                    </p>
+                </div>
 
-                        <p class="skill-card-description">
-                            Used 4 years while preparing for Olympiads, conducting the research and creating projects.
-                        </p>
-                    </div>
-                    
-                    <div class="skill-card">
-                        <img src="Images/Icons/Skills/latex_icon.svg"> 
-                        <p class = "skill-card-header">Latex</p>
+                <div class="skill-card">
+                    <img src="Images/Icons/Skills/Csharp_icon.svg"> <br>
+                    <p class = "skill-card-header"> C# </p>
 
-                        <p class="skill-card-description">
-                            Constantly use for homework assignments and during participations in National Internet Olympiads.
-                        </p>
-                    </div>
+                    <p class="skill-card-description">
+                        Programmed 6 years in Unity, Windows Forms and XNA using C#. My strongest programming language.  
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="Images/Icons/Skills/Cplus_icon.svg"> <br>
+                    <p class = "skill-card-header"> C++ </p>
+
+                    <p class="skill-card-description">
+                        Used C++ for Olympiads 4 years, where I got three 2nd degree diplomas regionally.
+                    </p>
+                </div>
+                
+                <div class="skill-card">
+                    <img src="Images/Icons/Skills/python_icon.svg"> <br>
+                    <p class = "skill-card-header"> Python </p>
+
+                    <p class="skill-card-description">
+                        Started using this language about a year ago. Used this language to make <a href="https://github.com/HeHelios/IsingModel" id="link-blue">Ising model</a> together with MIT student.  
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="Images/Icons/Skills/html_icon.svg"> <br>
+                    <p class = "skill-card-header"> HTML and CSS </p>
+
+                    <p class="skill-card-description">
+                        Used it just for creating this website, but I'm looking forward to exploring it further :)
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="Images/Icons/Skills/mathematica_icon.svg"> <br> 
+                    <p class = "skill-card-header">Wolfram Mathematica</p>
+
+                    <p class="skill-card-description">
+                        Used 4 years while preparing for Olympiads, conducting the research and creating projects.
+                    </p>
+                </div>
+                
+                <div class="skill-card">
+                    <img src="Images/Icons/Skills/latex_icon.svg"> 
+                    <p class = "skill-card-header">Latex</p>
+
+                    <p class="skill-card-description">
+                        Constantly use for homework assignments and during participations in National Internet Olympiads.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="Images/Icons/Skills/golang_icon.svg"> 
+                    <p class = "skill-card-header">Golang</p>
+
+                    <p class="skill-card-description">
+                        Programmed microservices for Distributed Lab
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="Images/Icons/Skills/postgresql_icon.svg" class = "Postgre"> 
+                    <p class = "skill-card-header">PostgreSQL</p>
+
+                    <p class="skill-card-description">
+                        
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="Images/Icons/Skills/docker_icon.svg" class = "Docker"> 
+                    <p class = "skill-card-header">Docker</p>
+
+                    <p class="skill-card-description">
+                        
+                    </p>
                 </div>
             </div>
         </div>

@@ -44,6 +44,28 @@
     display: none;
 }
 
+.achievement-table {
+    .achievement {
+        width: 30%;
+    }
+    .year {
+        width: 10%;
+    }
+    .subject {
+        width: 20%;
+    }
+    .level {
+        width: 15%;
+    }
+    .place {
+        width: 19%;
+    }
+    .medal {
+        width: 6%;
+    }
+}
+
+
 .achievement-table, .achievement-table-phone {
     border-collapse: collapse;
     margin: 25px 0;
@@ -89,24 +111,44 @@
             background-color: var(--darker-background-color);
         }
 
-        .neutral {
-            background: linear-gradient(to right, rgb(210, 210, 210), rgb(250, 250, 250));
+        .medal-title {
             font-weight: bold;
+        }
+
+        .neutral {
+            font-weight: bold;
+            .neutral-medal-image {
+                width: 100%;
+                vertical-align: middle;
+            }
         }
 
         .bronze-medal {
             background: var(--bronze-gradient);
             font-weight: bold;
+
+            .bronze-medal-image {
+                width: 100%;
+                vertical-align: middle;
+            }
         }
 
         .silver-medal {
             background: var(--silver-gradient);
             font-weight: bold;
+            .silver-medal-image {
+                width: 100%;
+                vertical-align: middle;
+            }
         }
 
         .gold-medal {
             background: var(--gold-gradient);
             font-weight: bold;
+            .gold-medal-image {
+                width: 100%;
+                vertical-align: middle;
+            }
         }
     }
 }
