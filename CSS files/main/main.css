@@ -4,6 +4,7 @@
   --slightly-darker-background-color: #fafafa;
   --darker-background-color: #f1f2f6;
   --black-text-color: #2f3542;
+  --neutral-text-color: rgb(98, 98, 98);
   --main-color: #70a1ff;
   --darker-main-color: #1e90ff;
   --dark-background-color: #57606f;
@@ -141,6 +142,26 @@ a {
 
 #link-yellow:hover {
   background-color: var(--link-yellow);
+}
+
+.color-border:nth-child(5n) {
+  border-left: solid var(--link-red) 5px;
+}
+
+.color-border:nth-child(5n+1) {
+  border-left: solid var(--link-blue) 5px;
+}
+
+.color-border:nth-child(5n+2) {
+  border-left: solid var(--link-green) 5px;
+}
+
+.color-border:nth-child(5n+3) {
+  border-left: solid var(--link-orange) 5px;
+}
+
+.color-border:nth-child(5n+4) {
+  border-left: solid var(--link-yellow) 5px;
 }
 
 .navbar {

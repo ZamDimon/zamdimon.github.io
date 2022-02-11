@@ -1,5 +1,130 @@
 @import url("../main/main.css");
 
+.section-header {
+    font-size: 2em;
+    text-align: center;
+
+    border-bottom: 4px solid var(--darker-background-color);
+
+    background: var(--header-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.advanced-list {
+    .advanced-list-element {
+        margin-bottom: 1.5em;
+        border-radius: 0 1em 1em 0;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        background-color: white;
+        padding: 10px;
+
+        .advanced-element-header {
+            display: grid;
+            grid-template-columns: 10% 90%;
+            margin-bottom: 0.2em;
+
+            .advanced-header-logo {
+                margin: 0 auto;
+                width: 100%;
+                align-self: center;
+            }
+
+            .advanced-header-content {
+                .advanced-title {
+                    margin: 0;
+                    font-size: 1.6em;
+                    font-weight: bold;
+                }
+                .advanced-subtitle {
+                    margin: 0;
+                    font-size: 1.25em;
+                    font-style: italic;
+                }
+
+                .advanced-detail {
+                    margin: 0;
+                    font-size: 1.15em;
+                    color: var(--neutral-text-color);
+                }
+            }
+        }
+
+        .advanced-element-sublist {
+            display: grid;
+            grid-template-columns: 10% 90%;
+            .advanced-sublist-content {
+                margin-bottom: 0.6em;
+                .advanced-subelement-title {
+                    margin: 0;
+                    font-size: 1.35em;
+                    font-weight: bold;
+                }
+                .advanced-subelement-detail {
+                    color: var(--neutral-text-color);
+                }
+
+                .advanced-subelement-description {
+                    font-size: 1.15em;
+                    margin-top: 0.2em;
+                    margin-left: 0.5em;
+
+                    .advanced-subelement-list {
+                        .advanced-subelement-element:before {
+                            content: '— ';
+                        }
+                    }
+                }
+            }
+
+            .advanced-sublist-element {
+                position:relative;
+                margin-bottom: 0;
+                padding-bottom: 1.5em;
+            }
+
+            .advanced-sublist-element:last-child {
+                padding-bottom: 20px;
+            }
+            
+            .advanced-sublist-element:after {
+                content: '\2022';
+                font-size: 2.5em;
+                color: rgb(200, 200, 200);
+                position: absolute;
+                left: -25px; 
+                top: -14px;
+            }
+            
+            .advanced-sublist-element:before {
+                content:"";
+                position: absolute;
+                left: -17.5px;
+                border-left: 2px solid rgb(200, 200, 200);
+                height: 100%;
+                width: 1px;
+            }
+            
+            .advanced-sublist-element:first-child:before {
+               top: 20px;
+            }
+            
+            .advanced-sublist-element:last-child:before {
+               height: 20px; 
+            }
+        }
+
+        
+        .advanced-element-description-box {
+            display: grid;
+            grid-template-columns: 10% 90%;
+            .advanced-element-description {
+                font-size: 1.15em; 
+            }
+        }
+    }
+}
+
 .description-header-phone {
     display: none;
 
@@ -16,14 +141,11 @@
     -webkit-text-fill-color: transparent;
 }
 
-//Main classes
 .main-page {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    //grid-template-columns: 75% 25%;
-    //justify-content: space-between;
 
     .description {
         margin: 20px 0 0 10%;
@@ -33,20 +155,6 @@
             padding: 0;
             margin: 20px;
             text-indent: 25px;
-        }
-
-        .description-header {
-            font-size: 1.7em;
-            padding: 0;
-            margin: 0;
-
-            text-align: center;
-            border-bottom: 4px solid var(--darker-background-color);
-
-            background: var(--header-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            //box-shadow: 0 2px 0px rgba(0, 0, 0, 0.15);
         }
     }
 
@@ -105,25 +213,7 @@
             }
 
             .contact-option {
-                .image-gmail {
-                    width: 8%;
-                    padding-right: 3px;
-                    vertical-align: middle;
-                }
-
-                .image-linkedin {
-                    width: 8%;
-                    padding-right: 3px;
-                    vertical-align: middle;
-                }
-
-                .image-telegram {
-                    width: 8%;
-                    padding-right: 3px;
-                    vertical-align: middle;
-                }
-
-                .image-github {
+                .contact-image {
                     width: 8%;
                     padding-right: 3px;
                     vertical-align: middle;
@@ -143,18 +233,7 @@
 }
 
 .skills-section {
-    margin: 10px 10% 20px 10%;
-
-    .skills-header {
-        font-size: 2em;
-        text-align: center;
-
-        border-bottom: 4px solid var(--darker-background-color);
-
-        background: var(--header-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+    margin: 10px 10% 30px 10%;
 
     .skills-icons-section {
         display: grid;
@@ -227,26 +306,6 @@
             }
         }
 
-        .skill-card:nth-child(5n) {
-            border-left: solid var(--link-red) 5px; 
-        }
-
-        .skill-card:nth-child(5n+1) {
-            border-left: solid var(--link-blue) 5px; 
-        }
-
-        .skill-card:nth-child(5n+2) {
-            border-left: solid var(--link-green) 5px; 
-        }
-
-        .skill-card:nth-child(5n+3) {
-            border-left: solid var(--link-orange) 5px; 
-        }
-
-        .skill-card:nth-child(5n+4) {
-            border-left: solid var(--link-yellow) 5px; 
-        }
-
         .skill-card:hover {
             background: var(--darker-background-color);
 
@@ -261,22 +320,174 @@
     }
 }
 
-@keyframes fadeIn{
-    0% {
-      opacity: 1;
-      transform: rotateX(90deg);
+.work-section {
+    margin: 0 16% 0 16%;
+    .color-border {
+        border-left-width: 8px;
     }
-    50% {
-      opacity: 0.5;
-      transform: rotateX(0deg);
+    #dl-logo {
+        width: 85%;
     }
-    100% {
-      display: none;
-      opacity: 0;
-      transform: rotateX(90deg);
+    #ugs-logo {
+        width: 80%;
+    }
+    .distributed-lab {
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .ugs {
+        padding: 20px;
     }
 }
 
+.test-section {
+    .tests {
+        .test {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            margin-bottom: 0.3em;
+
+            .toefl-logo {
+                width: 100%;
+                margin-top: 50%;
+            }
+            .sat-logo {
+                width: 100%;
+            }
+            .toefl-score {
+                margin-left: 0.4em;
+                font-size: 1.2em;
+                box-sizing: border-box;
+                
+                .score-bar {
+                    display: grid;
+                    grid-template-columns: 20% auto;
+                    
+                    .main-score {
+                        background-color: #2980b9;
+                        text-size-adjust: 100%;
+                        color: white;
+                        text-align: center;
+                        font-weight: bold;
+                        padding: 6px;
+                        border-radius: 10px 0px 0px 10px;
+                    }
+                    .toefl-score-bar {
+                        font-size: 1.2em;
+                        font-weight: bold;
+                        text-align: right;
+                        color: white;
+                        width: 93%; 
+                        background-color: #3498db;
+                        padding: 6px;
+                    }
+
+                    width: 100%;
+                    background-color: rgb(219, 219, 219);
+                }
+
+                .toefl-sections {
+                    margin-top: 0.3em;
+                    li {
+                        font-size: 0.9em;
+                        color: rgb(73, 73, 73);
+                        margin-left: 1.5em;
+                    }
+                    .total-score {
+                        display: none;
+                    }
+
+                    margin-bottom: 1em;
+                }
+            }
+            .sat-score {
+                margin-left: 0.4em;
+                font-size: 1.2em;
+                
+                .score-bar {
+                    display: grid;
+                    grid-template-columns: 20% auto;
+                    
+                    .main-score {
+                        background-color: #4834d4;
+                        text-size-adjust: 100%;
+                        color: white;
+                        text-align: center;
+                        font-weight: bold;
+                        padding: 6px;
+                        border-radius: 10px 0px 0px 10px;
+                    }
+                    .sat-score-bar {
+                        font-size: 1.2em;
+                        font-weight: bold;
+                        text-align: right;
+                        color: white;
+                        width: 90%; 
+                        background-color: #686de0;
+                        padding: 6px;
+                    }
+
+                    width: 100%;
+                    background-color: rgb(219, 219, 219);
+                }
+                .sat-sections {
+                    margin-top: 0.3em;
+                    li {
+                        font-size: 0.9em;
+                        color: rgb(73, 73, 73);
+                        margin-left: 1.5em;
+                    }
+                    .total-score {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.education-and-language {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .languages {
+        margin: 0 10% 0 10%;
+
+        .advanced-list-element {
+            margin-bottom: 0.5em;
+        }
+
+        .color-border {
+            border-left-width: 8px;
+        }
+
+        #flag {
+            width: 80%;
+        }
+    }
+
+    .education-section {
+        margin-left: 10%;
+        margin-right: 10%;
+
+        .advanced-element-header {
+            grid-template-columns: 20% 80%;
+
+            #kpml-logo {
+                width: 80%;
+            }
+        }
+
+        .color-border {
+            border-left-width: 8px;
+        }
+
+        .advanced-element-description-box {
+            grid-template-columns: 20% 80%;
+        }
+    }
+}
 
 @media only screen and (max-width: 1130px) {
     .description-header-phone {
@@ -309,6 +520,78 @@
     .skills-section {
         .skill-header {
             text-align: left;
+        }
+    }
+
+    .education-and-language {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .advanced-list {
+        .advanced-list-element {
+           .advanced-element-header {
+                margin-left: 10%;
+                display: grid;
+                grid-template-columns: 100%;
+
+                .advanced-header-logo { 
+                    margin-bottom: 10px;
+                }
+                #dl-logo {
+                    width: 40%;
+                    margin-bottom: 0px;
+                }
+                #ugs-logo {
+                    width: 20%;
+                }
+                #karazin-logo {
+                    width: 50%;
+                }
+                #kpml-logo {
+                    width: 50%;
+                }
+                #flag {
+                    width: 20%;
+                }
+            }
+
+            .advanced-element-sublist {
+                display: grid;
+                grid-template-columns: 10% 90%;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .work-section {
+        margin: 0 8% 0 8%;
+    }
+
+    .test-section {
+        .tests {
+            .test {
+                .toefl-score {
+                    .score-bar {
+                        display: none;
+                    }
+                    .toefl-sections {
+                        .total-score {
+                            display: inline;
+                        }
+                    }
+                }
+                .sat-score {
+                    .score-bar {
+                        display: none;
+                    }
+                    .sat-sections {
+                        .total-score {
+                            display: inline;
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -23,7 +23,7 @@
 
         <div class = "main-page">
             <div class = "description"> 
-                <h1 class = "description-header"> About me </h1>
+                <h1 class = "section-header"> About me </h1>
 
                 <p>
                     Hello! I am a former Ukrainian student of 
@@ -56,50 +56,33 @@
 
                     <ul>
                         <li class = "contact-option">
-                            <img src = "Images/Icons/Contacts/gmail_icon.svg" class = "image-gmail">
+                            <img src = "Images/Icons/Contacts/gmail_icon.svg" class = "contact-image" id="gmail">
                             zamdmytro@gmail.com
                         </li>
                         <li class = "contact-option">
-                            <img src = "Images/Icons/Contacts/linkedin_icon.svg" class = "image-linkedin">
+                            <img src = "Images/Icons/Contacts/linkedin_icon.svg" class = "contact-image" id="linkedin"> 
                             zamdimon
                         </li>
                         <li class = "contact-option">
-                            <img src = "Images/Projects/Source icons/github.svg" class = "image-github">
+                            <img src = "Images/Projects/Source icons/github.svg" class = "contact-image" id="github">
                             ZamDimon
                         </li>
                         <li class = "contact-option">
-                            <img src = "Images/Icons/Contacts/telegram_icon.svg" class = "image-telegram">
+                            <img src = "Images/Icons/Contacts/telegram_icon.svg" class = "contact-image" id="telegram">
                             @ZamDimon
                         </li>
                     </ul>
 
-                    <script>
-                        document.getElementsByClassName('contact-option')[0]
-                            .addEventListener('click', function (event) {
-                                window.open("mailto:zamdmytro@gmail.com");
-                         });
-                         document.getElementsByClassName('contact-option')[1]
-                            .addEventListener('click', function (event) {
-                                window.open("https://www.linkedin.com/in/zamdimon/");
-                         });
-                         document.getElementsByClassName('contact-option')[2]
-                            .addEventListener('click', function (event) {
-                                window.open("https://github.com/ZamDimon");
-                         });
-                         document.getElementsByClassName('contact-option')[3]
-                            .addEventListener('click', function (event) {
-                                window.open("https://t.me/ZamDimon");
-                         });
-                    </script>
+                    <script src="Scripts/contacts-buttons.js"> </script>
                 </div>
             </div>
         </div>
 
         <div class="skills-section">           
-            <h1 class = "skills-header"> My skills </h1>
+            <h1 class = "section-header"> My skills </h1>
             
             <div class="skills-icons-section">
-                <div class="skill-card">
+                <div class="skill-card color-border">
                     <img src="Images/Icons/Skills/unity_icon.svg"> <br> 
                     <p class = "skill-card-header"> Unity </p>
 
@@ -108,7 +91,7 @@
                     </p>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card color-border">
                     <img src="Images/Icons/Skills/XNA_icon.svg" class = "XNA"> <br>
                     <p class = "skill-card-header"> XNA </p>
 
@@ -117,7 +100,7 @@
                     </p>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card color-border">
                     <img src="Images/Icons/Skills/Csharp_icon.svg"> <br>
                     <p class = "skill-card-header"> C# </p>
 
@@ -126,7 +109,7 @@
                     </p>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card color-border">
                     <img src="Images/Icons/Skills/Cplus_icon.svg"> <br>
                     <p class = "skill-card-header"> C++ </p>
 
@@ -135,7 +118,7 @@
                     </p>
                 </div>
                 
-                <div class="skill-card">
+                <div class="skill-card color-border">
                     <img src="Images/Icons/Skills/python_icon.svg"> <br>
                     <p class = "skill-card-header"> Python </p>
 
@@ -144,7 +127,7 @@
                     </p>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card color-border">
                     <img src="Images/Icons/Skills/html_icon.svg"> <br>
                     <p class = "skill-card-header"> HTML and CSS </p>
 
@@ -153,7 +136,7 @@
                     </p>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card color-border">
                     <img src="Images/Icons/Skills/mathematica_icon.svg"> <br> 
                     <p class = "skill-card-header">Wolfram Mathematica</p>
 
@@ -162,7 +145,7 @@
                     </p>
                 </div>
                 
-                <div class="skill-card">
+                <div class="skill-card color-border">
                     <img src="Images/Icons/Skills/latex_icon.svg"> 
                     <p class = "skill-card-header">Latex</p>
 
@@ -171,7 +154,7 @@
                     </p>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card color-border">
                     <img src="Images/Icons/Skills/golang_icon.svg"> 
                     <p class = "skill-card-header">Golang</p>
 
@@ -180,7 +163,7 @@
                     </p>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card color-border">
                     <img src="Images/Icons/Skills/postgresql_icon.svg" class = "Postgre"> 
                     <p class = "skill-card-header">PostgreSQL</p>
 
@@ -189,13 +172,211 @@
                     </p>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card color-border">
                     <img src="Images/Icons/Skills/docker_icon.svg" class = "Docker"> 
                     <p class = "skill-card-header">Docker</p>
 
                     <p class="skill-card-description">
                         
                     </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="work-section">           
+            <h1 class = "section-header"> Work experience </h1>
+            
+            <div class="advanced-list">
+                <div class = "advanced-list-element color-border distributed-lab">
+                    <div class = "advanced-element-header">
+                        <img src="Images/Icons/Work/dl_logo.png" class = "advanced-header-logo" id="dl-logo">
+                        <div class = "advanced-header-content">
+                            <div class="advanced-title">Distributed Lab</div>
+                            <div class="advanced-detail"> 4 months </div>
+                            <div class="advanced-detail">Kharkiv, Ukraine</div>
+                        </div>
+                    </div>
+
+                    <div class = "advanced-element-sublist">
+                        <div class = "void"></div>
+                        <ul class = "advanced-sublist-content">
+                            <li class = "advanced-sublist-element">
+                                <div class = "advanced-subelement-title">Junior Golang Backend Developer</div>
+                                <div class="advanced-subelement-detail"> Full-time </div>
+                                <div class="advanced-subelement-detail">Jan 2022 - Present &#183; 2 months</div>        
+                                <div class="advanced-subelement-description">
+                                    <ul class="advanced-subelement-list">
+                                        <li class = "advanced-subelement-element">Developed Slack bot that notifies about new merge requests in Gitlab projects user is subscribed to</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class = "advanced-sublist-element">
+                                <div class = "advanced-subelement-title">Intern Golang Backend Developer</div>
+                                <div class="advanced-subelement-detail"> Full-time </div>
+                                <div class="advanced-subelement-detail">Nov 2021 - Dev 2021 &#183; 2 months</div>        
+                                <div class="advanced-subelement-description">
+                                    <ul class="advanced-subelement-list">
+                                        <li class = "advanced-subelement-element">Programmed microservice using Golang Language</li>
+                                        <li class = "advanced-subelement-element">Studied how to work with databases (specifically, PSQL)</li>
+                                        <li class = "advanced-subelement-element">Studied Docker and Docker Compose</li>
+                                        <li class = "advanced-subelement-element">Studied basics of Blockchain and Cryptocurrency</li>
+                                        <li class = "advanced-subelement-element">Worked with Linux and Git (GitLab & GitHub)</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div></div><div></div>
+                <div class = "advanced-list-element color-border ugs">
+                    <div class = "advanced-element-header">
+                        <img src="Images/Icons/Work/ugs_logo.jpg" class = "advanced-header-logo" id="ugs-logo">
+                        <div class = "advanced-header-content">
+                            <div class = "advanced-title">Ukraine Global Scholars</div>
+                            <div class = "advanced-subtitle">Finalist 2021</div>
+                            <div class="advanced-detail"> Jun 2021 - Nov 2021 &#183; 6 months </div>
+                            <div class="advanced-detail"> Ukraine</div>
+                        </div>
+                    </div>
+                    <div class="advanced-element-description-box">
+                        <div class="empty"></div>
+                        <div class="advanced-element-description">
+                            One of 56 finalists out of 550 applicants selected through a rigorous 3-stage selection process focusing on academic skills, extracurricular achievements, and character
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "education-and-language">
+            <div class="education-section">
+                <h1 class = "section-header"> Education </h1>
+                    
+                <div class="advanced-list">
+                    <div></div>
+                    <div class = "advanced-list-element color-border karazin-university">
+                        <div class = "advanced-element-header">
+                            <img src="Images/Icons/Education/karazin-logo.png" class = "advanced-header-logo" id = "karazin-logo">
+                            <div class = "advanced-header-content">
+                                <div class = "advanced-title">Karazin National University</div>
+                                <div class = "advanced-subtitle">Applied Mathematics Major, Freshman</div>
+                                <div class="advanced-subtitle"> GPA: 94/100 </div>
+                                <div class="advanced-detail"> Sep 2021 - Now &#183; 6 months </div>
+                                <div class="advanced-detail"> Kharkiv, Ukraine </div>
+                            </div>
+                        </div>
+                        <div class="advanced-element-description-box">
+                            <div class="empty"></div>
+                            <div class="advanced-element-description">
+                                Studying at one of the best Ukrainian national universities (top-1 according to QS), majoring in Applied Mathematics, School of Mathematics and Informatics. Taking classes in Linear Algebra, Analytical Geometry, Discrete Mathematics and Logic, Number Theory, Calculus etc.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class = "advanced-list-element color-border kpml">
+                        <div class = "advanced-element-header">
+                            <img src="Images/Icons/Education/kpml-logo.png" class = "advanced-header-logo" id = "kpml-logo">
+                            <div class = "advanced-header-content">
+                                <div class = "advanced-title">Kharkiv Physics & Mathematics Lyceum</div>
+                                <div class="advanced-subtitle"> GPA: 11.8/12 </div>
+                                <div class="advanced-detail"> Sep 2014 - Jun 2021 &#183; 7 years </div>
+                                <div class="advanced-detail"> Kharkiv, Ukraine </div>
+                            </div>
+                        </div>
+                        <div class="advanced-element-description-box">
+                            <div class="empty"></div>
+                            <div class="advanced-element-description">
+                                Graduated from one of the best schools nationally (top-6 according to 2021 rating) with national exam scores (External Independent Testing) in 4 subjects of 794/800.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "languages">
+                <h1 class = "section-header"> Languages & Tests </h1>
+                <div class = "advanced-list">
+                    <div class = "advanced-list-element color-border ukrainian">
+                        <div class="advanced-element-header">
+                            <img src="Images/Icons/Languages/ua.svg" class="advanced-header-logo" id="flag">
+                            <div class = "advanced-header-content">
+                                <div class="advanced-title"> Ukrainian </div>
+                                <div class="advanced-detail"> Native speaker </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "advanced-list-element color-border">
+                        <div class="advanced-element-header russian">
+                            <img src="Images/Icons/Languages/ru.svg" class="advanced-header-logo" id="flag">
+                            <div class = "advanced-header-content">
+                                <div class="advanced-title"> Russian </div>
+                                <div class="advanced-detail"> Native speaker </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "advanced-list-element color-border english">
+                        <div class="advanced-element-header">
+                            <img src="Images/Icons/Languages/us.svg" class="advanced-header-logo" id="flag">
+                            <div class = "advanced-header-content"> 
+                                <div class="advanced-title"> English </div>
+                                <div class="advanced-detail"> CEFR level: C1-C2 </div>
+                            </div>
+                        </div>
+                        
+                        <div class="advanced-element-description-box">
+                            <div></div>
+                            <div class = "test-section">
+                                <ul class = "tests">
+                                    <li class="test">
+                                        <img src="Images/Icons/Tests/toefl-logo.svg" class = "toefl-logo">
+                                        <div class = "toefl-score">
+                                            <div class="score-bar">
+                                                <div class = "main-score">TOEFL</div>
+                                                <div class="toefl-score-bar">113/120</div>
+                                            </div>
+                                            <ul class="toefl-sections">
+                                                <li class="total-score"><strong>TOEFL</strong> Total Score: <strong>113/120</strong></li>
+                                                <li>Reading: <strong>28/30</strong></li>
+                                                <li>Listening: <strong>29/30</strong></li>
+                                                <li>Speaking: <strong>27/30</strong></li>
+                                                <li>Writing: <strong>29/30</strong></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="test">
+                                        <img src="Images/Icons/Tests/sat-logo.png" class = "sat-logo">
+                                        <ul class = "sat-score">
+                                            <div class="score-bar">
+                                                <div class = "main-score">SAT</div>
+                                                <div class="sat-score-bar">1500/1600</div>
+                                            </div>
+                                            <ul class="sat-sections">
+                                                <li class="total-score"><strong>SAT</strong> Total Score: <strong>1500/1600</strong></li>
+                                                <li>Reading: <strong>330/400</strong></li>
+                                                <li>Grammar: <strong>370/400</strong></li>
+                                                <li>Mathematics: <strong>800/800</strong></li>
+                                            </ul>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "advanced-list-element color-border german">
+                        <div class="advanced-element-header">
+                            <img src="Images/Icons/Languages/de.svg" class="advanced-header-logo" id="flag">
+                            <div class = "advanced-header-content">
+                                <div class="advanced-title"> German </div>
+                                <div class="advanced-detail"> CEFR Level: B2 </div>
+                            </div>
+                        </div>
+                        <div class="advanced-element-description-box">
+                            <div></div>
+                            <div class="language-description">Completed Das Nürnberger Haus (official Goethe Institute partners) German courses</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

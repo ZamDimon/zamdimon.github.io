@@ -9,6 +9,41 @@
           flex-direction: column;
   row-gap: 30px;
   margin-bottom: 50px;
+  /*.project-menu:nth-child(5n+1) {
+        border-left: solid var(--link-red) 8px;
+
+        .project-title {
+            text-decoration: underline var(--link-red) 7px;
+        }
+    }
+
+    .project-menu:nth-child(5n+2) {
+        border-left: solid var(--link-green) 8px;
+        .project-title {
+            text-decoration: underline var(--link-green) 7px;
+        }
+    }
+
+    .project-menu:nth-child(5n+3) {
+        border-left: solid var(--link-blue) 8px;
+        .project-title {
+            text-decoration: underline var(--link-blue) 7px;
+        }
+    }
+
+    .project-menu:nth-child(5n+4) {
+        border-left: solid var(--link-orange) 8px;
+        .project-title {
+            text-decoration: underline var(--link-orange) 7px;
+        }
+    }
+
+    .project-menu:nth-child(5n+5) {
+        border-left: solid var(--link-yellow) 8px;
+        .project-title {
+            text-decoration: underline var(--link-yellow) 7px;
+        }
+    }*/
 }
 
 .projects-section .project-menu {
@@ -169,51 +204,6 @@
   font-size: 1em;
   color: #585858;
   background: #bebebe;
-}
-
-.projects-section .project-menu:nth-child(5n+1) {
-  border-left: solid var(--link-red) 8px;
-}
-
-.projects-section .project-menu:nth-child(5n+1) .project-title {
-  -webkit-text-decoration: underline var(--link-red) 7px;
-          text-decoration: underline var(--link-red) 7px;
-}
-
-.projects-section .project-menu:nth-child(5n+2) {
-  border-left: solid var(--link-green) 8px;
-}
-
-.projects-section .project-menu:nth-child(5n+2) .project-title {
-  -webkit-text-decoration: underline var(--link-green) 7px;
-          text-decoration: underline var(--link-green) 7px;
-}
-
-.projects-section .project-menu:nth-child(5n+3) {
-  border-left: solid var(--link-blue) 8px;
-}
-
-.projects-section .project-menu:nth-child(5n+3) .project-title {
-  -webkit-text-decoration: underline var(--link-blue) 7px;
-          text-decoration: underline var(--link-blue) 7px;
-}
-
-.projects-section .project-menu:nth-child(5n+4) {
-  border-left: solid var(--link-orange) 8px;
-}
-
-.projects-section .project-menu:nth-child(5n+4) .project-title {
-  -webkit-text-decoration: underline var(--link-orange) 7px;
-          text-decoration: underline var(--link-orange) 7px;
-}
-
-.projects-section .project-menu:nth-child(5n+5) {
-  border-left: solid var(--link-yellow) 8px;
-}
-
-.projects-section .project-menu:nth-child(5n+5) .project-title {
-  -webkit-text-decoration: underline var(--link-yellow) 7px;
-          text-decoration: underline var(--link-yellow) 7px;
 }
 
 @media only screen and (max-width: 1130px) {
