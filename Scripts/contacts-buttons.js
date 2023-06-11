@@ -15,3 +15,7 @@ document.getElementsByClassName('contact-option')[3]
     .addEventListener('click', function (event) {
         window.open("https://t.me/ZamDimon");
 });
+document.getElementsByClassName('description-resume-box')[0].
+    addEventListener('click', function(event) {
+        window.open("https://github.com/ZamDimon/ZamDimon/blob/main/resume.pdf");
+    })

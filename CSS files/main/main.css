@@ -33,39 +33,22 @@
   --link-yellow: #feca57;
 }
 
-@-webkit-keyframes transitionIn {
-  from {
-    opacity: 0;
-    -webkit-transform: rotateX(-10deg);
-            transform: rotateX(-10deg);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
-  }
-}
-
 @keyframes transitionIn {
   from {
     opacity: 0;
-    -webkit-transform: rotateX(-10deg);
-            transform: rotateX(-10deg);
+    transform: rotateX(-10deg);
   }
   to {
     opacity: 1;
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
+    transform: rotateX(0);
   }
 }
-
 body {
   background: var(--background-color);
   margin: 0;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   color: var(--black-text-color);
-  -webkit-animation: transitionIn 750ms;
-          animation: transitionIn 750ms;
+  animation: transitionIn 750ms;
 }
 
 ul {
@@ -82,10 +65,8 @@ a {
 #link-red {
   -webkit-text-decoration: underline var(--link-red) 4px;
           text-decoration: underline var(--link-red) 4px;
-  -webkit-transition-duration: 450ms;
-          transition-duration: 450ms;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-duration: 450ms;
+  transition-timing-function: ease;
 }
 
 #link-red:hover {
@@ -95,10 +76,8 @@ a {
 #link-green {
   -webkit-text-decoration: underline var(--link-green) 4px;
           text-decoration: underline var(--link-green) 4px;
-  -webkit-transition-duration: 450ms;
-          transition-duration: 450ms;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-duration: 450ms;
+  transition-timing-function: ease;
 }
 
 #link-green:hover {
@@ -108,10 +87,8 @@ a {
 #link-blue {
   -webkit-text-decoration: underline var(--link-blue) 4px;
           text-decoration: underline var(--link-blue) 4px;
-  -webkit-transition-duration: 450ms;
-          transition-duration: 450ms;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-duration: 450ms;
+  transition-timing-function: ease;
 }
 
 #link-blue:hover {
@@ -121,10 +98,8 @@ a {
 #link-orange {
   -webkit-text-decoration: underline var(--link-orange) 4px;
           text-decoration: underline var(--link-orange) 4px;
-  -webkit-transition-duration: 450ms;
-          transition-duration: 450ms;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-duration: 450ms;
+  transition-timing-function: ease;
 }
 
 #link-orange:hover {
@@ -134,10 +109,8 @@ a {
 #link-yellow {
   -webkit-text-decoration: underline var(--link-yellow) 4px;
           text-decoration: underline var(--link-yellow) 4px;
-  -webkit-transition-duration: 450ms;
-          transition-duration: 450ms;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-duration: 450ms;
+  transition-timing-function: ease;
 }
 
 #link-yellow:hover {
@@ -166,49 +139,34 @@ a {
 
 .navbar {
   padding: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0.75em 0 0.75em 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 100%;
   margin: auto;
   margin-bottom: 1em;
   background: var(--dark-gradient);
 }
-
 .navbar .navbar-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   text-align: center;
   padding-top: 5px;
 }
-
 .navbar .navbar-container .navbar-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .navbar .navbar-container .navbar-list li {
   text-transform: uppercase;
 }
-
 .navbar .navbar-container .navbar-list .current {
   font-weight: bold;
   -webkit-text-decoration: underline var(--color-variation1) 7px;
           text-decoration: underline var(--color-variation1) 7px;
 }
-
 .navbar .navbar-container a {
   font-size: 1.8em;
-  padding: .1em 1em;
+  padding: 0.1em 1em;
   color: var(--darker-background-color);
 }
 
@@ -217,10 +175,7 @@ a {
     padding-top: 0px;
   }
   .navbar .navbar-container .navbar-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .navbar .navbar-container .navbar-list li {
     padding: 1px;
@@ -228,5 +183,4 @@ a {
   .navbar .navbar-container a {
     font-size: 1.4em;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

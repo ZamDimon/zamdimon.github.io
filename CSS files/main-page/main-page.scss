@@ -156,6 +156,34 @@
             margin: 20px;
             text-indent: 25px;
         }
+
+        .description-resume-box {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+            transition-duration: 450ms;
+            cursor: pointer;
+
+            align-items: left;
+            height: 50px;
+            line-height: 50px;
+            margin: 3px 10% 3px 10%;
+            background: var(--darker-background-color);
+            padding-left: 15px;
+            border-radius: 0.6em;
+
+            outline: 3px dashed black;
+
+            .resume-icon{   
+                width: 6%;
+                padding-right: 6px;
+                vertical-align: middle;
+            }
+        }
+
+        .description-resume-box:hover {
+            background: var(--dark-background-color);
+            color: white;
+        }
     }
 
     .photo-block {
