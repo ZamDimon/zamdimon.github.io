@@ -5,25 +5,30 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Zakharov Dmytro</title>
-        <link rel="icon" href="Images/Head/Webicon.png">
-        <link rel = "stylesheet" href = "CSS files/main-page/main-page.css">
+        <link rel="icon" href="images/head/favicon.png">
+        <link rel="stylesheet" href="styles/main_page/main_page.css">
     </head>
     <body>
-        <div class = "navbar"> 
-            <nav class = "navbar-container">
-                <ul class = "navbar-list">
-                    <li><a href="#" class = "current"> Main </a> </li>
-                    <li><a href="Achievements.html" class = "navbar-list-element"> Achievements </a> </li>
-                    <li><a href="Projects.html" class = "navbar-list-element"> Projects </a> </li> 
+
+        <!-- Navbar section -->
+        <div class="navbar"> 
+            <nav class="navbar-container">
+                <ul class="navbar-list">
+                    <li><a href="#" class="current"> Main </a></li>
+                    <li><a href="Achievements.html" class="navbar-list-element"> Achievements </a></li>
+                    <li><a href="Projects.html" class="navbar-list-element"> Projects </a></li> 
                 </ul>
             </nav>  
         </div>
+        
+        <!-- About me header only for mobile apps -->
+        <h1 class="description-header-phone"> About me </h1>
 
-        <h1 class = "description-header-phone"> About me </h1>
-
-        <div class = "main-page">
-            <div class = "description"> 
-                <h1 class = "section-header"> About me </h1>
+        <!-- Main page -->
+        <div class="main-page">
+            <!-- About me section -->
+            <div class="description"> 
+                <h1 class="section-header"> About me </h1>
                 <p>
                     Welcome to my website! &#128075 
                 </p>
@@ -39,145 +44,60 @@
                 </p>
 
                 <div class="description-resume-box">
-                    <img src = "Images/Icons/Resume/resume.png" class = "resume-icon">
+                    <img src="images/icons/button/resume.png" class="resume-icon">
                     <strong>Download a formal CV</strong>
                 </div>
             </div>
+            
+            <!-- Photo & Contacts block section -->
+            <div class="photo-block">
+                <!-- Photo frame -->
+                <par class="photo-name"> Dmytro Zakharov </par>
+                <img src="images/main/personal_photo.jpg" class="photo-image">
 
-            <div class = "photo-block">
-                <par class = "photo-name"> Dmytro Zakharov </par>
-                <img src = "Images/Main/Photo5.jpg" class = "photo-image">
-
-                <div class = "contacts-section">
+                <!-- Contacts section -->
+                <div class="contacts-section">
                     <par>Contacts:</par>
-
                     <ul>
-                        <li class = "contact-option">
-                            <img src = "Images/Icons/Contacts/gmail_icon.svg" class = "contact-image" id="gmail">
+                        <li class="contact-option" id="contact-gmail">
+                            <img src="images/icons/contacts/gmail.svg" class="contact-image" id="gmail">
                             zamdmytro@gmail.com
                         </li>
-                        <li class = "contact-option">
-                            <img src = "Images/Icons/Contacts/linkedin_icon.svg" class = "contact-image" id="linkedin"> 
+                        <li class="contact-option" id="contact-linkedin">
+                            <img src="images/icons/contacts/linkedin.svg" class="contact-image" id="linkedin"> 
                             zamdimon
                         </li>
-                        <li class = "contact-option">
-                            <img src = "Images/Projects/Source icons/github.svg" class = "contact-image" id="github">
+                        <li class="contact-option" id="contact-github">
+                            <img src="images/projects/sources/github.svg" class="contact-image" id="github">
                             ZamDimon
                         </li>
-                        <li class = "contact-option">
-                            <img src = "Images/Icons/Contacts/telegram_icon.svg" class = "contact-image" id="telegram">
+                        <li class="contact-option" id="contact-telegram">
+                            <img src = "images/icons/contacts/telegram.svg" class="contact-image" id="telegram">
                             @ZamDimon
                         </li>
                     </ul>
 
-                    <script src="Scripts/contacts-buttons.js"> </script>
+                    <script src="scripts/main/contacts.js"></script>
                 </div>
             </div>
         </div>
-
+        
+        <!-- Skills section -->
         <div class="skills-section">           
-            <h1 class = "section-header"> My skills </h1>
-            
-            <div class="skills-icons-section">
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/golang_icon.svg"> 
-                    <p class = "skill-card-header">Golang</p>
+            <h1 class="section-header"> My skills </h1>
 
-                    <p class="skill-card-description">
-                        <b>1.5 years</b> of commerical experience as a Backend developer at <i>Distributed Lab</i>. 
-                    </p>
-                </div>
+            <div class="skills-icons-section" id="skills-list">                
+                <!-- A list of elements spawned by skills.js script in a format
+                    specified below:
 
                 <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/postgresql_icon.svg" class = "Postgre"> 
-                    <p class = "skill-card-header">PostgreSQL</p>
-
-                    <p class="skill-card-description">
-                        Primary database I used as a backend developer at <i>Distributed Lab</i>.
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/python_icon.svg"> <br>
-                    <p class = "skill-card-header"> Python </p>
-
-                    <p class="skill-card-description">
-                        <b>2 years</b> of experience for AI/ML researches and mathematical computations/analysis.  
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/latex_icon.svg"> 
-                    <p class = "skill-card-header">Latex</p>
-
-                    <p class="skill-card-description">
-                        Constantly use for homework assignments and writing research papers.
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/mathematica_icon.svg"> <br> 
-                    <p class = "skill-card-header">Wolfram Mathematica</p>
-
-                    <p class="skill-card-description">
-                        <b>4 years</b> of experience while preparing for Olympiads, conducting the research and creating projects.
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/Csharp_icon.svg"> <br>
-                    <p class = "skill-card-header"> C# </p>
-
-                    <p class="skill-card-description">
-                        <b>6 years</b> of <b>uncommerical</b> experience (as a hobby) in <i>Unity</i>, <i>Windows Forms</i> and <i>XNA</i> using this language.  
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/Cplus_icon.svg"> <br>
-                    <p class = "skill-card-header"> C++ </p>
-
-                    <p class="skill-card-description">
-                        <b>4 years</b> of using for competitive programming competitions, learned <i>OpenGL</i> on C++.
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/html_icon.svg"> <br>
-                    <p class = "skill-card-header"> HTML and CSS </p>
-
-                    <p class="skill-card-description">
-                        Used it just for creating this website, but I'm looking forward to exploring it further. &#128579
-                    </p>
-                </div>
-                
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/docker_icon.svg" class = "Docker"> 
-                    <p class = "skill-card-header">Docker</p>
-
-                    <p class="skill-card-description">
-                        Used for local setting up web projects. 
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/unity_icon.svg"> <br> 
-                    <p class = "skill-card-header"> Unity </p>
-
-                    <p class="skill-card-description">
-                        <b>6 years</b> of uncommercial experience. Made numerous game projects, the most substantial one is <a href="https://www.youtube.com/watch?v=A6j2XfqPh4k&feature=youtu.be" id="link-orange">Inside the dark</a>.
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/XNA_icon.svg" class = "XNA"> <br>
-                    <p class = "skill-card-header"> XNA </p>
-
-                    <p class="skill-card-description">
-                        Used for small games and computer modelling projects.
-                    </p>
-                </div>
+                    <img src="..."> <br> 
+                    <p class = "skill-card-header"> ... </p>
+                    <p class="skill-card-description"> ... </p>
+                </div> -->
             </div>
+
+            <script src="scripts/main/skills.js"></script>
         </div>
         
         <div class="work-section">           
