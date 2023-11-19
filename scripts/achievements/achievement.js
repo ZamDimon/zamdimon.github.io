@@ -10,7 +10,7 @@ export class Achievement {
     }
 
     /** Spawns the HTML table row element with the specified achievement
-     * @param achievement(Achievement) - achievement to spawn
+     * @param htmlElement - html element to attach the achievement to
      * @returns HTMLDivElement - achievement row
      * */
     spawnFrom(htmlElement) {
@@ -56,6 +56,42 @@ export class Achievement {
         medalIconTd.appendChild(medalIcon);
         achievementTr.appendChild(medalIconTd);
     
+        htmlElement.appendChild(achievementTr);
+    }
+
+    /** Spawns the HTML table row element with the specified achievement for mobile devices
+     * @param htmlElement - html element to attach the achievement to
+     * @returns HTMLDivElement - achievement row
+     * */
+    spawnMobileFrom(htmlElement) {
+        // Creating external tr element
+        const achievementTr = document.createElement('tr');
+        
+        // Creating row td element
+        const rowTd = document.createElement('td');
+
+        // Adding name with a link
+        const nameUrlElement = document.createElement('a');
+        nameUrlElement.href = this.url;
+        nameUrlElement.id = 'link-blue';
+        nameUrlElement.textContent = this.name;
+        rowTd.appendChild(nameUrlElement);
+
+        // Adding result
+        const resultDiv = document.createElement('div');
+        resultDiv.className = this.result.classNameMobile;
+        resultDiv.textContent = this.result.description;
+
+        // Adding medal icon
+        const medalIcon = document.createElement('i');
+        medalIcon.className = `em ${this.result.medalIcon}`;
+        medalIcon.setAttribute('aria-role', 'presentation');
+        medalIcon.setAttribute('aria-label', 'FIRST PLACE MEDAL');
+        resultDiv.appendChild(medalIcon);
+
+        rowTd.appendChild(resultDiv);
+
+        achievementTr.appendChild(rowTd);
         htmlElement.appendChild(achievementTr);
     }
 }

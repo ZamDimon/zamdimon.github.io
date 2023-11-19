@@ -47,9 +47,18 @@ const achievements = [
     })
 ]
 
+// Spawning the achievements table
 const achievementsTableId = 'achievements-table';
 const achievementsTable = document.getElementById(achievementsTableId);
 
 for (const achievement of achievements) {
     achievement.spawnFrom(achievementsTable);
+}
+
+// Spawning the achievements table for mobile devices
+const achievementsMobileTableId = 'achievements-table-mobile';
+const achievementsMobileTable = document.getElementById(achievementsMobileTableId);
+
+for (const achievement of achievements) {
+    achievement.spawnMobileFrom(achievementsMobileTable);
 }

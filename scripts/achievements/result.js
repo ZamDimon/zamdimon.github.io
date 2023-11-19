@@ -28,6 +28,7 @@ export class AchievementResult {
             'SilverMedal': 'silver-medal',
             'BronzeMedal': 'bronze-medal',
         }[title] ?? 'neutral';
+        this.classNameMobile = `${this.className}-phone`
     }
     /**
      * Sets the description of the achievement result
