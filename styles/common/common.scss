@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    //Main colors
+    --background-color: #ffffff;
+    --slightly-darker-background-color: #fafafa;
+    --darker-background-color: #f1f2f6;
+    --black-text-color: #2f3542;
+    --neutral-text-color: rgb(98, 98, 98);
+    --main-color: #70a1ff;
+    --darker-main-color: #1e90ff;
+    --dark-background-color: #57606f;
+
+    //Other colors
+    --color-variation1: #ff4757;
+    --color-variation2: #e67e22;
+    --color-variation3: #f1c40f;
+    --color-variation4: #9b59b6;
+
+    //Colors for table
+    --bronze-color: #F4B183;
+    --bronze-color-brighter: #eeb48e;
+    --silver-color: #ADB9CA;
+    --silver-color-brighter: rgb(181, 198, 219);
+    --gold-color: #FFD966;
+    --gold-color-brighter: #fddc77;
+
+    //Gradients
+    --main-color-gradient: linear-gradient(to right, #1488cc, #2b32b2);
+    --bronze-gradient: linear-gradient(var(--bronze-color), var(--bronze-color-brighter));
+    --silver-gradient: linear-gradient(var(--silver-color), var(--silver-color-brighter));
+    --gold-gradient: linear-gradient(var(--gold-color), var(--gold-color-brighter));
+    --header-gradient: linear-gradient(to right, #232526, #414345);
+    --light-gradient: linear-gradient(to right, var(--slightly-darker-background-color), var(--darker-background-color));
+    --dark-gradient: linear-gradient(to right, #780206, #061161);
+    --bright-header: linear-gradient(to right, #12C2E9, #C471ED, #F0C044);
+
+    //Link colors
+    --link-red: #ff6b81;
+    --link-orange: #ff7f50;
+    --link-green: #7bed9f;
+    --link-blue: #70a1ff;
+    --link-yellow: #feca57;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+body {
+    background: var(--background-color);
+    margin: 0;
+    font-family: 'Poppins';
+    color: var(--black-text-color);
+
+    //:not(.navbar) {
+        animation: transitionIn 750ms;
+    //}
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black-text-color);
+}
+
+#link-red {
+    text-decoration: underline var(--link-red) 4px;
+    transition-duration: 450ms;
+    transition-timing-function: ease;
+}
+
+#link-red:hover {
+    background-color: var(--link-red);
+}
+
+#link-green {
+    text-decoration: underline var(--link-green) 4px;
+    transition-duration: 450ms;
+    transition-timing-function: ease;
+}
+
+#link-green:hover {
+    background-color: var(--link-green);
+}
+
+#link-blue {
+    text-decoration: underline var(--link-blue) 4px;
+    transition-duration: 450ms;
+    transition-timing-function: ease;
+}
+
+#link-blue:hover {
+    background-color: var(--link-blue);
+}
+
+#link-orange {
+    text-decoration: underline var(--link-orange) 4px;
+    transition-duration: 450ms;
+    transition-timing-function: ease;
+}
+
+#link-orange:hover {
+    background-color: var(--link-orange);
+}
+
+#link-yellow {
+    text-decoration: underline var(--link-yellow) 4px;
+    transition-duration: 450ms;
+    transition-timing-function: ease;
+}
+
+#link-yellow:hover {
+    background-color: var(--link-yellow);
+}
+
+.color-border:nth-child(5n) {
+    border-left: solid var(--link-red) 5px; 
+}
+
+.color-border:nth-child(5n+1) {
+    border-left: solid var(--link-blue) 5px; 
+}
+
+.color-border:nth-child(5n+2) {
+    border-left: solid var(--link-green) 5px; 
+}
+
+.color-border:nth-child(5n+3) {
+    border-left: solid var(--link-orange) 5px; 
+}
+
+.color-border:nth-child(5n+4) {
+    border-left: solid var(--link-yellow) 5px; 
+}
+
+.navbar {
+    padding: 1em;
+
+    display: flex;
+    padding: 0.75em 0 0.75em 0;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1em;
+
+    background: var(--dark-gradient);
+    //border-bottom: solid var(--darker-background-color) 5px;
+
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding-top: 5px;
+
+        .navbar-list {
+            display: flex;
+
+            li {
+                text-transform: uppercase;
+            }
+
+            .current {
+                font-weight: bold;
+                text-decoration: underline var(--color-variation1) 7px;
+            }
+        }
+
+        a {
+            font-size: 1.8em;
+            padding: .1em 1em;
+            color: var(--darker-background-color);
+        }
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .navbar {
+        .navbar-container {
+            padding-top: 0px;
+
+            .navbar-list {
+                flex-direction: column;
+
+                li {
+                    padding: 1px;
+                }
+            }
+
+            a {
+                font-size: 1.4em;
+            }
+        }
+    }
+}

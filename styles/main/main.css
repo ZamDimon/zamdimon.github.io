@@ -1,186 +1,510 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-:root {
-  --background-color: #ffffff;
-  --slightly-darker-background-color: #fafafa;
-  --darker-background-color: #f1f2f6;
-  --black-text-color: #2f3542;
-  --neutral-text-color: rgb(98, 98, 98);
-  --main-color: #70a1ff;
-  --darker-main-color: #1e90ff;
-  --dark-background-color: #57606f;
-  --color-variation1: #ff4757;
-  --color-variation2: #e67e22;
-  --color-variation3: #f1c40f;
-  --color-variation4: #9b59b6;
-  --bronze-color: #F4B183;
-  --bronze-color-brighter: #eeb48e;
-  --silver-color: #ADB9CA;
-  --silver-color-brighter: rgb(181, 198, 219);
-  --gold-color: #FFD966;
-  --gold-color-brighter: #fddc77;
-  --main-color-gradient: linear-gradient(to right, #1488cc, #2b32b2);
-  --bronze-gradient: linear-gradient(var(--bronze-color), var(--bronze-color-brighter));
-  --silver-gradient: linear-gradient(var(--silver-color), var(--silver-color-brighter));
-  --gold-gradient: linear-gradient(var(--gold-color), var(--gold-color-brighter));
-  --header-gradient: linear-gradient(to right, #232526, #414345);
-  --light-gradient: linear-gradient(to right, var(--slightly-darker-background-color), var(--darker-background-color));
-  --dark-gradient: linear-gradient(to right, #780206, #061161);
-  --bright-header: linear-gradient(to right, #12C2E9, #C471ED, #F0C044);
-  --link-red: #ff6b81;
-  --link-orange: #ff7f50;
-  --link-green: #7bed9f;
-  --link-blue: #70a1ff;
-  --link-yellow: #feca57;
-}
-
-@keyframes transitionIn {
-  from {
-    opacity: 0;
-    transform: rotateX(-10deg);
-  }
-  to {
-    opacity: 1;
-    transform: rotateX(0);
-  }
-}
-body {
-  background: var(--background-color);
-  margin: 0;
-  font-family: "Poppins";
-  color: var(--black-text-color);
-  animation: transitionIn 750ms;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: var(--black-text-color);
-}
-
-#link-red {
-  -webkit-text-decoration: underline var(--link-red) 4px;
-          text-decoration: underline var(--link-red) 4px;
-  transition-duration: 450ms;
-  transition-timing-function: ease;
-}
-
-#link-red:hover {
-  background-color: var(--link-red);
-}
-
-#link-green {
-  -webkit-text-decoration: underline var(--link-green) 4px;
-          text-decoration: underline var(--link-green) 4px;
-  transition-duration: 450ms;
-  transition-timing-function: ease;
-}
-
-#link-green:hover {
-  background-color: var(--link-green);
-}
-
-#link-blue {
-  -webkit-text-decoration: underline var(--link-blue) 4px;
-          text-decoration: underline var(--link-blue) 4px;
-  transition-duration: 450ms;
-  transition-timing-function: ease;
-}
-
-#link-blue:hover {
-  background-color: var(--link-blue);
-}
-
-#link-orange {
-  -webkit-text-decoration: underline var(--link-orange) 4px;
-          text-decoration: underline var(--link-orange) 4px;
-  transition-duration: 450ms;
-  transition-timing-function: ease;
-}
-
-#link-orange:hover {
-  background-color: var(--link-orange);
-}
-
-#link-yellow {
-  -webkit-text-decoration: underline var(--link-yellow) 4px;
-          text-decoration: underline var(--link-yellow) 4px;
-  transition-duration: 450ms;
-  transition-timing-function: ease;
-}
-
-#link-yellow:hover {
-  background-color: var(--link-yellow);
-}
-
-.color-border:nth-child(5n) {
-  border-left: solid var(--link-red) 5px;
-}
-
-.color-border:nth-child(5n+1) {
-  border-left: solid var(--link-blue) 5px;
-}
-
-.color-border:nth-child(5n+2) {
-  border-left: solid var(--link-green) 5px;
-}
-
-.color-border:nth-child(5n+3) {
-  border-left: solid var(--link-orange) 5px;
-}
-
-.color-border:nth-child(5n+4) {
-  border-left: solid var(--link-yellow) 5px;
-}
-
-.navbar {
-  padding: 1em;
-  display: flex;
-  padding: 0.75em 0 0.75em 0;
-  justify-content: center;
-  width: 100%;
-  margin: auto;
-  margin-bottom: 1em;
-  background: var(--dark-gradient);
-}
-.navbar .navbar-container {
-  display: flex;
-  justify-content: space-between;
+@charset "UTF-8";
+@import url("../main/main.css");
+.section-header {
+  font-size: 2em;
   text-align: center;
-  padding-top: 5px;
+  border-bottom: 4px solid var(--darker-background-color);
+  background: var(--header-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.navbar .navbar-container .navbar-list {
-  display: flex;
+
+.advanced-list .advanced-list-element {
+  margin-bottom: 1.5em;
+  border-radius: 0 1em 1em 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  padding: 10px;
 }
-.navbar .navbar-container .navbar-list li {
-  text-transform: uppercase;
+.advanced-list .advanced-list-element .advanced-element-header {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin-bottom: 0.2em;
 }
-.navbar .navbar-container .navbar-list .current {
+.advanced-list .advanced-list-element .advanced-element-header .advanced-header-logo {
+  margin: 0 auto;
+  width: 100%;
+  align-self: center;
+}
+.advanced-list .advanced-list-element .advanced-element-header .advanced-header-content .advanced-title {
+  margin: 0;
+  font-size: 1.6em;
   font-weight: bold;
+}
+.advanced-list .advanced-list-element .advanced-element-header .advanced-header-content .advanced-subtitle {
+  margin: 0;
+  font-size: 1.25em;
+  font-style: italic;
+}
+.advanced-list .advanced-list-element .advanced-element-header .advanced-header-content .advanced-detail {
+  margin: 0;
+  font-size: 1.15em;
+  color: var(--neutral-text-color);
+}
+.advanced-list .advanced-list-element .advanced-element-sublist {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-content {
+  margin-bottom: 0.6em;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-content .advanced-subelement-title {
+  margin: 0;
+  font-size: 1.35em;
+  font-weight: bold;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-content .advanced-subelement-detail {
+  color: var(--neutral-text-color);
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-content .advanced-subelement-description {
+  font-size: 1.15em;
+  margin-top: 0.2em;
+  margin-left: 0.5em;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-content .advanced-subelement-description .advanced-subelement-list .advanced-subelement-element:before {
+  content: "— ";
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-element {
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 1.5em;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-element:last-child {
+  padding-bottom: 20px;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-element:after {
+  content: "•";
+  font-size: 2.5em;
+  color: rgb(200, 200, 200);
+  position: absolute;
+  left: -25px;
+  top: -14px;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-element:before {
+  content: "";
+  position: absolute;
+  left: -17.5px;
+  border-left: 2px solid rgb(200, 200, 200);
+  height: 100%;
+  width: 1px;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-element:first-child:before {
+  top: 20px;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-element:last-child:before {
+  height: 20px;
+}
+.advanced-list .advanced-list-element .advanced-element-description-box {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+.advanced-list .advanced-list-element .advanced-element-description-box .advanced-element-description {
+  font-size: 1.15em;
+}
+
+.description-header-phone {
+  display: none;
+  margin: 10px 10% 20px 10%;
+  font-size: 2em;
+  text-align: center;
+  border-bottom: 4px solid var(--darker-background-color);
+  background: var(--header-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-page {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.main-page .description {
+  margin: 20px 0 0 10%;
+  font-size: 1.3em;
+}
+.main-page .description p {
+  padding: 0;
+  margin: 20px;
+  text-indent: 25px;
+}
+.main-page .description .description-resume-box {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  transition-duration: 450ms;
+  cursor: pointer;
+  align-items: left;
+  height: 50px;
+  line-height: 50px;
+  margin: 3px 10% 3px 10%;
+  background: var(--darker-background-color);
+  padding-left: 15px;
+  border-radius: 0.6em;
+  outline: 3px dashed black;
+}
+.main-page .description .description-resume-box .resume-icon {
+  width: 6%;
+  padding-right: 6px;
+  vertical-align: middle;
+}
+.main-page .description .description-resume-box:hover {
+  background: var(--dark-background-color);
+  color: white;
+}
+.main-page .photo-block {
+  min-width: 350px;
+  max-width: 350px;
+  background-color: white;
+  margin: 10px 10% 0 50px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 0 1em 1em 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-left: solid var(--color-variation1) 8px;
+}
+.main-page .photo-block .photo-name {
+  font-weight: bold;
+  font-size: 1.8em;
+  background: var(--header-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main-page .photo-block .photo-image {
+  margin: 10px 0 0 0;
+  width: 80%;
+  border-radius: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.main-page .photo-block .contacts-section {
+  display: flex;
+  flex-direction: column;
+}
+.main-page .photo-block .contacts-section ul {
+  text-align: left;
+}
+.main-page .photo-block .contacts-section li {
+  align-items: left;
+  height: 50px;
+  line-height: 50px;
+  margin: 3px 0 3px 0;
+  background: var(--darker-background-color);
+  padding-left: 15px;
+  border-radius: 0.2em;
+}
+.main-page .photo-block .contacts-section par {
+  padding-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
   -webkit-text-decoration: underline var(--color-variation1) 7px;
           text-decoration: underline var(--color-variation1) 7px;
+  margin: 0;
 }
-.navbar .navbar-container a {
-  font-size: 1.8em;
-  padding: 0.1em 1em;
-  color: var(--darker-background-color);
+.main-page .photo-block .contacts-section .contact-option {
+  transition-duration: 450ms;
+  cursor: pointer;
+}
+.main-page .photo-block .contacts-section .contact-option .contact-image {
+  width: 8%;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+.main-page .photo-block .contacts-section .contact-option:hover {
+  background: var(--dark-background-color);
+  color: white;
+}
+
+.skills-section {
+  margin: 10px 10% 30px 10%;
+}
+.skills-section .skills-icons-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 175px));
+  justify-content: center;
+  grid-row-gap: 30px;
+  grid-column-gap: 50px;
+  align-items: center;
+}
+.skills-section .skills-icons-section .skill-card {
+  min-width: 175px;
+  max-width: 175px;
+  min-height: 175px;
+  margin: 0 50px 0 50px;
+  padding: 10px;
+  text-align: center;
+  justify-self: center;
+  border-radius: 0 0.5em 0.5em 0;
+  position: relative;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  transition-duration: 450ms;
+  cursor: pointer;
+}
+.skills-section .skills-icons-section .skill-card img {
+  width: 40%;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  opacity: 1;
+  transition-duration: 450ms;
+}
+.skills-section .skills-icons-section .skill-card .XNA {
+  width: 90%;
+}
+.skills-section .skills-icons-section .skill-card .Postgre {
+  width: 60%;
+}
+.skills-section .skills-icons-section .skill-card .Docker {
+  width: 75%;
+}
+.skills-section .skills-icons-section .skill-card .skill-card-header {
+  background: var(--darker-background-color);
+  font-size: 1.35em;
+  transition-duration: 450ms;
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  opacity: 1;
+}
+.skills-section .skills-icons-section .skill-card .skill-card-description {
+  opacity: 0;
+  transition-duration: 450ms;
+  position: absolute;
+  font-size: 0.9em;
+  top: 0;
+  width: 90%;
+}
+.skills-section .skills-icons-section .skill-card:hover {
+  background: var(--darker-background-color);
+}
+.skills-section .skills-icons-section .skill-card:hover .skill-card-header, .skills-section .skills-icons-section .skill-card:hover img {
+  opacity: 0;
+}
+.skills-section .skills-icons-section .skill-card:hover .skill-card-description {
+  opacity: 1;
+}
+
+.work-section {
+  margin: 0 16% 0 16%;
+}
+.work-section .color-border {
+  border-left-width: 8px;
+}
+.work-section #dl-logo {
+  width: 85%;
+}
+.work-section #ugs-logo {
+  width: 80%;
+}
+.work-section .distributed-lab {
+  padding: 0;
+  padding-top: 20px;
+}
+.work-section .ugs {
+  padding: 20px;
+}
+
+.test-section .tests .test {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  margin-bottom: 0.3em;
+}
+.test-section .tests .test .toefl-logo {
+  width: 100%;
+  margin-top: 50%;
+}
+.test-section .tests .test .sat-logo {
+  width: 100%;
+}
+.test-section .tests .test .toefl-score {
+  margin-left: 0.4em;
+  font-size: 1.2em;
+  box-sizing: border-box;
+}
+.test-section .tests .test .toefl-score .score-bar {
+  display: grid;
+  grid-template-columns: 20% auto;
+  width: 100%;
+  background-color: rgb(219, 219, 219);
+}
+.test-section .tests .test .toefl-score .score-bar .main-score {
+  background-color: #2980b9;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px;
+  border-radius: 10px 0px 0px 10px;
+}
+.test-section .tests .test .toefl-score .score-bar .toefl-score-bar {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: right;
+  color: white;
+  width: 93%;
+  background-color: #3498db;
+  padding: 6px;
+}
+.test-section .tests .test .toefl-score .toefl-sections {
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+}
+.test-section .tests .test .toefl-score .toefl-sections li {
+  font-size: 0.9em;
+  color: rgb(73, 73, 73);
+  margin-left: 1.5em;
+}
+.test-section .tests .test .toefl-score .toefl-sections .total-score {
+  display: none;
+}
+.test-section .tests .test .sat-score {
+  margin-left: 0.4em;
+  font-size: 1.2em;
+}
+.test-section .tests .test .sat-score .score-bar {
+  display: grid;
+  grid-template-columns: 20% auto;
+  width: 100%;
+  background-color: rgb(219, 219, 219);
+}
+.test-section .tests .test .sat-score .score-bar .main-score {
+  background-color: #4834d4;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px;
+  border-radius: 10px 0px 0px 10px;
+}
+.test-section .tests .test .sat-score .score-bar .sat-score-bar {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: right;
+  color: white;
+  width: 90%;
+  background-color: #686de0;
+  padding: 6px;
+}
+.test-section .tests .test .sat-score .sat-sections {
+  margin-top: 0.3em;
+}
+.test-section .tests .test .sat-score .sat-sections li {
+  font-size: 0.9em;
+  color: rgb(73, 73, 73);
+  margin-left: 1.5em;
+}
+.test-section .tests .test .sat-score .sat-sections .total-score {
+  display: none;
+}
+
+.education-and-language {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.education-and-language .languages {
+  margin: 0 10% 0 10%;
+}
+.education-and-language .languages .advanced-list-element {
+  margin-bottom: 0.5em;
+}
+.education-and-language .languages .color-border {
+  border-left-width: 8px;
+}
+.education-and-language .languages #flag {
+  width: 80%;
+}
+.education-and-language .education-section {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.education-and-language .education-section .advanced-element-header {
+  grid-template-columns: 20% 80%;
+}
+.education-and-language .education-section .advanced-element-header #kpml-logo {
+  width: 80%;
+}
+.education-and-language .education-section .color-border {
+  border-left-width: 8px;
+}
+.education-and-language .education-section .advanced-element-description-box {
+  grid-template-columns: 20% 80%;
 }
 
 @media only screen and (max-width: 1130px) {
-  .navbar .navbar-container {
-    padding-top: 0px;
+  .description-header-phone {
+    display: block;
   }
-  .navbar .navbar-container .navbar-list {
+  .main-page {
     flex-direction: column;
+    flex-wrap: wrap;
   }
-  .navbar .navbar-container .navbar-list li {
-    padding: 1px;
+  .main-page .photo-block {
+    order: -1;
+    margin: auto;
   }
-  .navbar .navbar-container a {
-    font-size: 1.4em;
+  .main-page .description {
+    order: 9;
+    font-size: 1.1em;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .main-page .description .description-header {
+    display: none;
+  }
+  .skills-section .skill-header {
+    text-align: left;
+  }
+  .education-and-language {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header {
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header .advanced-header-logo {
+    margin-bottom: 10px;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header #dl-logo {
+    width: 40%;
+    margin-bottom: 0px;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header #ugs-logo {
+    width: 20%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header #karazin-logo {
+    width: 50%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header #kpml-logo {
+    width: 50%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header #flag {
+    width: 20%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-sublist {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-right: 10px;
+  }
+  .work-section {
+    margin: 0 8% 0 8%;
+  }
+  .test-section .tests .test .toefl-score .score-bar {
+    display: none;
+  }
+  .test-section .tests .test .toefl-score .toefl-sections .total-score {
+    display: inline;
+  }
+  .test-section .tests .test .sat-score .score-bar {
+    display: none;
+  }
+  .test-section .tests .test .sat-score .sat-sections .total-score {
+    display: inline;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -11,7 +11,7 @@ const achievements = [
         subject: 'Computational Physics',
         level: AchievementLevel.International,
         result: AchievementResult.SilverMedal.withDescription('Silver medal'),
-        url: '',
+        url: 'research.html',
     }),
     new Achievement({
         name: 'International Festival of Engineering Science and Technology in Tunisia (I-FEST)',
@@ -19,7 +19,7 @@ const achievements = [
         subject: 'Computational Physics',
         level: AchievementLevel.International,
         result: AchievementResult.SilverMedal.withDescription('Silver medal'),
-        url: '',
+        url: 'research.html',
     }),
     new Achievement({
         name: 'International Zhautykov Physics Olympiad',
@@ -27,7 +27,7 @@ const achievements = [
         subject: 'Physics',
         level: AchievementLevel.International,
         result: AchievementResult.BronzeMedal.withDescription('Bronze medal'),
-        url: '',
+        url: 'https://izho.kz/contest/results-izho-2021/',
     }),
     new Achievement({
         name: 'European Union Contest for Young Scientists (EUCYS)',
@@ -35,7 +35,7 @@ const achievements = [
         subject: 'Computational Physics',
         level: AchievementLevel.International,
         result: AchievementResult.HonorableMention.withDescription('Ukraine representative'),
-        url: '',
+        url: 'https://eucys2021.usal.es/physics-07-2021/',
     }),
     new Achievement({
         name: 'JASU National Scientific work defense competition - Theoretical Physics',
@@ -43,7 +43,7 @@ const achievements = [
         subject: 'Computational Physics',
         level: AchievementLevel.National,
         result: AchievementResult.GoldMedal.withDescription('First place'),
-        url: '',
+        url: 'research.html',
     })
 ]
 
