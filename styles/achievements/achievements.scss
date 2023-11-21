@@ -1,5 +1,6 @@
 @import url("../common/common.css");
 
+// Defining the table header style
 .table-header {
     font-size: 3em;
     margin: auto;
@@ -9,41 +10,19 @@
     text-decoration: underline var(--color-variation1) 7px;
 }
 
+// Description block above the table
 .table-description {
     font-size: 1.5em;
     margin: auto;
     padding: 10px 10% 0 10%;
-
-    .yellow-text {
-        text-transform: uppercase;
-        font-weight: bold;
-        background: var(--gold-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: var(--gold-color);
-    }
-
-    .gray-text {
-        text-transform: uppercase;
-        font-weight: bold;
-        background: var(--silver-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .orange-text {
-        text-transform: uppercase;
-        font-weight: bold;
-        background: var(--bronze-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
 }
 
+// We do not display the table on non-mobile devices
 .achievement-table-phone {
     display: none;
 }
 
+// Defining widths of columns
 .achievement-table {
     .achievement {
         width: 30%;
@@ -65,7 +44,7 @@
     }
 }
 
-
+// Defining the table style
 .achievement-table, .achievement-table-phone {
     border-collapse: collapse;
     margin: 25px 0;
@@ -75,14 +54,17 @@
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
+    // Margin settings
     margin-top: 50px;
     margin-left: 8%;
     margin-right: 8%;
 
+    // Table header style
     td {
         padding: 20px 25px;
     }
 
+    // Table header style
     .achievement-thead {
         font-weight: bold;
         background: var(--main-color-gradient);
@@ -94,15 +76,18 @@
     .achievement-tbody {
         color: var(--black-text-color);
         text-align: center;
-    
+        
+        // Adding bottom border to rows
         tr {
             border-bottom: 2px solid #949494;
 
+            // Adding bottom border to the last row
             &:last-of-type {
                 border-bottom: 5px solid var(--main-color);
             }
         }
 
+        // Adding alternating row colors
         tr:nth-child(2n + 1) {
             background-color: var(--background-color);
         }
@@ -111,6 +96,7 @@
             background-color: var(--darker-background-color);
         }
 
+        // Making result title bold
         .medal-title {
             font-weight: bold;
         }
@@ -136,6 +122,7 @@
         .silver-medal {
             background: var(--silver-gradient);
             font-weight: bold;
+
             .silver-medal-image {
                 width: 100%;
                 vertical-align: middle;
@@ -145,6 +132,7 @@
         .gold-medal {
             background: var(--gold-gradient);
             font-weight: bold;
+            
             .gold-medal-image {
                 width: 100%;
                 vertical-align: middle;

@@ -52,7 +52,7 @@ const achievementsTableId = 'achievements-table';
 const achievementsTable = document.getElementById(achievementsTableId);
 
 for (const achievement of achievements) {
-    achievement.spawnFrom(achievementsTable);
+    achievement.spawnFrom(achievementsTable, achievements.indexOf(achievement));
 }
 
 // Spawning the achievements table for mobile devices

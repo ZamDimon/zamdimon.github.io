@@ -6,21 +6,24 @@ export class Achievement {
             _name, _year, _subject, _level, _result, _url
         } = properties;
 
-        Object.assign(this, properties)
-    }
+        Object.assign(this, properties);
 
+        this.colorClasses = ['red', 'green', 'blue', 'orange', 'yellow'];
+    }
+    
     /** Spawns the HTML table row element with the specified achievement
      * @param htmlElement - html element to attach the achievement to
+     * @optionalparam index - index of the achievement in the array
      * @returns HTMLDivElement - achievement row
      * */
-    spawnFrom(htmlElement) {
+    spawnFrom(htmlElement, index=0) {
         const achievementTr = document.createElement('tr');
     
         // Adding a name and a link to the achievement
         const nameTd = document.createElement('td');
         const nameUrlElement = document.createElement('a');
         nameUrlElement.href = this.url;
-        nameUrlElement.id = 'link-blue';
+        nameUrlElement.className = this.colorClasses[index % this.colorClasses.length];
         nameUrlElement.textContent = this.name;
         nameTd.appendChild(nameUrlElement);
         achievementTr.appendChild(nameTd);
@@ -73,7 +76,7 @@ export class Achievement {
         // Adding name with a link
         const nameUrlElement = document.createElement('a');
         nameUrlElement.href = this.url;
-        nameUrlElement.id = 'link-blue';
+        nameUrlElement.className = 'colorful';
         nameUrlElement.textContent = this.name;
         rowTd.appendChild(nameUrlElement);
 

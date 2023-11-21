@@ -43,6 +43,7 @@
     --link-yellow: #feca57;
 }
 
+// Transitions between frames
 @keyframes transitionIn {
     from {
         opacity: 0;
@@ -55,15 +56,13 @@
     }
 }
 
+// Main body settings
 body {
     background: var(--background-color);
     margin: 0;
     font-family: 'Poppins';
     color: var(--black-text-color);
-
-    //:not(.navbar) {
-        animation: transitionIn 750ms;
-    //}
+    animation: transitionIn 750ms;
 }
 
 ul {
@@ -72,79 +71,52 @@ ul {
     padding: 0;
 }
 
+// Custom links
 a {
     text-decoration: none;
     color: var(--black-text-color);
-}
-
-#link-red {
-    text-decoration: underline var(--link-red) 4px;
     transition-duration: 450ms;
     transition-timing-function: ease;
+
+    &.red {
+        text-decoration: underline var(--link-red) 4px;
+    }
+    &.red:hover {
+        background-color: var(--link-red);
+    }
+    &.green {
+        text-decoration: underline var(--link-green) 4px;
+    }
+    &.green:hover {
+        background-color: var(--link-green);
+    }
+    &.blue {
+        text-decoration: underline var(--link-blue) 4px;
+    }
+    &.blue:hover {
+        background-color: var(--link-blue);
+    }
+    &.orange {
+        text-decoration: underline var(--link-orange) 4px;
+    }
+    &.orange:hover {
+        background-color: var(--link-orange);
+    }
+    &.yellow {
+        text-decoration: underline var(--link-yellow) 4px;
+    }
+    &.yellow:hover {
+        background-color: var(--link-yellow);
+    }
 }
 
-#link-red:hover {
-    background-color: var(--link-red);
-}
+// Setting custom color borders
+$border-colors: --link-blue, --link-green, --link-orange, --link-yellow, --link-red;
 
-#link-green {
-    text-decoration: underline var(--link-green) 4px;
-    transition-duration: 450ms;
-    transition-timing-function: ease;
-}
-
-#link-green:hover {
-    background-color: var(--link-green);
-}
-
-#link-blue {
-    text-decoration: underline var(--link-blue) 4px;
-    transition-duration: 450ms;
-    transition-timing-function: ease;
-}
-
-#link-blue:hover {
-    background-color: var(--link-blue);
-}
-
-#link-orange {
-    text-decoration: underline var(--link-orange) 4px;
-    transition-duration: 450ms;
-    transition-timing-function: ease;
-}
-
-#link-orange:hover {
-    background-color: var(--link-orange);
-}
-
-#link-yellow {
-    text-decoration: underline var(--link-yellow) 4px;
-    transition-duration: 450ms;
-    transition-timing-function: ease;
-}
-
-#link-yellow:hover {
-    background-color: var(--link-yellow);
-}
-
-.color-border:nth-child(5n) {
-    border-left: solid var(--link-red) 5px; 
-}
-
-.color-border:nth-child(5n+1) {
-    border-left: solid var(--link-blue) 5px; 
-}
-
-.color-border:nth-child(5n+2) {
-    border-left: solid var(--link-green) 5px; 
-}
-
-.color-border:nth-child(5n+3) {
-    border-left: solid var(--link-orange) 5px; 
-}
-
-.color-border:nth-child(5n+4) {
-    border-left: solid var(--link-yellow) 5px; 
+@for $i from 1 through length($border-colors) {
+    .color-border:nth-child(#{length($border-colors)}n+#{$i}) {
+        border-left: solid var(nth($border-colors, $i)) 5px;
+    }
 }
 
 .navbar {
@@ -158,7 +130,6 @@ a {
     margin-bottom: 1em;
 
     background: var(--dark-gradient);
-    //border-bottom: solid var(--darker-background-color) 5px;
 
     .navbar-container {
         display: flex;
