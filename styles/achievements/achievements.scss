@@ -7,7 +7,7 @@
     font-weight: bold;
     text-align: center;
     margin-top: 30px;
-    text-decoration: underline var(--color-variation1) 7px;
+    text-decoration: underline var(--table-color-gradient) 7px;
 }
 
 // Description block above the table
@@ -67,7 +67,7 @@
     // Table header style
     .achievement-thead {
         font-weight: bold;
-        background: var(--main-color-gradient);
+        background: var(--table-color-gradient);
         color: white;
         text-align: center;
         font-size: 1.25em;

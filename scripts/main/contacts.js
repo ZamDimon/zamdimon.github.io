@@ -1,10 +1,10 @@
 
 // Adding event listeners to contacts buttons
 const contactsDictionary = {
-    'contact-gmail': 'mailto:zamdmytro@gmail.com',
     'contact-linkedin': 'https://www.linkedin.com/in/zamdimon/',
     'contact-github': 'https://github.com/ZamDimon',
-    'contact-telegram': 'https://t.me/ZamDimon',
+    'contact-google-scholar': 'https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en',
+    'contact-research-gate': 'https://www.researchgate.net/profile/Dmytro-Zakharov-3',
 }
 
 for (const [objectId, contactUrl] of Object.entries(contactsDictionary)) {
@@ -14,8 +14,3 @@ for (const [objectId, contactUrl] of Object.entries(contactsDictionary)) {
             window.open(contactUrl);
         });
 }
-
-document.getElementsByClassName('description-resume-box')[0].
-    addEventListener('click', function(_event) {
-        window.open("https://github.com/ZamDimon/ZamDimon/blob/main/resume.pdf");
-    })

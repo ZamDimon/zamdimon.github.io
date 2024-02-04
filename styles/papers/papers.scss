@@ -1,0 +1,102 @@
+@import url("../main/main.css");
+
+.papers-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin: 0 15% 50px 15%;
+
+    .paper {
+        background: white;
+        border-radius: 1em;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+
+        display: flex;
+        align-content: space-between;
+        column-gap: 20px;
+
+        .preview {
+            border-radius: 0.5em;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            
+            vertical-align: middle;
+            flex: 50%;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .paper-description {
+            .title {
+                background: var(--header-gradient);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bold;
+                font-size: 1.5em;
+                margin: 0;
+            }
+
+            .authors {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .journal {
+                font-size: 1em;
+                font-style: italic;
+                margin: 0;
+            }
+
+            .paper-links {
+                .paper-link {
+                    font-size: 1.3em;
+                    font-family: monospace;
+                }
+                margin: 0;
+                margin-top: 10px;
+            }
+
+            display: flex;
+            flex-direction: column;
+            align-items: left; 
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .papers-section {
+        .paper {
+            .preview {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+            }
+
+            .title {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+
+            .authors {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+            }
+
+            .journal { 
+                grid-column: 1 / 2;
+                grid-row: 5 / 6;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .paper { 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 10px;
+    }
+}

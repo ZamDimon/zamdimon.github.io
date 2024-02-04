@@ -10,7 +10,7 @@ export class Achievement {
 
         this.colorClasses = ['red', 'green', 'blue', 'orange', 'yellow'];
     }
-    
+   
     /** Spawns the HTML table row element with the specified achievement
      * @param htmlElement - html element to attach the achievement to
      * @optionalparam index - index of the achievement in the array

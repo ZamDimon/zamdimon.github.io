@@ -1,46 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+// Chinese pallette taken from https://flatuicolors.com/palette/cn
 :root {
-    //Main colors
+    // Main colors
     --background-color: #ffffff;
-    --slightly-darker-background-color: #fafafa;
-    --darker-background-color: #f1f2f6;
+    --darker-background-color: #dfe4ea;
+    --slightly-darker-background-color: #f1f2f6;
+    --neutral-text-color: #57606f;
     --black-text-color: #2f3542;
-    --neutral-text-color: rgb(98, 98, 98);
+    --dark-background-color: #57606f;
     --main-color: #70a1ff;
     --darker-main-color: #1e90ff;
-    --dark-background-color: #57606f;
 
-    //Other colors
-    --color-variation1: #ff4757;
-    --color-variation2: #e67e22;
-    --color-variation3: #f1c40f;
-    --color-variation4: #9b59b6;
+    // Link colors
+    --link-color: #70a1ff;
+    --selected-link-color: #1e90ff;
+    --accent-color: #ff4757;
 
-    //Colors for table
+    // Colors for places
     --bronze-color: #F4B183;
     --bronze-color-brighter: #eeb48e;
     --silver-color: #ADB9CA;
     --silver-color-brighter: rgb(181, 198, 219);
     --gold-color: #FFD966;
     --gold-color-brighter: #fddc77;
-
-    //Gradients
-    --main-color-gradient: linear-gradient(to right, #1488cc, #2b32b2);
     --bronze-gradient: linear-gradient(var(--bronze-color), var(--bronze-color-brighter));
     --silver-gradient: linear-gradient(var(--silver-color), var(--silver-color-brighter));
     --gold-gradient: linear-gradient(var(--gold-color), var(--gold-color-brighter));
+    
+    // Gradients
+    --table-color-gradient: linear-gradient(to right, #4776E6, #8E54E9);
     --header-gradient: linear-gradient(to right, #232526, #414345);
-    --light-gradient: linear-gradient(to right, var(--slightly-darker-background-color), var(--darker-background-color));
-    --dark-gradient: linear-gradient(to right, #780206, #061161);
+    --dark-gradient: linear-gradient(to right, #005C97, #363795);
     --bright-header: linear-gradient(to right, #12C2E9, #C471ED, #F0C044);
-
-    //Link colors
-    --link-red: #ff6b81;
-    --link-orange: #ff7f50;
-    --link-green: #7bed9f;
-    --link-blue: #70a1ff;
-    --link-yellow: #feca57;
 }
 
 // Transitions between frames
@@ -74,61 +66,29 @@ ul {
 // Custom links
 a {
     text-decoration: none;
-    color: var(--black-text-color);
+    color: var(--link-color);
+    font-weight: bolder;
     transition-duration: 450ms;
     transition-timing-function: ease;
 
-    &.red {
-        text-decoration: underline var(--link-red) 4px;
-    }
-    &.red:hover {
-        background-color: var(--link-red);
-    }
-    &.green {
-        text-decoration: underline var(--link-green) 4px;
-    }
-    &.green:hover {
-        background-color: var(--link-green);
-    }
-    &.blue {
-        text-decoration: underline var(--link-blue) 4px;
-    }
-    &.blue:hover {
-        background-color: var(--link-blue);
-    }
-    &.orange {
-        text-decoration: underline var(--link-orange) 4px;
-    }
-    &.orange:hover {
-        background-color: var(--link-orange);
-    }
-    &.yellow {
-        text-decoration: underline var(--link-yellow) 4px;
-    }
-    &.yellow:hover {
-        background-color: var(--link-yellow);
+    &:hover {
+        color: var(--black-text-color);
     }
 }
 
 // Setting custom color borders
-$border-colors: --link-blue, --link-green, --link-orange, --link-yellow, --link-red;
-
-@for $i from 1 through length($border-colors) {
-    .color-border:nth-child(#{length($border-colors)}n+#{$i}) {
-        border-left: solid var(nth($border-colors, $i)) 5px;
-    }
+.color-border {
+    border-left: solid var(--link-blue) 5px;
 }
 
 .navbar {
-    padding: 1em;
-
+    // Positioning and size
     display: flex;
     padding: 0.75em 0 0.75em 0;
     justify-content: center;
     width: 100%;
     margin: auto;
     margin-bottom: 1em;
-
     background: var(--dark-gradient);
 
     .navbar-container {
@@ -145,8 +105,8 @@ $border-colors: --link-blue, --link-green, --link-orange, --link-yellow, --link-
             }
 
             .current {
-                font-weight: bold;
-                text-decoration: underline var(--color-variation1) 7px;
+                font-weight: bolder;
+                background: var(--neutral-text-color);
             }
         }
 
@@ -154,10 +114,15 @@ $border-colors: --link-blue, --link-green, --link-orange, --link-yellow, --link-
             font-size: 1.8em;
             padding: .1em 1em;
             color: var(--darker-background-color);
+
+            &:hover {
+                background-color: var(--link-color);
+            }
         }
     }
 }
 
+// Changes for mobile version
 @media only screen and (max-width: 1130px) {
     .navbar {
         .navbar-container {

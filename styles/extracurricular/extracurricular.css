@@ -1,0 +1,326 @@
+@import url("../main/main.css");
+.section-header {
+  margin: 0 15%;
+}
+
+.achievements-section .table-header {
+  font-size: 3em;
+  margin: auto;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  -webkit-text-decoration: underline var(--table-color-gradient) 7px;
+          text-decoration: underline var(--table-color-gradient) 7px;
+}
+.achievements-section .table-description {
+  font-size: 1.5em;
+  margin: auto;
+  padding: 10px 10% 0 10%;
+}
+.achievements-section .achievement-table-phone {
+  display: none;
+}
+.achievements-section .achievement-table .achievement {
+  width: 30%;
+}
+.achievements-section .achievement-table .year {
+  width: 10%;
+}
+.achievements-section .achievement-table .subject {
+  width: 20%;
+}
+.achievements-section .achievement-table .level {
+  width: 15%;
+}
+.achievements-section .achievement-table .place {
+  width: 19%;
+}
+.achievements-section .achievement-table .medal {
+  width: 6%;
+}
+.achievements-section .achievement-table, .achievements-section .achievement-table-phone {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1.2em;
+  min-width: 400px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-top: 50px;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+.achievements-section .achievement-table td, .achievements-section .achievement-table-phone td {
+  padding: 20px 25px;
+}
+.achievements-section .achievement-table .achievement-thead, .achievements-section .achievement-table-phone .achievement-thead {
+  font-weight: bold;
+  background: var(--table-color-gradient);
+  color: white;
+  text-align: center;
+  font-size: 1.25em;
+}
+.achievements-section .achievement-table .achievement-tbody, .achievements-section .achievement-table-phone .achievement-tbody {
+  color: var(--black-text-color);
+  text-align: center;
+}
+.achievements-section .achievement-table .achievement-tbody tr, .achievements-section .achievement-table-phone .achievement-tbody tr {
+  border-bottom: 2px solid #949494;
+}
+.achievements-section .achievement-table .achievement-tbody tr:last-of-type, .achievements-section .achievement-table-phone .achievement-tbody tr:last-of-type {
+  border-bottom: 5px solid var(--main-color);
+}
+.achievements-section .achievement-table .achievement-tbody tr:nth-child(2n+1), .achievements-section .achievement-table-phone .achievement-tbody tr:nth-child(2n+1) {
+  background-color: var(--background-color);
+}
+.achievements-section .achievement-table .achievement-tbody tr:nth-child(2n+2), .achievements-section .achievement-table-phone .achievement-tbody tr:nth-child(2n+2) {
+  background-color: var(--darker-background-color);
+}
+.achievements-section .achievement-table .achievement-tbody .medal-title, .achievements-section .achievement-table-phone .achievement-tbody .medal-title {
+  font-weight: bold;
+}
+.achievements-section .achievement-table .achievement-tbody .neutral, .achievements-section .achievement-table-phone .achievement-tbody .neutral {
+  font-weight: bold;
+}
+.achievements-section .achievement-table .achievement-tbody .neutral .neutral-medal-image, .achievements-section .achievement-table-phone .achievement-tbody .neutral .neutral-medal-image {
+  width: 100%;
+  vertical-align: middle;
+}
+.achievements-section .achievement-table .achievement-tbody .bronze-medal, .achievements-section .achievement-table-phone .achievement-tbody .bronze-medal {
+  background: var(--bronze-gradient);
+  font-weight: bold;
+}
+.achievements-section .achievement-table .achievement-tbody .bronze-medal .bronze-medal-image, .achievements-section .achievement-table-phone .achievement-tbody .bronze-medal .bronze-medal-image {
+  width: 100%;
+  vertical-align: middle;
+}
+.achievements-section .achievement-table .achievement-tbody .silver-medal, .achievements-section .achievement-table-phone .achievement-tbody .silver-medal {
+  background: var(--silver-gradient);
+  font-weight: bold;
+}
+.achievements-section .achievement-table .achievement-tbody .silver-medal .silver-medal-image, .achievements-section .achievement-table-phone .achievement-tbody .silver-medal .silver-medal-image {
+  width: 100%;
+  vertical-align: middle;
+}
+.achievements-section .achievement-table .achievement-tbody .gold-medal, .achievements-section .achievement-table-phone .achievement-tbody .gold-medal {
+  background: var(--gold-gradient);
+  font-weight: bold;
+}
+.achievements-section .achievement-table .achievement-tbody .gold-medal .gold-medal-image, .achievements-section .achievement-table-phone .achievement-tbody .gold-medal .gold-medal-image {
+  width: 100%;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 1130px) {
+  .achievements-section .section-header {
+    display: none;
+  }
+  .achievements-section .achievement-table {
+    display: none;
+  }
+  .achievements-section .achievement-table-phone {
+    display: table;
+    font-size: 1em;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .achievements-section .achievement-table-phone .achievement-thead {
+    font-size: 1.05em;
+  }
+  .achievements-section .achievement-table-phone .achievement-tbody tr {
+    border-bottom: 10px solid var(--darker-background-color);
+  }
+  .achievements-section .achievement-table-phone .achievement-tbody tr .bronze-medal-phone {
+    font-weight: bold;
+    background: var(--bronze-gradient);
+    margin: 5px;
+    border-radius: 0.5em;
+  }
+  .achievements-section .achievement-table-phone .achievement-tbody tr .silver-medal-phone {
+    font-weight: bold;
+    background: var(--silver-gradient);
+    margin: 5px;
+    border-radius: 0.5em;
+  }
+  .achievements-section .achievement-table-phone .achievement-tbody tr .gold-medal-phone {
+    font-weight: bold;
+    background: var(--gold-gradient);
+    margin: 5px;
+    border-radius: 0.5em;
+  }
+  .achievements-section .table-description {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0px 10px 0 10px;
+  }
+}
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-bottom: 50px;
+  /*.project-menu:nth-child(5n+1) {
+      border-left: solid var(--link-red) 8px;
+
+      .project-title {
+          text-decoration: underline var(--link-red) 7px;
+      }
+  }
+
+  .project-menu:nth-child(5n+2) {
+      border-left: solid var(--link-green) 8px;
+      .project-title {
+          text-decoration: underline var(--link-green) 7px;
+      }
+  }
+
+  .project-menu:nth-child(5n+3) {
+      border-left: solid var(--link-blue) 8px;
+      .project-title {
+          text-decoration: underline var(--link-blue) 7px;
+      }
+  }
+
+  .project-menu:nth-child(5n+4) {
+      border-left: solid var(--link-orange) 8px;
+      .project-title {
+          text-decoration: underline var(--link-orange) 7px;
+      }
+  }
+
+  .project-menu:nth-child(5n+5) {
+      border-left: solid var(--link-yellow) 8px;
+      .project-title {
+          text-decoration: underline var(--link-yellow) 7px;
+      }
+  }*/
+}
+.projects-section .project-menu {
+  background: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 0 1em 1em 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  /*#inside-the-dark-image {
+      width: 100%;
+  }*/
+}
+.projects-section .project-menu .project-image {
+  border-radius: 0.5em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  grid-column: 1/2;
+  grid-row: 1/5;
+  justify-self: center;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+.projects-section .project-menu #jasu-research-image {
+  max-width: 95%;
+  max-height: 95%;
+}
+.projects-section .project-menu .project-title {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background: var(--header-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  justify-self: center;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.projects-section .project-menu .project-description {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-size: 1.2em;
+}
+.projects-section .project-menu .project-links-section {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  row-gap: 5px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+  justify-self: left bottom;
+}
+.projects-section .project-menu .project-links-section .project-link {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding: 5px;
+  border-radius: 1em;
+  max-width: 200px;
+  max-height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: var(--darker-background-color);
+  color: var(--black-text-color);
+  transition-duration: 400ms;
+}
+.projects-section .project-menu .project-links-section .project-link img {
+  width: 15%;
+  justify-self: left;
+}
+.projects-section .project-menu .project-links-section .project-link p {
+  text-align: center;
+  display: table-cell;
+}
+.projects-section .project-menu .project-links-section .project-link:hover {
+  background-color: var(--dark-background-color);
+  color: white;
+}
+.projects-section .project-menu .tags-section {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+.projects-section .project-menu .tags-section .tags-list {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 170px));
+  justify-self: right;
+  justify-content: end;
+}
+.projects-section .project-menu .tags-section .tags-list li {
+  text-align: center;
+  vertical-align: center;
+  margin: 7px;
+  padding: 8px;
+  border-radius: 1em;
+  font-size: 1em;
+  color: rgb(88, 88, 88);
+  background: rgb(190, 190, 190);
+}
+
+@media only screen and (max-width: 1130px) {
+  .projects-section .project-menu .project-image {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .projects-section .project-menu .project-title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .projects-section .project-menu .project-description {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .projects-section .project-menu .project-links-section {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  .projects-section .project-menu .tags-section {
+    grid-column: 1/2;
+    grid-row: 7/8;
+  }
+}/*# sourceMappingURL=extracurricular.css.map */

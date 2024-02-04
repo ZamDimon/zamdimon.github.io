@@ -1,20 +1,21 @@
 @import url("../common/common.css");
 
+// About me section
 .section-header {
     font-size: 2em;
     text-align: center;
-
     border-bottom: 4px solid var(--darker-background-color);
-
     background: var(--header-gradient);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+// Work list
 .advanced-list {
     .advanced-list-element {
         margin-bottom: 1.5em;
-        border-radius: 0 1em 1em 0;
+        border-radius: 1em;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         background-color: white;
         padding: 10px;
@@ -120,33 +121,38 @@
             grid-template-columns: 10% 90%;
             .advanced-element-description {
                 font-size: 1.15em; 
+
+                .transcript-button {
+                    position: relative;
+                    top: 3px;
+                }
             }
         }
     }
 }
 
+// Header description displayed on mobile
 .description-header-phone {
     display: none;
-
     margin: 10px 10% 20px 10%;
-
     font-size: 2em;
-
     text-align: center;
-
     border-bottom: 4px solid var(--darker-background-color);
-
+    
     background: var(--header-gradient);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+// Main page section
 .main-page {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
 
+    // Description section
     .description {
         margin: 20px 0 0 10%;
         font-size: 1.3em;
@@ -156,56 +162,31 @@
             margin: 20px;
             text-indent: 25px;
         }
-
-        .description-resume-box {
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-
-            transition-duration: 450ms;
-            cursor: pointer;
-
-            align-items: left;
-            height: 50px;
-            line-height: 50px;
-            margin: 3px 10% 3px 10%;
-            background: var(--darker-background-color);
-            padding-left: 15px;
-            border-radius: 0.6em;
-
-            outline: 3px dashed black;
-
-            .resume-icon{   
-                width: 6%;
-                padding-right: 6px;
-                vertical-align: middle;
-            }
-        }
-
-        .description-resume-box:hover {
-            background: var(--dark-background-color);
-            color: white;
-        }
     }
 
+    // Block with photo and contacts
     .photo-block {
+        text-align: center;
         min-width: 350px;
         max-width: 350px;
-        background-color: white;
         margin: 10px 10% 0 50px;
-        text-align: center;
-        padding: 10px;
-        border-radius: 0 1em 1em 0;
+        padding: 20px;
+        border-radius: 1em;
+        background-color: white;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-        border-left: solid var(--color-variation1) 8px;
-
+        
+        // Name above the photo
         .photo-name {
             font-weight: bold;
             font-size: 1.8em;
 
             background: var(--header-gradient);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
+        // Photo itself
         .photo-image {
             margin: 10px 0 0 0;
             width: 80%;
@@ -213,22 +194,26 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         }
 
+        // Contacts section
         .contacts-section {
             display: flex;
             flex-direction: column;
 
+            .email-text {
+                font-family: monospace;
+                font-size: 1.3em;
+            }
+
             ul {
-                text-align: left;
+                text-align: center;
+                padding-top: 10px;
             }
 
             li {
-                align-items: left;
-                height: 50px;
-                line-height: 50px;
+                display: inline;
+                align-items: center;
                 margin: 3px 0 3px 0;
-                background: var(--darker-background-color);
                 padding-left: 15px;
-                border-radius: 0.2em;
             }
 
             par {
@@ -251,98 +236,48 @@
                 cursor: pointer;
             }
 
-
             .contact-option:hover {
-                background: var(--dark-background-color);
-                color: white;
+                size: 1.1em;
             }
         }
     }
 }
 
 .skills-section {
-    margin: 10px 10% 30px 10%;
+    margin: 0 16% 0 16%;
 
-    .skills-icons-section {
+    .skills-list {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(175px, 175px));
-        justify-content: center;
-        grid-row-gap: 30px;
-        grid-column-gap: 50px;
-        align-items: center;
-            
-        .skill-card {
-            min-width: 175px;
-            max-width: 175px;
-            min-height: 175px;
-            margin: 0 50px 0 50px;
-            padding: 10px;
+        grid-template-columns: 50% 50%;
+        margin-top: 5px;
+
+        .skill-header {
             text-align: center;
-            justify-self: center;
-            border-radius: 0 0.5em 0.5em 0;
-            position: relative;
-
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-
-            transition-duration: 450ms;
-
-            cursor: pointer;
-
-            img {
-                width: 40%;
-                padding: 0;
-                margin-left: auto;
-                margin-right: auto;
-                display: block;
-                opacity: 1;
-
-                transition-duration: 450ms;
-            }
-                
-            .XNA {
-                width: 90%;
-            }
-
-            .Postgre {
-                width: 60%;
-            }
-
-            .Docker {
-                width: 75%;
-            }
-
-            .skill-card-header {
-                background: var(--darker-background-color);
-                font-size: 1.35em;
-                transition-duration: 450ms;
-
-                position: absolute;
-                width: 90%;
-                bottom: 0;
-                opacity: 1;
-            }
-
-            .skill-card-description {
-                opacity: 0;
-                transition-duration: 450ms;
-
-                position: absolute;
-                font-size: 0.9em;
-                top: 0;
-                width: 90%;
-            }
+            font-size: 1.3em;
+            margin-bottom: 20px;
         }
 
-        .skill-card:hover {
-            background: var(--darker-background-color);
+        .skills-list-element {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 1em;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
 
-            .skill-card-header, img {
-                opacity: 0;
-            }
+        .badges-list {
+            display: flex;
+            flex-shrink: 0;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: flex-end;
+            margin-top: 5px;
+            margin-bottom: 20px;
 
-            .skill-card-description {
-                opacity: 1;
+            .badge {
+                display: inline;
+                margin: 0px 5px 0px 5px;
+                margin-bottom: 0.3em;
             }
         }
     }
@@ -393,7 +328,7 @@
                     grid-template-columns: 20% auto;
                     
                     .main-score {
-                        background-color: #2980b9;
+                        background-color: var(--darker-main-color);
                         text-size-adjust: 100%;
                         color: white;
                         text-align: center;
@@ -402,17 +337,18 @@
                         border-radius: 10px 0px 0px 10px;
                     }
                     .toefl-score-bar {
+                        background-color: var(--main-color);
                         font-size: 1.2em;
                         font-weight: bold;
                         text-align: right;
                         color: white;
                         width: 93%; 
-                        background-color: #3498db;
                         padding: 6px;
                     }
 
                     width: 100%;
                     background-color: rgb(219, 219, 219);
+                    border-radius: 10px 0px 0px 10px;
                 }
 
                 .toefl-sections {
@@ -438,7 +374,7 @@
                     grid-template-columns: 20% auto;
                     
                     .main-score {
-                        background-color: #4834d4;
+                        background-color: var(--darker-main-color);
                         text-size-adjust: 100%;
                         color: white;
                         text-align: center;
@@ -452,12 +388,13 @@
                         text-align: right;
                         color: white;
                         width: 90%; 
-                        background-color: #686de0;
+                        background-color: var(--main-color);
                         padding: 6px;
                     }
 
                     width: 100%;
                     background-color: rgb(219, 219, 219);
+                    border-radius: 10px 0px 0px 10px;
                 }
                 .sat-sections {
                     margin-top: 0.3em;

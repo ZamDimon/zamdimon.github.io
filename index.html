@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+
+<!-- Including emoji support -->
+<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Zakharov Dmytro</title>
-        <link rel="icon" href="images/head/favicon.png">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🧑‍💻</text></svg>">
         <link rel="stylesheet" href="styles/main/main.css">
     </head>
     <body>
@@ -15,8 +19,8 @@
             <nav class="navbar-container">
                 <ul class="navbar-list">
                     <li><a href="#" class="current"> Main </a></li>
-                    <li><a href="achievements.html" class="navbar-list-element"> Achievements </a></li>
-                    <li><a href="projects.html" class="navbar-list-element"> Projects </a></li> 
+                    <li><a href="papers.html" class="navbar-list-element"> Publications </a></li>
+                    <li><a href="extracurricular.html" class="navbar-list-element"> Extracurricular </a></li> 
                 </ul>
             </nav>  
         </div>
@@ -42,11 +46,6 @@
                 <p>
                     Throughout my career, I have gathered a wealth of achievements and skills, which I've documented on this website. Whether you have inquiries or simply want to get in touch, feel free to reach out to me. I'm more than happy to answer any questions you may have! &#128578
                 </p>
-
-                <div class="description-resume-box">
-                    <img src="images/icons/button/resume.png" class="resume-icon">
-                    <strong>Download a formal CV</strong>
-                </div>
             </div>
             
             <!-- Photo & Contacts block section -->
@@ -58,22 +57,19 @@
                 <!-- Contacts section -->
                 <div class="contacts-section">
                     <par>Contacts:</par>
+                    <div class="email-text">zamdmytro@gmail.com</div>
                     <ul>
-                        <li class="contact-option" id="contact-gmail">
-                            <img src="images/icons/contacts/gmail.svg" class="contact-image" id="gmail">
-                            zamdmytro@gmail.com
-                        </li>
                         <li class="contact-option" id="contact-linkedin">
                             <img src="images/icons/contacts/linkedin.svg" class="contact-image" id="linkedin"> 
-                            zamdimon
                         </li>
                         <li class="contact-option" id="contact-github">
-                            <img src="images/projects/sources/github.svg" class="contact-image" id="github">
-                            ZamDimon
+                            <img src="images/icons/contacts/github.svg" class="contact-image" id="github">
                         </li>
-                        <li class="contact-option" id="contact-telegram">
-                            <img src = "images/icons/contacts/telegram.svg" class="contact-image" id="telegram">
-                            @ZamDimon
+                        <li class="contact-option" id="contact-google-scholar">
+                            <img src = "images/icons/contacts/google-scholar.svg" class="contact-image" id="google-scholar">
+                        </li>
+                        <li class="contact-option" id="contact-research-gate">
+                            <img src = "images/icons/contacts/researchgate.svg" class="contact-image" id="research-gate">
                         </li>
                     </ul>
 
@@ -81,23 +77,65 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Skills section -->
         <div class="skills-section">           
-            <h1 class="section-header"> My skills </h1>
+            <h1 class="section-header"> Skills: </h1>
 
-            <div class="skills-icons-section" id="skills-list">                
-                <!-- A list of elements spawned by skills.js script in a format
-                    specified below:
-
-                <div class="skill-card color-border">
-                    <img src="..."> <br> 
-                    <p class = "skill-card-header"> ... </p>
-                    <p class="skill-card-description"> ... </p>
-                </div> -->
-            </div>
-
-            <script type="module" src="scripts/main/main.js"></script>
+            <ul class="skills-list">
+                <li class="skills-list-element"> 
+                    <div class="programming-languages">
+                        <h3 class="skill-header"> Programming Languages </h3>
+                        <ul class="badges-list">
+                            <li class="badge"><img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/> </li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Rust-black?style=for-the-badge&logo=rust&logoColor=#E57324"/> </li>
+                            <li class="badge"><img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"/> </li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"/> </li>
+                            <li class="badge"><img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"/> </li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Fortran-%23734F96.svg?style=for-the-badge&logo=fortran&logoColor=white"></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="skills-list-element"> 
+                    <div class="backend">
+                        <h3 class="skill-header"> Backend Development </h3>
+                        <ul class="badges-list">
+                            <li class="badge"><img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/redis-%23DD0031.svg?&style=for-the-badge&logo=redis&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white"></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"></li> 
+                            <li class="badge"><img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/> </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="skills-list-element"> 
+                    <div class="programming-languages">
+                        <h3 class="skill-header"> Machine Learning </h3>
+                        <ul class="badges-list">
+                            <li class="badge"><img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Keras-FF0000?style=for-the-badge&logo=keras&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white"></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black"></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/SciPy-654FF0?style=for-the-badge&logo=SciPy&logoColor=white"/></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="skills-list-element"> 
+                    <div class="programming-languages">
+                        <h3 class="skill-header"> Academics </h3>
+                        <ul class="badges-list">
+                            <li class="badge"><img src="https://img.shields.io/badge/Wolfram-DD1100?&style=for-the-badge&logo=Wolfram&logoColor=white"></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=LaTeX&logoColor=white"> </li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Overleaf-47A141?style=for-the-badge&logo=Overleaf&logoColor=white"></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
         
         <!-- Work experience section -->
@@ -110,7 +148,7 @@
                         <img src="images/icons/work/dl.png" class="advanced-header-logo" id="dl-logo">
                         <div class="advanced-header-content">
                             <div class="advanced-title"> Distributed Lab </div>
-                            <div class="advanced-detail"> 1.5 years </div>
+                            <div class="advanced-detail"> <par id="dl-time">2 years 4 months</par> </div>
                             <div class="advanced-detail"> Kharkiv/Kyiv, Ukraine </div>
                         </div>
                     </div>
@@ -119,9 +157,22 @@
                         <div class="void"></div>
                         <ul class="advanced-sublist-content">
                             <li class="advanced-sublist-element">
-                                <div class="advanced-subelement-title"> Junior/Middle Golang Backend Developer </div>
+                                <div class="advanced-subelement-title"> Middle Rust Developer & Machine Learning Researcher </div>
                                 <div class="advanced-subelement-detail"> Full-time </div>
-                                <div class="advanced-subelement-detail"> Jan 2022 - Present &#183; 1 year 4 months </div>        
+                                <div class="advanced-subelement-detail"> Jun 2023 - Present &#183; <par id="dl-time-research">9 months</par> </div>        
+                                <div class="advanced-subelement-description">
+                                    <ul class="advanced-subelement-list">
+                                        <li class="advanced-subelement-element"> Integrated KYC and deposits/withdrawals functionality for an investing platform </li>
+                                        <li class="advanced-subelement-element"> Developed 3D Physics computer simulation in Rust (Bevy game engine)</a> </li>
+                                        <li class="advanced-subelement-element"> Researching Neural Network applications in Blockchain & Cybersecurity</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="advanced-sublist-element">
+                                <div class="advanced-subelement-title"> Junior Golang Backend Developer </div>
+                                <div class="advanced-subelement-detail"> Full-time </div>
+                                <div class="advanced-subelement-detail"> Jan 2022 - Jun 2023 &#183; 1 year 6 months </div>        
                                 <div class="advanced-subelement-description">
                                     <ul class="advanced-subelement-list">
                                         <li class="advanced-subelement-element"> Developed Backend service for the IGO crowdfunding website </li>
@@ -138,7 +189,7 @@
                             <li class="advanced-sublist-element">
                                 <div class="advanced-subelement-title"> Intern Golang Backend Developer </div>
                                 <div class="advanced-subelement-detail"> Full-time </div>
-                                <div class="advanced-subelement-detail"> Nov 2021 - Dev 2021 &#183; 2 months </div>        
+                                <div class="advanced-subelement-detail"> Nov 2021 - Dec 2021 &#183; 2 months </div>        
                                 <div class="advanced-subelement-description">
                                     <ul class="advanced-subelement-list">
                                         <li class="advanced-subelement-element"> Programmed microservice using <i>Golang</i> Language </li>
@@ -187,16 +238,20 @@
                             <img src="images/icons/education/karazin.png" class="advanced-header-logo" id="karazin-logo">
                             <div class="advanced-header-content">
                                 <div class="advanced-title"> Karazin National University </div>
-                                <div class="advanced-subtitle"> Applied Mathematics Major, Freshman </div>
-                                <div class="advanced-subtitle"> GPA: 94/100 </div>
-                                <div class="advanced-detail"> Sep 2021 - Now &#183; ~2 years </div>
+                                <div class="advanced-subtitle"> Applied Mathematics Major, Bachelor </div>
+                                <div class="advanced-subtitle"> GPA: 96/100 </div>
+                                <div class="advanced-detail"> Sep 2021 - Now &#183; <par id="karazin-time">2 years 6 months</par> </div>
                                 <div class="advanced-detail"> Kharkiv, Ukraine </div>
                             </div>
                         </div>
                         <div class="advanced-element-description-box">
                             <div class="empty"></div>
                             <div class="advanced-element-description">
-                                Studying at one of the best Ukrainian national universities (top-1 according to QS), majoring in Applied Mathematics, School of Mathematics and Informatics. Taking classes in Linear Algebra, Analytical and Differential Geometry, Multivariable Calculus, Discrete Mathematics, Number Theory, etc.
+                                Studying at one of the best Ukrainian national universities (top-1 according to QS), majoring in Applied Mathematics, School of Mathematics and Informatics. Taking classes in Linear Algebra, Analytical and Differential Geometry, Real Analysis, Measure Theory, Functional Analysis etc.
+                                <br>
+                                <a href="https://github.com/ZamDimon/University-Homeworks" class="transcript-button">
+                                    <i class="em em-eyes" aria-role="presentation" aria-label="EYES"></i> View GitHub
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -293,11 +348,14 @@
                         </div>
                         <div class="advanced-element-description-box">
                             <div></div>
-                            <div class="language-description"> Completed <i>Das Nürnberger Haus</i> (official <i>Goethe Institute</i> partners) German courses </div>
+                            <div class="language-description"> Completed <i>Das Nürnberger Haus</i> (official <i>Goethe Institute</i> partner) German courses </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- JS Script -->
+        <script type='module' src="scripts/main/main.js"></script>
     </body>
 </html>

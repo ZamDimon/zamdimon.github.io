@@ -5,8 +5,8 @@
   font-weight: bold;
   text-align: center;
   margin-top: 30px;
-  -webkit-text-decoration: underline var(--color-variation1) 7px;
-          text-decoration: underline var(--color-variation1) 7px;
+  -webkit-text-decoration: underline var(--table-color-gradient) 7px;
+          text-decoration: underline var(--table-color-gradient) 7px;
 }
 
 .table-description {
@@ -55,7 +55,7 @@
 }
 .achievement-table .achievement-thead, .achievement-table-phone .achievement-thead {
   font-weight: bold;
-  background: var(--main-color-gradient);
+  background: var(--table-color-gradient);
   color: white;
   text-align: center;
   font-size: 1.25em;

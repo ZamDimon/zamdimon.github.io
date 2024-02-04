@@ -12,4 +12,16 @@ export class AchievementLevel {
     toString() {
         return `AchievementLevel.${this.title}`;
     }
+
+    /**
+     * Converts an int representation of the achievement level to the enum
+     * @param {int} value - value of the achievement level 
+     */
+    static fromInt(value) {
+        return {
+            1: AchievementLevel.International,
+            2: AchievementLevel.National,
+            3: AchievementLevel.Regional,
+        }[value] ?? AchievementLevel.Regional;
+    }
 }

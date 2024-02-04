@@ -42,4 +42,17 @@ export class AchievementResult {
     toString() {
         return `AchievementResult.${this.title}`;
     }
+
+    /**
+     * Converts an int representation of the achievement result to the enum
+     * @param {int} value - value of the achievement result 
+     */
+    static fromInt(value) {
+        return {
+            1: AchievementResult.GoldMedal,
+            2: AchievementResult.SilverMedal,
+            3: AchievementResult.BronzeMedal,
+            4: AchievementResult.HonorableMention,
+        }[value] ?? AchievementResult.HonorableMention;
+    }
 }
