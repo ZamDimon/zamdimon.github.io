@@ -1,0 +1,415 @@
+@import url("../main/main.css");
+
+.section-header {
+    margin: 0 15%;
+}
+
+.achievements-section {
+    // Defining the table header style
+    .table-header {
+        font-size: 3em;
+        margin: auto;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 30px;
+        text-decoration: underline var(--table-color-gradient) 7px;
+    }
+
+    // Description block above the table
+    .table-description {
+        font-size: 1.5em;
+        margin: auto;
+        padding: 10px 10% 0 10%;
+    }
+
+    // We do not display the table on non-mobile devices
+    .achievement-table-phone {
+        display: none;
+    }
+
+    // Defining widths of columns
+    .achievement-table {
+        .achievement {
+            width: 30%;
+        }
+        .year {
+            width: 10%;
+        }
+        .subject {
+            width: 20%;
+        }
+        .level {
+            width: 15%;
+        }
+        .place {
+            width: 19%;
+        }
+        .medal {
+            width: 6%;
+        }
+    }
+
+    // Defining the table style
+    .achievement-table, .achievement-table-phone {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 1.2em;
+        min-width: 400px;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+        // Margin settings
+        margin-top: 50px;
+        margin-left: 8%;
+        margin-right: 8%;
+
+        // Table header style
+        td {
+            padding: 20px 25px;
+        }
+
+        // Table header style
+        .achievement-thead {
+            font-weight: bold;
+            background: var(--table-color-gradient);
+            color: white;
+            text-align: center;
+            font-size: 1.25em;
+        }
+
+        .achievement-tbody {
+            color: var(--black-text-color);
+            text-align: center;
+            
+            // Adding bottom border to rows
+            tr {
+                border-bottom: 2px solid #949494;
+
+                // Adding bottom border to the last row
+                &:last-of-type {
+                    border-bottom: 5px solid var(--main-color);
+                }
+            }
+
+            // Adding alternating row colors
+            tr:nth-child(2n + 1) {
+                background-color: var(--background-color);
+            }
+
+            tr:nth-child(2n + 2) {
+                background-color: var(--darker-background-color);
+            }
+
+            // Making result title bold
+            .medal-title {
+                font-weight: bold;
+            }
+
+            .neutral {
+                font-weight: bold;
+                .neutral-medal-image {
+                    width: 100%;
+                    vertical-align: middle;
+                }
+            }
+
+            .bronze-medal {
+                background: var(--bronze-gradient);
+                font-weight: bold;
+
+                .bronze-medal-image {
+                    width: 100%;
+                    vertical-align: middle;
+                }
+            }
+
+            .silver-medal {
+                background: var(--silver-gradient);
+                font-weight: bold;
+
+                .silver-medal-image {
+                    width: 100%;
+                    vertical-align: middle;
+                }
+            }
+
+            .gold-medal {
+                background: var(--gold-gradient);
+                font-weight: bold;
+                
+                .gold-medal-image {
+                    width: 100%;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .achievements-section {
+        .section-header {
+            display: none;
+        }
+
+        .achievement-table {
+            display: none;
+        }
+
+        .achievement-table-phone {
+            display: table;
+            font-size: 1em;
+
+            padding: 0;
+            margin: auto;
+            margin-bottom: 30px;
+
+            .achievement-thead {
+                font-size: 1.05em;
+            }
+
+            .achievement-tbody {
+                tr {
+                    border-bottom: 10px solid var(--darker-background-color);
+                    
+                    .bronze-medal-phone {
+                        font-weight: bold;
+                        background: var(--bronze-gradient);
+                        margin: 5px;
+                        border-radius: 0.5em;
+                    }
+
+                    .silver-medal-phone {
+                        font-weight: bold;
+                        background: var(--silver-gradient);
+                        margin: 5px;
+                        border-radius: 0.5em;
+                    }
+
+                    .gold-medal-phone {
+                        font-weight: bold;
+                        background: var(--gold-gradient);
+                        margin: 5px;
+                        border-radius: 0.5em;
+                    }
+                }
+            }
+        }
+
+        .table-description {
+            font-size: 1.1em;
+            text-align: center;
+            margin-bottom: 20px;
+
+            padding: 0px 10px 0 10px;
+        }
+    }
+}
+
+// Projects section
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-bottom: 50px;
+
+    .project-menu {
+        background: white;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 0 1em 1em 0;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+
+        display: grid;
+        grid-template-rows: auto;
+        column-gap: 20px;
+
+        .project-image {
+            border-radius: 0.5em;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            grid-column: 1 / 2;
+            grid-row: 1 / 5;
+            justify-self: center;
+
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+        }
+
+        #jasu-research-image {
+            max-width: 95%;
+            max-height: 95%;
+        }
+
+        /*#inside-the-dark-image {
+            width: 100%;
+        }*/
+
+        .project-title {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+
+            background: var(--header-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+
+            justify-self: center;
+            text-align: center;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+        .project-description {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            font-size: 1.2em;
+        }
+
+        .project-links-section {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+
+            //flex-direction: row;
+            row-gap: 5px;
+            column-gap: 10px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+            justify-self: left bottom;
+
+            .project-link {
+                display: flex;
+                flex-direction: row;
+                column-gap: 10px;
+                padding: 5px;
+                border-radius: 1em;
+
+                max-width: 200px;
+                max-height: 40px;
+                
+                align-items: center;
+                justify-content: center;
+                
+                background: var(--darker-background-color);
+                color: var(--black-text-color);
+                transition-duration: 400ms;
+
+                img {
+                    width: 15%;
+                    justify-self: left;
+                }
+    
+                p {
+                    text-align: center;
+                    display: table-cell;
+                }
+            }
+
+            .project-link:hover {
+                background-color: var(--dark-background-color);
+                color: white;
+            }
+        }
+
+        .tags-section {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+
+            //justify-self: right;
+
+            .tags-list {
+                display: flex;
+                grid-template-columns: repeat(auto-fit, minmax(auto, 170px));
+                //flex-direction: row;
+                justify-self: right;
+                justify-content: end;
+
+                li {
+                    text-align: center;
+                    vertical-align: center;
+
+                    //max-width: 150px;
+                    
+                    margin: 7px;
+                    padding: 8px;
+                    border-radius: 1em;
+                    font-size: 1em;
+                    
+                    color: rgb(88, 88, 88);
+                    background: rgb(190, 190, 190);
+                }
+            }
+        }
+    }
+
+    /*.project-menu:nth-child(5n+1) {
+        border-left: solid var(--link-red) 8px;
+
+        .project-title {
+            text-decoration: underline var(--link-red) 7px;
+        }
+    }
+
+    .project-menu:nth-child(5n+2) {
+        border-left: solid var(--link-green) 8px;
+        .project-title {
+            text-decoration: underline var(--link-green) 7px;
+        }
+    }
+
+    .project-menu:nth-child(5n+3) {
+        border-left: solid var(--link-blue) 8px;
+        .project-title {
+            text-decoration: underline var(--link-blue) 7px;
+        }
+    }
+
+    .project-menu:nth-child(5n+4) {
+        border-left: solid var(--link-orange) 8px;
+        .project-title {
+            text-decoration: underline var(--link-orange) 7px;
+        }
+    }
+
+    .project-menu:nth-child(5n+5) {
+        border-left: solid var(--link-yellow) 8px;
+        .project-title {
+            text-decoration: underline var(--link-yellow) 7px;
+        }
+    }*/
+}
+
+@media only screen and (max-width: 1130px) {
+    .projects-section {
+        .project-menu {
+            .project-image {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+            }
+
+            .project-title {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+
+            .project-description {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+            }
+
+            .project-links-section { 
+                grid-column: 1 / 2;
+                grid-row: 5 / 6;
+            }
+
+            .tags-section {
+                grid-column: 1 / 2;
+                grid-row: 7 / 8;
+            }
+        }
+    }
+}

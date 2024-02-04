@@ -1,230 +1,202 @@
 <!DOCTYPE html>
+
+<!-- Including emoji support -->
+<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Zakharov Dmytro</title>
-        <link rel="icon" href="Images/Head/Webicon.png">
-        <link rel = "stylesheet" href = "CSS files/main-page/main-page.css">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+        <link rel="stylesheet" href="styles/main/main.css">
     </head>
     <body>
-        <div class = "navbar"> 
-            <nav class = "navbar-container">
-                <ul class = "navbar-list">
-                    <li><a href="#" class = "current"> Main </a> </li>
-                    <li><a href="Achievements.html" class = "navbar-list-element"> Achievements </a> </li>
-                    <li><a href="Projects.html" class = "navbar-list-element"> Projects </a> </li> 
+
+        <!-- Navbar section -->
+        <div class="navbar"> 
+            <nav class="navbar-container">
+                <ul class="navbar-list">
+                    <li><a href="#" class="current"> Main </a></li>
+                    <li><a href="papers.html" class="navbar-list-element"> Publications </a></li>
+                    <li><a href="extracurricular.html" class="navbar-list-element"> Extracurricular </a></li> 
                 </ul>
             </nav>  
         </div>
+        
+        <!-- About me header only for mobile apps -->
+        <h1 class="description-header-phone"> About me </h1>
 
-        <h1 class = "description-header-phone"> About me </h1>
-
-        <div class = "main-page">
-            <div class = "description"> 
-                <h1 class = "section-header"> About me </h1>
+        <!-- Main page -->
+        <div class="main-page">
+            <!-- About me section -->
+            <div class="description"> 
+                <h1 class="section-header"> About me </h1>
                 <p>
                     Welcome to my website! &#128075 
                 </p>
                 <p>
-                    I am a Blockchain Backend developer at <a href = "https://distributedlab.com/" id = "link-blue">Distributed Lab</a>, based in Ukraine. 
-                    I am also a finalist of the <a href = "https://www.ugs.foundation" id = "link-yellow">Ukraine Global Scholars</a> 501(c)(3) program and currently pursuing my 
-                    studies at <a href = "https://karazin.ua/" id = "link-red">Karazin National University</a>, where I major in Applied Mathematics. 
+                    I am a Blockchain Backend developer at <a href = "https://distributedlab.com/" class="blue">Distributed Lab</a>, based in Ukraine. 
+                    I am also a finalist of the <a href = "https://www.ugs.foundation" class="yellow">Ukraine Global Scholars</a> 501(c)(3) program and currently pursuing my 
+                    studies at <a href = "https://karazin.ua/" class="green">Karazin National University</a>, where I major in Applied Mathematics. 
                     My primary areas of interest revolve around Programming, encompassing web development,  AI/ML, game development, and mathematical modeling. 
                     I am also deeply passionate about Mathematics and Physics.
                 </p>
                 <p>
                     Throughout my career, I have gathered a wealth of achievements and skills, which I've documented on this website. Whether you have inquiries or simply want to get in touch, feel free to reach out to me. I'm more than happy to answer any questions you may have! &#128578
                 </p>
-
-                <div class="description-resume-box">
-                    <img src = "Images/Icons/Resume/resume.png" class = "resume-icon">
-                    <strong>Download a formal CV</strong>
-                </div>
             </div>
+            
+            <!-- Photo & Contacts block section -->
+            <div class="photo-block">
+                <!-- Photo frame -->
+                <par class="photo-name"> Dmytro Zakharov </par>
+                <img src="images/main/personal_photo.jpg" class="photo-image">
 
-            <div class = "photo-block">
-                <par class = "photo-name"> Dmytro Zakharov </par>
-                <img src = "Images/Main/Photo5.jpg" class = "photo-image">
-
-                <div class = "contacts-section">
+                <!-- Contacts section -->
+                <div class="contacts-section">
                     <par>Contacts:</par>
-
+                    <div class="email-text">zamdmytro@gmail.com</div>
                     <ul>
-                        <li class = "contact-option">
-                            <img src = "Images/Icons/Contacts/gmail_icon.svg" class = "contact-image" id="gmail">
-                            zamdmytro@gmail.com
+                        <li class="contact-option" id="contact-linkedin">
+                            <img src="images/icons/contacts/linkedin.svg" class="contact-image" id="linkedin"> 
                         </li>
-                        <li class = "contact-option">
-                            <img src = "Images/Icons/Contacts/linkedin_icon.svg" class = "contact-image" id="linkedin"> 
-                            zamdimon
+                        <li class="contact-option" id="contact-github">
+                            <img src="images/icons/contacts/github.svg" class="contact-image" id="github">
                         </li>
-                        <li class = "contact-option">
-                            <img src = "Images/Projects/Source icons/github.svg" class = "contact-image" id="github">
-                            ZamDimon
+                        <li class="contact-option" id="contact-google-scholar">
+                            <img src = "images/icons/contacts/google-scholar.svg" class="contact-image" id="google-scholar">
                         </li>
-                        <li class = "contact-option">
-                            <img src = "Images/Icons/Contacts/telegram_icon.svg" class = "contact-image" id="telegram">
-                            @ZamDimon
+                        <li class="contact-option" id="contact-research-gate">
+                            <img src = "images/icons/contacts/researchgate.svg" class="contact-image" id="research-gate">
                         </li>
                     </ul>
 
-                    <script src="Scripts/contacts-buttons.js"> </script>
+                    <script src="scripts/main/contacts.js"></script>
                 </div>
             </div>
         </div>
 
+        <!-- Skills section -->
         <div class="skills-section">           
-            <h1 class = "section-header"> My skills </h1>
-            
-            <div class="skills-icons-section">
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/golang_icon.svg"> 
-                    <p class = "skill-card-header">Golang</p>
+            <h1 class="section-header"> Skills: </h1>
 
-                    <p class="skill-card-description">
-                        <b>1.5 years</b> of commerical experience as a Backend developer at <i>Distributed Lab</i>. 
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/postgresql_icon.svg" class = "Postgre"> 
-                    <p class = "skill-card-header">PostgreSQL</p>
-
-                    <p class="skill-card-description">
-                        Primary database I used as a backend developer at <i>Distributed Lab</i>.
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/python_icon.svg"> <br>
-                    <p class = "skill-card-header"> Python </p>
-
-                    <p class="skill-card-description">
-                        <b>2 years</b> of experience for AI/ML researches and mathematical computations/analysis.  
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/latex_icon.svg"> 
-                    <p class = "skill-card-header">Latex</p>
-
-                    <p class="skill-card-description">
-                        Constantly use for homework assignments and writing research papers.
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/mathematica_icon.svg"> <br> 
-                    <p class = "skill-card-header">Wolfram Mathematica</p>
-
-                    <p class="skill-card-description">
-                        <b>4 years</b> of experience while preparing for Olympiads, conducting the research and creating projects.
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/Csharp_icon.svg"> <br>
-                    <p class = "skill-card-header"> C# </p>
-
-                    <p class="skill-card-description">
-                        <b>6 years</b> of <b>uncommerical</b> experience (as a hobby) in <i>Unity</i>, <i>Windows Forms</i> and <i>XNA</i> using this language.  
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/Cplus_icon.svg"> <br>
-                    <p class = "skill-card-header"> C++ </p>
-
-                    <p class="skill-card-description">
-                        <b>4 years</b> of using for competitive programming competitions, learned <i>OpenGL</i> on C++.
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/html_icon.svg"> <br>
-                    <p class = "skill-card-header"> HTML and CSS </p>
-
-                    <p class="skill-card-description">
-                        Used it just for creating this website, but I'm looking forward to exploring it further. &#128579
-                    </p>
-                </div>
-                
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/docker_icon.svg" class = "Docker"> 
-                    <p class = "skill-card-header">Docker</p>
-
-                    <p class="skill-card-description">
-                        Used for local setting up web projects. 
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/unity_icon.svg"> <br> 
-                    <p class = "skill-card-header"> Unity </p>
-
-                    <p class="skill-card-description">
-                        <b>6 years</b> of uncommercial experience. Made numerous game projects, the most substantial one is <a href="https://www.youtube.com/watch?v=A6j2XfqPh4k&feature=youtu.be" id="link-orange">Inside the dark</a>.
-                    </p>
-                </div>
-
-                <div class="skill-card color-border">
-                    <img src="Images/Icons/Skills/XNA_icon.svg" class = "XNA"> <br>
-                    <p class = "skill-card-header"> XNA </p>
-
-                    <p class="skill-card-description">
-                        Used for small games and computer modelling projects.
-                    </p>
-                </div>
-            </div>
+            <ul class="skills-list">
+                <li class="skills-list-element"> 
+                    <div class="programming-languages">
+                        <h3 class="skill-header"> Languages </h3>
+                        <ul class="badges-list">
+                            <li class="badge"><img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/> </li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Rust-black?style=for-the-badge&logo=rust&logoColor=#E57324"/> </li>
+                            <li class="badge"><img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"/> </li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"/> </li>
+                            <li class="badge"><img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"/> </li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Fortran-%23734F96.svg?style=for-the-badge&logo=fortran&logoColor=white"></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="skills-list-element"> 
+                    <div class="backend">
+                        <h3 class="skill-header"> Backend </h3>
+                        <ul class="badges-list">
+                            <li class="badge"><img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/redis-%23DD0031.svg?&style=for-the-badge&logo=redis&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white"></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"></li> 
+                            <li class="badge"><img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/> </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="skills-list-element"> 
+                    <div class="programming-languages">
+                        <h3 class="skill-header"> Machine Learning </h3>
+                        <ul class="badges-list">
+                            <li class="badge"><img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Keras-FF0000?style=for-the-badge&logo=keras&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white"></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black"></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/SciPy-654FF0?style=for-the-badge&logo=SciPy&logoColor=white"/></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="skills-list-element"> 
+                    <div class="programming-languages">
+                        <h3 class="skill-header"> Academics </h3>
+                        <ul class="badges-list">
+                            <li class="badge"><img src="https://img.shields.io/badge/Wolfram-DD1100?&style=for-the-badge&logo=Wolfram&logoColor=white"></li>
+                            <li class="badge"><img src="https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=LaTeX&logoColor=white"> </li>
+                            <li class="badge"><img src="https://img.shields.io/badge/Overleaf-47A141?style=for-the-badge&logo=Overleaf&logoColor=white"></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
         
+        <!-- Work experience section -->
         <div class="work-section">           
-            <h1 class = "section-header"> Work experience </h1>
+            <h1 class="section-header"> Work experience </h1>
             
             <div class="advanced-list">
-                <div class = "advanced-list-element color-border distributed-lab">
-                    <div class = "advanced-element-header">
-                        <img src="Images/Icons/Work/dl_logo.png" class = "advanced-header-logo" id="dl-logo">
-                        <div class = "advanced-header-content">
-                            <div class="advanced-title">Distributed Lab</div>
-                            <div class="advanced-detail"> 1.5 years </div>
-                            <div class="advanced-detail">Kharkiv/Kyiv, Ukraine</div>
+                <div class="advanced-list-element color-border distributed-lab">
+                    <div class="advanced-element-header">
+                        <img src="images/icons/work/dl.png" class="advanced-header-logo" id="dl-logo">
+                        <div class="advanced-header-content">
+                            <div class="advanced-title"> Distributed Lab </div>
+                            <div class="advanced-detail"> <par id="dl-time">2 years 4 months</par> </div>
+                            <div class="advanced-detail"> Kharkiv/Kyiv, Ukraine </div>
                         </div>
                     </div>
 
-                    <div class = "advanced-element-sublist">
-                        <div class = "void"></div>
-                        <ul class = "advanced-sublist-content">
-                            <li class = "advanced-sublist-element">
-                                <div class = "advanced-subelement-title">Junior/Middle Golang Backend Developer</div>
+                    <div class="advanced-element-sublist">
+                        <div class="void"></div>
+                        <ul class="advanced-sublist-content">
+                            <li class="advanced-sublist-element">
+                                <div class="advanced-subelement-title"> Middle Rust Developer & Machine Learning Researcher </div>
                                 <div class="advanced-subelement-detail"> Full-time </div>
-                                <div class="advanced-subelement-detail">Jan 2022 - Present &#183; 1 year 4 months</div>        
+                                <div class="advanced-subelement-detail"> Jun 2023 - Present &#183; <par id="dl-time-research">9 months</par> </div>        
                                 <div class="advanced-subelement-description">
                                     <ul class="advanced-subelement-list">
-                                        <li class = "advanced-subelement-element">Developed Backend service for the IGO crowdfunding website</li>
-                                        <li class = "advanced-subelement-element">Developed Backend responsible for Decentralized marketplace statistics processing (<a href="https://info.dex.moonrabbit.com/home" id="link-blue">MoonRabbit DEX)</a></li>
-                                        <li class = "advanced-subelement-element">Developed Backend service for the P2E game with Solidity contracts integration</li>
-                                        <li class = "advanced-subelement-element">Implemented piece of cross-chain bridge functionality on the <i>Pact</i> programming language</li>
-                                        <li class = "advanced-subelement-element">Implemented document aggregator service for a <a href="https://safere.com/" id="link-orange">SafeRE</a> project that downloads and sorts all account transactions and operations on the private blockchain regardless of timeframe specified</li>
-                                        <li class = "advanced-subelement-element">Worked on an <a href="https://bookrypto.com/bookshelf" id="link-green">open-source tokenized books store</a> project, now its backend team reviewer</li>
-                                        <li class = "advanced-subelement-element">Working on a backend notifications service for a DAO platform featuring integration with <i>Telegram</i>, <i>Discord</i>, <i>Slack</i>, emails, and web pushes.</li>
+                                        <li class="advanced-subelement-element"> Integrated KYC and deposits/withdrawals functionality for an investing platform </li>
+                                        <li class="advanced-subelement-element"> Developed 3D Physics computer simulation in Rust (Bevy game engine)</a> </li>
+                                        <li class="advanced-subelement-element"> Researching Neural Network applications in Blockchain & Cybersecurity</a> </li>
                                     </ul>
                                 </div>
                             </li>
 
-                            <li class = "advanced-sublist-element">
-                                <div class = "advanced-subelement-title">Intern Golang Backend Developer</div>
+                            <li class="advanced-sublist-element">
+                                <div class="advanced-subelement-title"> Junior Golang Backend Developer </div>
                                 <div class="advanced-subelement-detail"> Full-time </div>
-                                <div class="advanced-subelement-detail">Nov 2021 - Dev 2021 &#183; 2 months</div>        
+                                <div class="advanced-subelement-detail"> Jan 2022 - Jun 2023 &#183; 1 year 6 months </div>        
                                 <div class="advanced-subelement-description">
                                     <ul class="advanced-subelement-list">
-                                        <li class = "advanced-subelement-element">Programmed microservice using <i>Golang</i> Language</li>
-                                        <li class = "advanced-subelement-element">Studied how to work with databases (specifically, <i>PSQL</i>)</li>
-                                        <li class = "advanced-subelement-element">Studied <i>Docker</i> and <i>Docker Compose</i></li>
-                                        <li class = "advanced-subelement-element">Studied basics of Blockchain and Cryptocurrency</li>
-                                        <li class = "advanced-subelement-element">Worked with <i>Linux</i> and <i>Git</i> (<i>GitLab</i> & <i>GitHub</i>)</li>
+                                        <li class="advanced-subelement-element"> Developed Backend service for the IGO crowdfunding website </li>
+                                        <li class="advanced-subelement-element"> Developed Backend responsible for Decentralized marketplace statistics processing (<a href="https://info.dex.moonrabbit.com/home" class="blue">MoonRabbit DEX)</a> </li>
+                                        <li class="advanced-subelement-element"> Developed Backend service for the P2E game with Solidity contracts integration</li>
+                                        <li class="advanced-subelement-element"> Implemented piece of cross-chain bridge functionality on the <i>Pact</i> programming language </li>
+                                        <li class="advanced-subelement-element"> Implemented document aggregator service for a <a href="https://safere.com/" class="orange">SafeRE</a> project that downloads and sorts all account transactions and operations on the private blockchain regardless of timeframe specified </li>
+                                        <li class="advanced-subelement-element"> Worked on an <a href="https://bookrypto.com/bookshelf" class="green">open-source tokenized books store</a> project, now its backend team reviewer </li>
+                                        <li class="advanced-subelement-element"> Working on a backend notifications service for a DAO platform featuring integration with <i>Telegram</i>, <i>Discord</i>, <i>Slack</i>, emails, and web pushes. </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="advanced-sublist-element">
+                                <div class="advanced-subelement-title"> Intern Golang Backend Developer </div>
+                                <div class="advanced-subelement-detail"> Full-time </div>
+                                <div class="advanced-subelement-detail"> Nov 2021 - Dec 2021 &#183; 2 months </div>        
+                                <div class="advanced-subelement-description">
+                                    <ul class="advanced-subelement-list">
+                                        <li class="advanced-subelement-element"> Programmed microservice using <i>Golang</i> Language </li>
+                                        <li class="advanced-subelement-element"> Studied how to work with databases (specifically, <i>PSQL</i>) </li>
+                                        <li class="advanced-subelement-element"> Studied <i>Docker</i> and <i>Docker Compose</i> </li>
+                                        <li class="advanced-subelement-element"> Studied basics of Blockchain and Cryptocurrency </li>
+                                        <li class="advanced-subelement-element"> Worked with <i>Linux</i> and <i>Git</i> (<i>GitLab</i> & <i>GitHub</i>) </li>
                                     </ul>
                                 </div>
                             </li>
@@ -232,14 +204,14 @@
                     </div>
                 </div>
                 <div></div><div></div>
-                <div class = "advanced-list-element color-border ugs">
-                    <div class = "advanced-element-header">
-                        <img src="Images/Icons/Work/ugs_logo.jpg" class = "advanced-header-logo" id="ugs-logo">
-                        <div class = "advanced-header-content">
-                            <div class = "advanced-title">Ukraine Global Scholars</div>
-                            <div class = "advanced-subtitle">Finalist 2021, Math Test Creation Lead</div>
+                <div class="advanced-list-element color-border ugs">
+                    <div class="advanced-element-header">
+                        <img src="images/icons/work/ugs.jpg" class = "advanced-header-logo" id="ugs-logo">
+                        <div class="advanced-header-content">
+                            <div class="advanced-title"> Ukraine Global Scholars </div>
+                            <div class="advanced-subtitle"> Finalist 2021, Math Test Creation Lead </div>
                             <div class="advanced-detail"> Jun 2021 - Nov 2021 &#183; 6 months </div>
-                            <div class="advanced-detail"> Ukraine</div>
+                            <div class="advanced-detail"> Ukraine </div>
                         </div>
                     </div>
                     <div class="advanced-element-description-box">
@@ -253,36 +225,42 @@
             </div>
         </div>
 
-        <div class = "education-and-language">
+        <!-- Education and language section -->
+        <div class="education-and-language">
+            <!-- Education section -->
             <div class="education-section">
-                <h1 class = "section-header"> Education </h1>
+                <h1 class="section-header"> Education </h1>
                     
                 <div class="advanced-list">
                     <div></div>
-                    <div class = "advanced-list-element color-border karazin-university">
-                        <div class = "advanced-element-header">
-                            <img src="Images/Icons/Education/karazin-logo.png" class = "advanced-header-logo" id = "karazin-logo">
-                            <div class = "advanced-header-content">
-                                <div class = "advanced-title">Karazin National University</div>
-                                <div class = "advanced-subtitle">Applied Mathematics Major, Freshman</div>
-                                <div class="advanced-subtitle"> GPA: 94/100 </div>
-                                <div class="advanced-detail"> Sep 2021 - Now &#183; ~2 years </div>
+                    <div class="advanced-list-element color-border karazin-university">
+                        <div class="advanced-element-header">
+                            <img src="images/icons/education/karazin.png" class="advanced-header-logo" id="karazin-logo">
+                            <div class="advanced-header-content">
+                                <div class="advanced-title"> Karazin National University </div>
+                                <div class="advanced-subtitle"> Applied Mathematics Major, Bachelor </div>
+                                <div class="advanced-subtitle"> GPA: 96/100 </div>
+                                <div class="advanced-detail"> Sep 2021 - Now &#183; <par id="karazin-time">2 years 6 months</par> </div>
                                 <div class="advanced-detail"> Kharkiv, Ukraine </div>
                             </div>
                         </div>
                         <div class="advanced-element-description-box">
                             <div class="empty"></div>
                             <div class="advanced-element-description">
-                                Studying at one of the best Ukrainian national universities (top-1 according to QS), majoring in Applied Mathematics, School of Mathematics and Informatics. Taking classes in Linear Algebra, Analytical and Differential Geometry, Multivariable Calculus, Discrete Mathematics, Number Theory, etc.
+                                Studying at one of the best Ukrainian national universities (top-1 according to QS), majoring in Applied Mathematics, School of Mathematics and Informatics. Taking classes in Linear Algebra, Analytical and Differential Geometry, Real Analysis, Measure Theory, Functional Analysis etc.
+                                <br>
+                                <a href="https://github.com/ZamDimon/University-Homeworks" class="transcript-button">
+                                    <i class="em em-eyes" aria-role="presentation" aria-label="EYES"></i> View GitHub
+                                </a>
                             </div>
                         </div>
                     </div>
     
-                    <div class = "advanced-list-element color-border kpml">
-                        <div class = "advanced-element-header">
-                            <img src="Images/Icons/Education/kpml-logo.png" class = "advanced-header-logo" id = "kpml-logo">
-                            <div class = "advanced-header-content">
-                                <div class = "advanced-title">Kharkiv Physics & Mathematics Lyceum</div>
+                    <div class="advanced-list-element color-border kpml">
+                        <div class="advanced-element-header">
+                            <img src="images/icons/education/kpml.png" class="advanced-header-logo" id="kpml-logo">
+                            <div class="advanced-header-content">
+                                <div class="advanced-title">Kharkiv Physics & Mathematics Lyceum</div>
                                 <div class="advanced-subtitle"> GPA: 11.8/12 </div>
                                 <div class="advanced-detail"> Sep 2014 - Jun 2021 &#183; 7 years </div>
                                 <div class="advanced-detail"> Kharkiv, Ukraine </div>
@@ -298,31 +276,23 @@
                 </div>
             </div>
 
-            <div class = "languages">
-                <h1 class = "section-header"> Languages & Tests </h1>
-                <div class = "advanced-list">
-                    <div class = "advanced-list-element color-border ukrainian">
+            <!-- Languages section -->
+            <div class="languages">
+                <h1 class="section-header"> Languages & Tests </h1>
+                <div class="advanced-list">
+                    <div class="advanced-list-element color-border ukrainian">
                         <div class="advanced-element-header">
-                            <img src="Images/Icons/Languages/ua.svg" class="advanced-header-logo" id="flag">
+                            <img src="images/icons/languages/ua.svg" class="advanced-header-logo" id="flag">
                             <div class = "advanced-header-content">
                                 <div class="advanced-title"> Ukrainian </div>
                                 <div class="advanced-detail"> Native speaker </div>
                             </div>
                         </div>
                     </div>
-                    <div class = "advanced-list-element color-border">
-                        <div class="advanced-element-header russian">
-                            <img src="Images/Icons/Languages/ru.svg" class="advanced-header-logo" id="flag">
-                            <div class = "advanced-header-content">
-                                <div class="advanced-title"> Russian </div>
-                                <div class="advanced-detail"> Native speaker (unfortunately) </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "advanced-list-element color-border english">
+                    <div class="advanced-list-element color-border english">
                         <div class="advanced-element-header">
-                            <img src="Images/Icons/Languages/us.svg" class="advanced-header-logo" id="flag">
-                            <div class = "advanced-header-content"> 
+                            <img src="images/icons/languages/us.svg" class="advanced-header-logo" id="flag">
+                            <div class="advanced-header-content"> 
                                 <div class="advanced-title"> English </div>
                                 <div class="advanced-detail"> CEFR level: <b>C1-C2</b> </div>
                             </div>
@@ -330,13 +300,13 @@
                         
                         <div class="advanced-element-description-box">
                             <div></div>
-                            <div class = "test-section">
-                                <ul class = "tests">
+                            <div class="test-section">
+                                <ul class="tests">
                                     <li class="test">
-                                        <img src="Images/Icons/Tests/toefl-logo.svg" class = "toefl-logo">
-                                        <div class = "toefl-score">
+                                        <img src="images/icons/tests/toefl.svg" class="toefl-logo">
+                                        <div class="toefl-score">
                                             <div class="score-bar">
-                                                <div class = "main-score">TOEFL</div>
+                                                <div class="main-score">TOEFL</div>
                                                 <div class="toefl-score-bar">113/120</div>
                                             </div>
                                             <ul class="toefl-sections">
@@ -349,10 +319,10 @@
                                         </div>
                                     </li>
                                     <li class="test">
-                                        <img src="Images/Icons/Tests/sat-logo.png" class = "sat-logo">
-                                        <ul class = "sat-score">
+                                        <img src="images/icons/tests/sat.png" class="sat-logo">
+                                        <ul class="sat-score">
                                             <div class="score-bar">
-                                                <div class = "main-score">SAT</div>
+                                                <div class="main-score">SAT</div>
                                                 <div class="sat-score-bar">1500/1600</div>
                                             </div>
                                             <ul class="sat-sections">
@@ -368,21 +338,24 @@
                         </div>
                     </div>
 
-                    <div class = "advanced-list-element color-border german">
+                    <div class="advanced-list-element color-border german">
                         <div class="advanced-element-header">
                             <img src="Images/Icons/Languages/de.svg" class="advanced-header-logo" id="flag">
-                            <div class = "advanced-header-content">
+                            <div class="advanced-header-content">
                                 <div class="advanced-title"> German </div>
                                 <div class="advanced-detail"> CEFR Level: <b>B2</b> </div>
                             </div>
                         </div>
                         <div class="advanced-element-description-box">
                             <div></div>
-                            <div class="language-description">Completed <i>Das Nürnberger Haus</i> (official <i>Goethe Institute</i> partners) German courses</div>
+                            <div class="language-description"> Completed <i>Das Nürnberger Haus</i> (official <i>Goethe Institute</i> partner) German courses </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- JS Script -->
+        <script type='module' src="scripts/main/main.js"></script>
     </body>
 </html>

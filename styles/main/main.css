@@ -1,0 +1,469 @@
+@charset "UTF-8";
+@import url("../common/common.css");
+.section-header {
+  font-size: 2em;
+  text-align: center;
+  border-bottom: 4px solid var(--darker-background-color);
+  background: var(--header-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.advanced-list .advanced-list-element {
+  margin-bottom: 1.5em;
+  border-radius: 1em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  padding: 10px;
+}
+.advanced-list .advanced-list-element .advanced-element-header {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin-bottom: 0.2em;
+}
+.advanced-list .advanced-list-element .advanced-element-header .advanced-header-logo {
+  margin: 0 auto;
+  width: 100%;
+  align-self: center;
+}
+.advanced-list .advanced-list-element .advanced-element-header .advanced-header-content .advanced-title {
+  margin: 0;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.advanced-list .advanced-list-element .advanced-element-header .advanced-header-content .advanced-subtitle {
+  margin: 0;
+  font-size: 1.25em;
+  font-style: italic;
+}
+.advanced-list .advanced-list-element .advanced-element-header .advanced-header-content .advanced-detail {
+  margin: 0;
+  font-size: 1.15em;
+  color: var(--neutral-text-color);
+}
+.advanced-list .advanced-list-element .advanced-element-sublist {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-content {
+  margin-bottom: 0.6em;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-content .advanced-subelement-title {
+  margin: 0;
+  font-size: 1.35em;
+  font-weight: bold;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-content .advanced-subelement-detail {
+  color: var(--neutral-text-color);
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-content .advanced-subelement-description {
+  font-size: 1.15em;
+  margin-top: 0.2em;
+  margin-left: 0.5em;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-content .advanced-subelement-description .advanced-subelement-list .advanced-subelement-element:before {
+  content: "— ";
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-element {
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 1.5em;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-element:last-child {
+  padding-bottom: 20px;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-element:after {
+  content: "•";
+  font-size: 2.5em;
+  color: rgb(200, 200, 200);
+  position: absolute;
+  left: -25px;
+  top: -14px;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-element:before {
+  content: "";
+  position: absolute;
+  left: -17.5px;
+  border-left: 2px solid rgb(200, 200, 200);
+  height: 100%;
+  width: 1px;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-element:first-child:before {
+  top: 20px;
+}
+.advanced-list .advanced-list-element .advanced-element-sublist .advanced-sublist-element:last-child:before {
+  height: 20px;
+}
+.advanced-list .advanced-list-element .advanced-element-description-box {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+.advanced-list .advanced-list-element .advanced-element-description-box .advanced-element-description {
+  font-size: 1.15em;
+}
+.advanced-list .advanced-list-element .advanced-element-description-box .advanced-element-description .transcript-button {
+  position: relative;
+  top: 3px;
+}
+
+.description-header-phone {
+  display: none;
+  margin: 10px 10% 20px 10%;
+  font-size: 2em;
+  text-align: center;
+  border-bottom: 4px solid var(--darker-background-color);
+  background: var(--header-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-page {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.main-page .description {
+  margin: 20px 0 0 10%;
+  font-size: 1.3em;
+}
+.main-page .description p {
+  padding: 0;
+  margin: 20px;
+  text-indent: 25px;
+}
+.main-page .photo-block {
+  text-align: center;
+  min-width: 350px;
+  max-width: 350px;
+  margin: 10px 10% 0 50px;
+  padding: 20px;
+  border-radius: 1em;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.main-page .photo-block .photo-name {
+  font-weight: bold;
+  font-size: 1.8em;
+  background: var(--header-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main-page .photo-block .photo-image {
+  margin: 10px 0 0 0;
+  width: 80%;
+  border-radius: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.main-page .photo-block .contacts-section {
+  display: flex;
+  flex-direction: column;
+}
+.main-page .photo-block .contacts-section .email-text {
+  font-family: monospace;
+  font-size: 1.3em;
+}
+.main-page .photo-block .contacts-section ul {
+  text-align: center;
+  padding-top: 10px;
+}
+.main-page .photo-block .contacts-section li {
+  display: inline;
+  align-items: center;
+  margin: 3px 0 3px 0;
+  padding-left: 15px;
+}
+.main-page .photo-block .contacts-section par {
+  padding-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-text-decoration: underline var(--color-variation1) 7px;
+          text-decoration: underline var(--color-variation1) 7px;
+  margin: 0;
+}
+.main-page .photo-block .contacts-section .contact-option {
+  transition-duration: 450ms;
+  cursor: pointer;
+}
+.main-page .photo-block .contacts-section .contact-option .contact-image {
+  width: 8%;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+.main-page .photo-block .contacts-section .contact-option:hover {
+  size: 1.1em;
+}
+
+.skills-section {
+  margin: 0 16% 0 16%;
+}
+.skills-section .skills-list {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 5px;
+}
+.skills-section .skills-list .skill-header {
+  text-align: center;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+.skills-section .skills-list .skills-list-element {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 1em;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.skills-section .skills-list .badges-list {
+  display: flex;
+  flex-shrink: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.skills-section .skills-list .badges-list .badge {
+  display: inline;
+  margin: 0px 5px 0px 5px;
+  margin-bottom: 0.3em;
+}
+
+.work-section {
+  margin: 0 16% 0 16%;
+}
+.work-section .color-border {
+  border-left-width: 8px;
+}
+.work-section #dl-logo {
+  width: 85%;
+}
+.work-section #ugs-logo {
+  width: 80%;
+}
+.work-section .distributed-lab {
+  padding: 0;
+  padding-top: 20px;
+}
+.work-section .ugs {
+  padding: 20px;
+}
+
+.test-section .tests .test {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  margin-bottom: 0.3em;
+}
+.test-section .tests .test .toefl-logo {
+  width: 100%;
+  margin-top: 50%;
+}
+.test-section .tests .test .sat-logo {
+  width: 100%;
+}
+.test-section .tests .test .toefl-score {
+  margin-left: 0.4em;
+  font-size: 1.2em;
+  box-sizing: border-box;
+}
+.test-section .tests .test .toefl-score .score-bar {
+  display: grid;
+  grid-template-columns: 20% auto;
+  width: 100%;
+  background-color: rgb(219, 219, 219);
+  border-radius: 10px 0px 0px 10px;
+}
+.test-section .tests .test .toefl-score .score-bar .main-score {
+  background-color: var(--darker-main-color);
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px;
+  border-radius: 10px 0px 0px 10px;
+}
+.test-section .tests .test .toefl-score .score-bar .toefl-score-bar {
+  background-color: var(--main-color);
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: right;
+  color: white;
+  width: 93%;
+  padding: 6px;
+}
+.test-section .tests .test .toefl-score .toefl-sections {
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+}
+.test-section .tests .test .toefl-score .toefl-sections li {
+  font-size: 0.9em;
+  color: rgb(73, 73, 73);
+  margin-left: 1.5em;
+}
+.test-section .tests .test .toefl-score .toefl-sections .total-score {
+  display: none;
+}
+.test-section .tests .test .sat-score {
+  margin-left: 0.4em;
+  font-size: 1.2em;
+}
+.test-section .tests .test .sat-score .score-bar {
+  display: grid;
+  grid-template-columns: 20% auto;
+  width: 100%;
+  background-color: rgb(219, 219, 219);
+  border-radius: 10px 0px 0px 10px;
+}
+.test-section .tests .test .sat-score .score-bar .main-score {
+  background-color: var(--darker-main-color);
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px;
+  border-radius: 10px 0px 0px 10px;
+}
+.test-section .tests .test .sat-score .score-bar .sat-score-bar {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: right;
+  color: white;
+  width: 90%;
+  background-color: var(--main-color);
+  padding: 6px;
+}
+.test-section .tests .test .sat-score .sat-sections {
+  margin-top: 0.3em;
+}
+.test-section .tests .test .sat-score .sat-sections li {
+  font-size: 0.9em;
+  color: rgb(73, 73, 73);
+  margin-left: 1.5em;
+}
+.test-section .tests .test .sat-score .sat-sections .total-score {
+  display: none;
+}
+
+.education-and-language {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.education-and-language .languages {
+  margin: 0 10% 0 10%;
+}
+.education-and-language .languages .advanced-list-element {
+  margin-bottom: 0.5em;
+}
+.education-and-language .languages .color-border {
+  border-left-width: 8px;
+}
+.education-and-language .languages #flag {
+  width: 80%;
+}
+.education-and-language .education-section {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.education-and-language .education-section .advanced-element-header {
+  grid-template-columns: 20% 80%;
+}
+.education-and-language .education-section .advanced-element-header #kpml-logo {
+  width: 80%;
+}
+.education-and-language .education-section .color-border {
+  border-left-width: 8px;
+}
+.education-and-language .education-section .advanced-element-description-box {
+  grid-template-columns: 20% 80%;
+}
+
+@media only screen and (max-width: 1130px) {
+  .description-header-phone {
+    display: block;
+  }
+  .main-page {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .main-page .photo-block {
+    order: -1;
+    margin: auto;
+  }
+  .main-page .description {
+    order: 9;
+    font-size: 1.1em;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .main-page .description .description-header {
+    display: none;
+  }
+  .skills-section .skill-header {
+    text-align: left;
+  }
+  .skills-section .skills-list .skills-list-element {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 1em;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(17, 255, 238, 0);
+    background-color: rgba(17, 255, 238, 0);
+  }
+  .education-and-language {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header {
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header .advanced-header-logo {
+    margin-bottom: 10px;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header #dl-logo {
+    width: 40%;
+    margin-bottom: 0px;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header #ugs-logo {
+    width: 20%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header #karazin-logo {
+    width: 50%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header #kpml-logo {
+    width: 50%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header #flag {
+    width: 20%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-sublist {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-right: 10px;
+  }
+  .work-section {
+    margin: 0 8% 0 8%;
+  }
+  .test-section .tests .test .toefl-score .score-bar {
+    display: none;
+  }
+  .test-section .tests .test .toefl-score .toefl-sections .total-score {
+    display: inline;
+  }
+  .test-section .tests .test .sat-score .score-bar {
+    display: none;
+  }
+  .test-section .tests .test .sat-score .sat-sections .total-score {
+    display: inline;
+  }
+}/*# sourceMappingURL=main.css.map */
