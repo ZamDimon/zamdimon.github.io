@@ -410,6 +410,14 @@
   .skills-section .skill-header {
     text-align: left;
   }
+  .skills-section .skills-list .skills-list-element {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 1em;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(17, 255, 238, 0);
+    background-color: rgba(17, 255, 238, 0);
+  }
   .education-and-language {
     display: grid;
     grid-template-columns: 100%;

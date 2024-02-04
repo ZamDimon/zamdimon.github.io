@@ -486,6 +486,17 @@
         .skill-header {
             text-align: left;
         }
+
+        .skills-list {
+            .skills-list-element {
+                margin: 5px;
+                padding: 5px;
+                border-radius: 1em;
+                background-color: white;
+                box-shadow: 0 0 20px #1fe0;
+                background-color: #1fe0;
+            }
+        }
     }
 
     .education-and-language {
