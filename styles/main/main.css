@@ -197,6 +197,12 @@
 .main-page .photo-block .contacts-section .contact-option:hover {
   size: 1.1em;
 }
+.main-page .photo-block .contacts-section .resume-text {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-top: 10px;
+}
 
 .skills-section {
   margin: 0 16% 0 16%;
