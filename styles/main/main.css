@@ -384,6 +384,9 @@
 .education-and-language .education-section .advanced-element-header #kpml-logo {
   width: 80%;
 }
+.education-and-language .education-section .advanced-element-header #kse-logo {
+  width: 75%;
+}
 .education-and-language .education-section .color-border {
   border-left-width: 8px;
 }
@@ -445,6 +448,9 @@
   }
   .advanced-list .advanced-list-element .advanced-element-header #karazin-logo {
     width: 50%;
+  }
+  .advanced-list .advanced-list-element .advanced-element-header #kse-logo {
+    width: 40%;
   }
   .advanced-list .advanced-list-element .advanced-element-header #kpml-logo {
     width: 50%;
