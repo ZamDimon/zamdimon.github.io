@@ -32,7 +32,7 @@
         li {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start; /* Aligns items to the top */
+            align-items: flex-start;
             gap: 20px;
             padding: 10px 5px;
             border-bottom: 1px solid #f0f0f0;
@@ -60,14 +60,12 @@
             font-size: 0.95em;
         }
 
-        /* Rule for regular descriptions (no background) */
         .list-item-description {
             margin: 4px 0 0 0;
             color: #555;
             font-size: 0.95em;
         }
         
-        /* Rule for descriptions and abstracts that need a gray background */
         .list-item-description.with-bg,
         .list-item-abstract.with-bg {
             background-color: #f8f9fa;
@@ -84,7 +82,7 @@
             font-family: monospace;
             font-size: 1.1em;
             white-space: nowrap;
-            padding-top: 2px; /* Aligns links nicely with the title */
+            padding-top: 2px;
         }
     }
 }
@@ -104,7 +102,7 @@
         }
 
         .compact-list .list-item-links {
-            padding-top: 0; /* Reset padding for mobile */
+            padding-top: 0;
         }
     }
 }
