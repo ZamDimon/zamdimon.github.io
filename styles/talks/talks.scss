@@ -1,0 +1,108 @@
+@import url("../main/main.css");
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    margin: 0 15% 50px 15%;
+
+    .section-header {
+        font-size: 2em;
+        margin-top: 20px;
+        margin-bottom: 0;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+
+        span {
+            background: var(--header-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .compact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 10px 5px;
+            border-bottom: 1px solid #f0f0f0;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        
+        .list-item-content {
+            flex-grow: 1;
+        }
+        
+        .list-item-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 0;
+            color: #2c3e50;
+        }
+        
+        .list-item-meta {
+            font-style: italic;
+            margin: 4px 0 0 0;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .list-item-description {
+            margin: 4px 0 0 0;
+            color: #555;
+            font-size: 0.95em;
+        }
+        
+        .list-item-description.with-bg,
+        .list-item-abstract.with-bg {
+            background-color: #f8f9fa;
+            border-left: 4px solid #bdc3c7;
+            padding: 15px 20px;
+            margin-top: 10px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            line-height: 1.6;
+            color: #34495e;
+        }
+
+        .list-item-links {
+            font-family: monospace;
+            font-size: 1.1em;
+            white-space: nowrap;
+            padding-top: 2px;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .content-section {
+        margin: 0 5% 50px 5%;
+
+        .section-header {
+            font-size: 1.6em;
+        }
+        
+        .compact-list li {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .compact-list .list-item-links {
+            padding-top: 0;
+        }
+    }
+}

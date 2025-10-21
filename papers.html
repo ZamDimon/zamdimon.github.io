@@ -1,332 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🧑‍💻</text></svg>">
-        <title>Dmytro Zakharov</title>
-        <meta name="description" content="R&D Engineer at Distributed Lab with over 2 years of experience in Backend, Blockchain, and zero-knowledge development in Rust and Golang.">
-        <meta name=”robots” content="index, follow">
-        <link rel="stylesheet" href="styles/papers/papers.css">
-    </head>
-    <body>
-        <!-- Navbar section -->
-        <div class="navbar"> 
-            <nav class="navbar-container">
-                <ul class="navbar-list">
-                    <li><a href="index.html" class="navbar-list-element"> Main </a></li>
-                    <li><a href="#" class="current"> Publications </a></li>
-                    <li><a href="extracurricular.html" class="navbar-list-element"> Extracurricular </a></li> 
-                </ul>
-            </nav>  
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+    <title>Dmytro Zakharov - Publications</title>
+    <meta name="description" content="R&D Engineer at Distributed Lab with over 2 years of experience in Backend, Blockchain, and zero-knowledge development in Rust and Golang.">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles/papers/papers.css">
+</head>
+<body>
+    <div class="navbar"> 
+        <nav class="navbar-container">
+            <ul class="navbar-list">
+                <li><a href="index.html" class="navbar-list-element"> Main </a></li>
+                <li><a href="#" class="current"> Publications </a></li>
+                <li><a href="talks.html" class="navbar-list-element"> Notes & Slides </a></li> 
+            </ul>
+        </nav>  
+    </div>
 
-        <!-- Papers section -->
-        <div class="papers-section">
-            <!-- Desktop version of papers -->
-
-            <table class="paper-table">
-                <colgroup class="paper-colgroup">
-                    <col span="1" class="img-col">
-                    <col span="1" class="description-col">
-                 </colgroup>
-
-                <tbody>
-                    <tr class="image-row">
-                        <td rowspan="4" class="preview-cell"> 
-                            <img src="images/papers/previews/w-mul.png" class="preview" id="crosschain-image">
-                        </td>
-                        <td class="title">
-                            Optimizing Big Integer multiplication on Bitcoin: Introducing <i>w</i>-windowed approach
-                        </td>
-                    </tr>
-                    <tr class="author-row">
-                        <td class="authors-cell">
-                            <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?hl=en&user=-IdWqhkAAAAJ">Oleksandr Kurbatov</a>, Manish Bist, Belove Bist
-                        </td>
-                    </tr>
-                    <tr class="submission-row">
-                        <td class="submission-cell">
-                            Published on ePrint
-                        </td>
-                    </tr>
-                    <tr class="links-row">
-                        <td class="links-cell">
-                            [<a href="https://eprint.iacr.org/2024/1236" class="paper-link">ePrint</a>]
-                            [<a href="https://github.com/distributed-lab/bitcoin-window-mul" class="paper-link">GitHub</a>]
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <table class="paper-table">
-                <colgroup class="paper-colgroup">
-                    <col span="1" class="img-col">
-                    <col span="1" class="description-col">
-                 </colgroup>
-
-                <tbody>
-                    <tr class="image-row">
-                        <td rowspan="4" class="preview-cell"> 
-                            <img src="images/papers/previews/taprootized.png" class="preview" id="crosschain-image">
-                        </td>
-                        <td class="title">
-                            Multichain Taprootized Atomic Swaps: Introducing Untraceability through Zero-Knowledge Proofs
-                        </td>
-                    </tr>
-                    <tr class="author-row">
-                        <td class="authors-cell">
-                            <a href="https://scholar.google.com/citations?hl=en&user=-IdWqhkAAAAJ">Oleksandr Kurbatov</a>, <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?hl=en&user=X1nnIVcAAAAJ">Anton Levochko</a>, <a href="https://scholar.google.com/citations?user=qqPvOvMAAAAJ">Kyrylo Riabov</a>, Bohdan Skriabin
-                        </td>
-                    </tr>
-                    <tr class="submission-row">
-                        <td class="submission-cell">
-                            Submitted to IET Blockchain
-                        </td>
-                    </tr>
-                    <tr class="links-row">
-                        <td class="links-cell">
-                            [<a href="https://arxiv.org/abs/2402.16735" class="paper-link">Preprint</a>]
-                            [<a href="https://cs.paperswithcode.com/paper/multichain-taprootized-atomic-swaps" class="paper-link">paperswithcode</a>]
-                            [<a href="https://github.com/distributed-lab/taprootized-atomic-swaps" class="paper-link">GitHub</a>]
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <table class="paper-table">
-                <colgroup class="paper-colgroup">
-                    <col span="1" class="img-col">
-                    <col span="1" class="description-col">
-                 </colgroup>
-
-                <tbody>
-                    <tr class="image-row">
-                        <td rowspan="4" class="preview-cell"> 
-                            <img src="images/papers/previews/unrecognizable.png" class="preview" id="crosschain-image">
-                        </td>
-                        <td class="title">
-                            Identifiable Yet Recognizable: Image Distortion with Preserved Embeddings
-                        </td>
-                    </tr>
-                    <tr class="author-row">
-                        <td class="authors-cell">
-                            <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?user=DUI-bncAAAAJ&hl=en">Oleksandr Kuznetsov</a>, <a href="https://scholar.google.com/citations?user=Vgi8nAcAAAAJ&hl=en">Emanuele Frontoni</a>
-                        </td>
-                    </tr>
-                    <tr class="submission-row">
-                        <td class="submission-cell">
-                            Published in Engineering Applications of AI (Elsevier) and International Conference on Artificial Intelligence and Soft Computing (Springer)
-                        </td>
-                    </tr>
-                    <tr class="links-row">
-                        <td class="links-cell">
-                            [<a href="https://doi.org/10.1016/j.engappai.2024.109164" class="paper-link">Journal Paper</a>]
-                            [<a href="https://doi.org/10.1007/978-3-031-84356-3_18" class="paper-link">Conference Paper</a>]
-                            [<a href="https://arxiv.org/abs/2401.15048" class="paper-link">Preprint</a>]
-                            [<a href="https://paperswithcode.com/paper/unrecognizable-yet-identifiable-image" class="paper-link">paperswithcode</a>]
-                            [<a href="https://github.com/ZamDimon/distortion-generator" class="paper-link">GitHub</a>]
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <table class="paper-table">
-                <colgroup class="paper-colgroup">
-                    <col span="1" class="img-col">
-                    <col span="1" class="description-col">
-                 </colgroup>
-
-                <tbody>
-                    <tr class="image-row">
-                        <td rowspan="4" class="preview-cell"> 
-                            <img src="images/papers/previews/attacknet.png" class="preview" id="crosschain-image">
-                        </td>
-                        <td class="title">
-                            AttackNet: Enhancing biometric security via tailored convolutional neural network architectures for liveness detection
-                        </td>
-                    </tr>
-                    <tr class="author-row">
-                        <td class="authors-cell">
-                            <a href="https://scholar.google.com/citations?user=DUI-bncAAAAJ&hl=en">Oleksandr Kuznetsov</a>, <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?user=Vgi8nAcAAAAJ&hl=en">Emanuele Frontoni</a>, Andrea Maranesi
-                        </td>
-                    </tr>
-                    <tr class="submission-row">
-                        <td class="submission-cell">
-                            Published in Computers and Security (Elsevier)
-                        </td>
-                    </tr>
-                    <tr class="links-row">
-                        <td class="links-cell">
-                            [<a href="https://doi.org/10.1016/j.cose.2024.103828" class="paper-link">Journal Paper</a>]
-                            [<a href="https://arxiv.org/abs/2402.03769" class="paper-link">Preprint</a>]
-                            [<a href="https://github.com/ZamDimon/liveness-detection" class="paper-link">GitHub</a>]
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <table class="paper-table">
-                <colgroup class="paper-colgroup">
-                    <col span="1" class="img-col">
-                    <col span="1" class="description-col">
-                 </colgroup>
-
-                <tbody>
-                    <tr class="image-row">
-                        <td rowspan="4" class="preview-cell"> 
-                            <img src="images/papers/previews/keys.png" class="preview" id="crosschain-image">
-                        </td>
-                        <td class="title">
-                            Deep learning-based biometric cryptographic key generation with post-quantum security
-                        </td>
-                    </tr>
-                    <tr class="author-row">
-                        <td class="authors-cell">
-                            <a href="https://scholar.google.com/citations?user=DUI-bncAAAAJ&hl=en">Oleksandr Kuznetsov</a>, <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?user=Vgi8nAcAAAAJ&hl=en">Emanuele Frontoni</a>
-                        </td>
-                    </tr>
-                    <tr class="submission-row">
-                        <td class="submission-cell">
-                            Published in Multimedia Tools and Applications (Springer) and PIC S&T 2022 Conference (IEEE)
-                        </td>
-                    </tr>
-                    <tr class="links-row">
-                        <td class="links-cell">
-                            [<a href="https://doi.org/10.1007/s11042-023-17714-7" class="paper-link">Journal Paper</a>]
-                            [<a href="https://doi.org/10.1109/PICST57299.2022.10238643" class="paper-link">Conference Paper</a>]
-                            [<a href="https://www.researchsquare.com/article/rs-2913502/v1" class="paper-link">Preprint</a>]
-                            [<a href="https://github.com/ZamDimon/Binary-Encoder" class="paper-link">GitHub</a>]
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <table class="paper-table">
-                <colgroup class="paper-colgroup">
-                    <col span="1" class="img-col">
-                    <col span="1" class="description-col">
-                 </colgroup>
-
-                <tbody>
-                    <tr class="image-row">
-                        <td rowspan="4" class="preview-cell"> 
-                            <img src="images/papers/previews/liveness.png" class="preview" id="crosschain-image">
-                        </td>
-                        <td class="title">
-                            Cross-Database Liveness Detection: Insights from Comparative Biometric Analysis
-                        </td>
-                    </tr>
-                    <tr class="author-row">
-                        <td class="authors-cell">
-                            <a href="https://scholar.google.com/citations?user=DUI-bncAAAAJ&hl=en">Oleksandr Kuznetsov</a>, <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?user=Vgi8nAcAAAAJ&hl=en">Emanuele Frontoni</a>, Andrea Maranesi, Serhii Bohucharskyi
-                        </td>
-                    </tr>
-                    <tr class="submission-row">
-                        <td class="submission-cell">
-                            Published in CEUR Proceedings, SCIA 2023
-                        </td>
-                    </tr>
-                    <tr class="links-row">
-                        <td class="links-cell">
-                            [<a href="https://ceur-ws.org/Vol-3608/#paper19" class="paper-link">Paper</a>]
-                            [<a href="https://arxiv.org/abs/2401.16232" class="paper-link">Preprint</a>]
-                            [<a href="https://paperswithcode.com/paper/cross-database-liveness-detection-insights" class="paper-link">paperswithcode</a>]
-                            [<a href="https://github.com/ZamDimon/liveness-detection" class="paper-link">GitHub</a>]
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <!-- Phone version of papers -->
-
-            <div class="paper-phone" id="paper-w-mul">
-                <img src="images/papers/previews/w-mul.png" class="preview" id="w-mul-image">
-                <div class="paper-description">
-                    <p class="title"> Optimizing Big Integer multiplication on Bitcoin: Introducing <i>w</i>-windowed approach </p>
-                    <p class="authors"> <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?hl=en&user=-IdWqhkAAAAJ">Oleksandr Kurbatov</a>, Manish Bista, Belove Bist
-                    <p class="journal"> Published on ePrint </p>
-                    <div class="paper-links">
-                        [<a href="https://eprint.iacr.org/2024/1236" class="paper-link">ePrint</a>]
-                        [<a href="https://github.com/distributed-lab/bitcoin-window-mul" class="paper-link">GitHub</a>]
-                    </div>
-                </div>
+    <div class="papers-section">
+        <div class="paper-card">
+            <div class="paper-image-container">
+                <img src="images/papers/previews/bionetta.png" class="preview" alt="Bionetta Paper Preview">
             </div>
-
-            <div class="paper-phone" id="paper-crosschain">
-                <img src="images/papers/previews/taprootized.png" class="preview" id="crosschain-image">
-                <div class="paper-description">
-                    <p class="title"> Multichain Taprootized Atomic Swaps: Introducing Untraceability through Zero-Knowledge Proofs </p>
-                    <p class="authors"> <a href="https://scholar.google.com/citations?hl=en&user=-IdWqhkAAAAJ">Oleksandr Kurbatov</a>, <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?hl=en&user=X1nnIVcAAAAJ">Anton Levochko</a>, <a href="https://scholar.google.com/citations?user=qqPvOvMAAAAJ">Kyrylo Riabov</a>, Bohdan Skriabin </p>
-                    <p class="journal"> Submitted to IET Blockchain </p>
-                    <div class="paper-links">
-                        [<a href="https://arxiv.org/abs/2402.16735" class="paper-link">Preprint</a>]
-                        [<a href="https://cs.paperswithcode.com/paper/multichain-taprootized-atomic-swaps" class="paper-link">paperswithcode</a>]
-                        [<a href="https://github.com/distributed-lab/taprootized-atomic-swaps" class="paper-link">GitHub</a>]
-                    </div>
-                </div>
-            </div>
-
-            <div class="paper-phone" id="paper-embeddings">
-                <img src="images/papers/previews/unrecognizable.png" class="preview" id="embeddings-image">
-                <div class="paper-description">
-                    <p class="title"> Identifiable Yet Recognizable: Image Distortion with Preserved Embeddings </p>
-                    <p class="authors"> <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?user=DUI-bncAAAAJ&hl=en">Oleksandr Kuznetsov</a>, <a href="https://scholar.google.com/citations?user=Vgi8nAcAAAAJ&hl=en">Emanuele Frontoni</a> </p>
-                    <p class="journal"> Published in Engineering Applications of AI (Elsevier) and International Conference on Artificial Intelligence and Soft Computing (Springer) </p>
-                    <div class="paper-links">
-                        [<a href="https://doi.org/10.1016/j.engappai.2024.109164" class="paper-link">Journal Paper</a>]
-                         [<a href="https://doi.org/10.1007/978-3-031-84356-3_18" class="paper-link">Conference Paper</a>]
-                        [<a href="https://arxiv.org/abs/2401.15048v2" class="paper-link">Preprint</a>]
-                        [<a href="https://paperswithcode.com/paper/unrecognizable-yet-identifiable-image" class="paper-link">paperswithcode</a>]
-                        [<a href="https://github.com/ZamDimon/distortion-generator" class="paper-link">GitHub</a>]
-                    </div>
-                </div>
-            </div>
-
-            <div class="paper-phone" id="paper-key-gen">
-                <img src="images/papers/previews/attacknet.png" class="preview" id="key-generation">
-                <div class="paper-description">
-                    <p class="title"> AttackNet: Enhancing biometric security via tailored convolutional neural network architectures for liveness detection </p>
-                    <p class="authors"> <a href="https://scholar.google.com/citations?user=DUI-bncAAAAJ&hl=en">Oleksandr Kuznetsov</a>, <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?user=Vgi8nAcAAAAJ&hl=en">Emanuele Frontoni</a>, Andrea Maranesi </p>
-                    <p class="journal"> Published in Computers and Security (Elsevier) </p>
-                    <div class="paper-links">
-                        [<a href="https://doi.org/10.1016/j.cose.2024.103828" class="paper-link">Journal Paper</a>]
-                        [<a href="https://arxiv.org/abs/2402.03769" class="paper-link">Preprint</a>]
-                        [<a href="https://github.com/ZamDimon/liveness-detection" class="paper-link">GitHub</a>]
-                    </div>
-                </div>
-            </div>
-
-            <div class="paper-phone" id="paper-key-gen">
-                <img src="images/papers/previews/keys.png" class="preview" id="key-generation">
-                <div class="paper-description">
-                    <p class="title"> Deep learning-based biometric cryptographic key generation with post-quantum security </p>
-                    <p class="authors"> <a href="https://scholar.google.com/citations?user=DUI-bncAAAAJ&hl=en">Oleksandr Kuznetsov</a>, <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?user=Vgi8nAcAAAAJ&hl=en">Emanuele Frontoni</a> </p>
-                    <p class="journal"> Published in Multimedia Tools and Applications (Springer) and PIC S&T 2022 Conference (IEEE) </p>
-                    <div class="paper-links">
-                        [<a href="https://doi.org/10.1007/s11042-023-17714-7" class="paper-link">Journal Paper</a>]
-                        [<a href="https://doi.org/10.1109/PICST57299.2022.10238643" class="paper-link">Conference Paper</a>]
-                        [<a href="https://www.researchsquare.com/article/rs-2913502/v1" class="paper-link">Preprint</a>]
-                        [<a href="https://github.com/ZamDimon/Binary-Encoder" class="paper-link">GitHub</a>]
-                    </div>
-                </div>
-            </div>
-
-            <div class="paper-phone" id="paper-liveness">
-                <img src="images/papers/previews/liveness.png" class="preview" id="liveness">
-                <div class="paper-description">
-                    <p class="title"> Cross-Database Liveness Detection: Insights from Comparative Biometric Analysis </p>
-                    <p class="authors"> <a href="https://scholar.google.com/citations?user=DUI-bncAAAAJ&hl=en">Oleksandr Kuznetsov</a>, <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?user=Vgi8nAcAAAAJ&hl=en">Emanuele Frontoni</a>, Andrea Maranesi, Serhii Bohucharskyi </p>
-                    <p class="journal"> Published in CEUR Proceedings </p>
-                    <div class="paper-links">
-                        [<a href="https://ceur-ws.org/Vol-3608/#paper19" class="paper-link">Conference Paper</a>]
-                        [<a href="https://arxiv.org/abs/2401.16232" class="paper-link">Preprint</a>]
-                        [<a href="https://paperswithcode.com/paper/cross-database-liveness-detection-insights" class="paper-link">paperswithcode</a>]
-                        [<a href="https://github.com/ZamDimon/liveness-detection" class="paper-link">GitHub</a>]
-                    </div>
+            <div class="paper-details">
+                <h3 class="title"> Bionetta: Efficient Client-Side Zero-Knowledge Machine Learning Proving. Technical Report </h3>
+                <p class="authors"><a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?hl=en&user=-IdWqhkAAAAJ">Oleksandr Kurbatov</a>, Lasha Antadze, Lev Soukhanov, Artem Sdobnov, Yevhenii Sekhin, Vitalii Volovyk</p>
+                <p class="journal">Preprint published on arXiv, in review</p>
+                <div class="paper-links">
+                    [<a href="https://arxiv.org/pdf/2510.06784" class="paper-link">arXiv</a>]
                 </div>
             </div>
         </div>
-    </body>
+
+        <div class="paper-card">
+            <div class="paper-image-container">
+                <img src="images/papers/previews/unforgettable.png" class="preview" alt="Unforgettable Paper Preview">
+            </div>
+            <div class="paper-details">
+                <h3 class="title">Unforgettable Fuzzy Extractor: Practical Construction and Security Model</h3>
+                <p class="authors"><a href="https://scholar.google.com/citations?hl=en&user=-IdWqhkAAAAJ">Oleksandr Kurbatov</a>, <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, Lasha Antadze, Victor Mashtalyar, Roman Skovron, Volodymyr Dubinin</p>
+                <p class="journal">Preprint published on ePrint</p>
+                <div class="paper-links">
+                    [<a href="https://eprint.iacr.org/2025/1799" class="paper-link">ePrint</a>]
+                </div>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <div class="paper-image-container">
+                <img src="images/papers/previews/w-mul.png" class="preview" alt="w-windowed multiplication preview">
+            </div>
+            <div class="paper-details">
+                <h3 class="title">Optimizing Big Integer multiplication on Bitcoin: Introducing <i>w</i>-windowed approach</h3>
+                <p class="authors"><a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?hl=en&user=-IdWqhkAAAAJ">Oleksandr Kurbatov</a>, Manish Bist, Belove Bist</p>
+                <p class="journal">Published in 6th International Conference on Software Engineering, Security and Blockchain</p>
+                <div class="paper-links">
+                    [<a href="https://eprint.iacr.org/2024/1236" class="paper-link">ePrint</a>]
+                    [<a href="https://github.com/distributed-lab/bitcoin-window-mul" class="paper-link">GitHub</a>]
+                </div>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <div class="paper-image-container">
+                <img src="images/papers/previews/taprootized.png" class="preview" alt="Taprootized Atomic Swaps preview">
+            </div>
+            <div class="paper-details">
+                <h3 class="title">Multichain Taprootized Atomic Swaps: Introducing Untraceability through Zero-Knowledge Proofs</h3>
+                <p class="authors"><a href="https://scholar.google.com/citations?hl=en&user=-IdWqhkAAAAJ">Oleksandr Kurbatov</a>, <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?hl=en&user=X1nnIVcAAAAJ">Anton Levochko</a>, <a href="https://scholar.google.com/citations?user=qqPvOvMAAAAJ">Kyrylo Riabov</a>, Bohdan Skriabin</p>
+                <p class="journal">Preprint published on arXiv</p>
+                <div class="paper-links">
+                    [<a href="https://arxiv.org/abs/2402.16735" class="paper-link">Preprint</a>]
+                    [<a href="https://github.com/distributed-lab/taprootized-atomic-swaps" class="paper-link">GitHub</a>]
+                </div>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <div class="paper-image-container">
+                <img src="images/papers/previews/unrecognizable.png" class="preview" alt="Image Distortion with Preserved Embeddings preview">
+            </div>
+            <div class="paper-details">
+                <h3 class="title">Identifiable Yet Recognizable: Image Distortion with Preserved Embeddings</h3>
+                <p class="authors"><a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?user=DUI-bncAAAAJ&hl=en">Oleksandr Kuznetsov</a>, <a href="https://scholar.google.com/citations?user=Vgi8nAcAAAAJ&hl=en">Emanuele Frontoni</a></p>
+                <p class="journal">Published in Engineering Applications of AI (Elsevier) and ICAISC (Springer)</p>
+                <div class="paper-links">
+                    [<a href="https://doi.org/10.1016/j.engappai.2024.109164" class="paper-link">Journal</a>]
+                    [<a href="https://doi.org/10.1007/978-3-031-84356-3_18" class="paper-link">Conference</a>]
+                    [<a href="https://arxiv.org/abs/2401.15048" class="paper-link">Preprint</a>]
+                    [<a href="https://github.com/ZamDimon/distortion-generator" class="paper-link">GitHub</a>]
+                </div>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <div class="paper-image-container">
+                <img src="images/papers/previews/attacknet.png" class="preview" alt="AttackNet liveness detection preview">
+            </div>
+            <div class="paper-details">
+                <h3 class="title">AttackNet: Enhancing biometric security via tailored convolutional neural network architectures for liveness detection</h3>
+                <p class="authors"><a href="https://scholar.google.com/citations?user=DUI-bncAAAAJ&hl=en">Oleksandr Kuznetsov</a>, <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?user=Vgi8nAcAAAAJ&hl=en">Emanuele Frontoni</a>, Andrea Maranesi</p>
+                <p class="journal">Published in Computers and Security (Elsevier)</p>
+                <div class="paper-links">
+                    [<a href="https://doi.org/10.1016/j.cose.2024.103828" class="paper-link">Journal</a>]
+                    [<a href="https://arxiv.org/abs/2402.03769" class="paper-link">Preprint</a>]
+                    [<a href="https://github.com/ZamDimon/liveness-detection" class="paper-link">GitHub</a>]
+                </div>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <div class="paper-image-container">
+                <img src="images/papers/previews/keys.png" class="preview" alt="Biometric cryptographic key generation preview">
+            </div>
+            <div class="paper-details">
+                <h3 class="title">Deep learning-based biometric cryptographic key generation with post-quantum security</h3>
+                <p class="authors"><a href="https://scholar.google.com/citations?user=DUI-bncAAAAJ&hl=en">Oleksandr Kuznetsov</a>, <a href="https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en">Dmytro Zakharov</a>, <a href="https://scholar.google.com/citations?user=Vgi8nAcAAAAJ&hl=en">Emanuele Frontoni</a></p>
+                <p class="journal">Published in Multimedia Tools and Applications (Springer) and PIC S&T (IEEE)</p>
+                <div class="paper-links">
+                    [<a href="https://doi.org/10.1007/s11042-023-17714-7" class="paper-link">Journal</a>]
+                    [<a href="https://doi.org/10.1109/PICST57299.2022.10238643" class="paper-link">Conference</a>]
+                    [<a href="https://www.researchsquare.com/article/rs-2913502/v1" class="paper-link">Preprint</a>]
+                    [<a href="https://github.com/ZamDimon/Binary-Encoder" class="paper-link">GitHub</a>]
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
 </html>
