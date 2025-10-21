@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+    <title>Dmytro Zakharov - Notes & Slides</title>
+    <meta name="description" content="A collection of talks, presentations, blog posts, and lecture notes by Dmytro Zakharov.">
+    <meta name="robots" content="index, follow">
+
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+          }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="styles/talks/talks.css">
+</head>
+<body>
+    <div class="navbar"> 
+        <nav class="navbar-container">
+            <ul class="navbar-list">
+                <li><a href="index.html" class="navbar-list-element"> Main </a></li>
+                <li><a href="papers.html" class="navbar-list-element"> Publications </a></li>
+                <li><a href="#" class="current"> Notes & Slides </a></li> 
+            </ul>
+        </nav>  
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-header"><span>Lecture Notes</span></h2>
+        <ul class="compact-list">
+            <li>
+                <div class="list-item-content">
+                    <h3 class="list-item-title">Book on Zero-Knowledge Proofs</h3>
+                    <p class="list-item-meta">Based on ZKDL Camp Course at Distributed Lab</p>
+                    <p class="list-item-description with-bg">This is a series of lectures on zero-knowledge (ZK) proofs, conducted at Distributed Lab, in which we explore "from scratch" how modern zk-SNARKs such as Groth16, PlonK, GKR work, including all the mathematical components they rely on. The course covers not only ZK theory itself and its applications, but also the basic mathematics needed to understand ZK and cryptography in general.</p>
+                </div>
+                <div class="list-item-links">
+                    [<a href="https://zkdl-camp.github.io/" class="item-link" target="_blank">Course Website</a>]
+                </div>
+            </li>
+            <li>
+                <div class="list-item-content">
+                    <h3 class="list-item-title">Finite Field Extensions: Uniqueness and Existence</h3>
+                    <p class="list-item-meta">Mathematical Seminar at Kyiv School of Economics</p>
+                    <div class="list-item-abstract with-bg">
+                        This small lecture is devoted to a quick glance at the
+                        structure of finite fields. One obvious well-known
+                        example of the finite field is $\mathbb{Z}/p\mathbb{Z}$,
+                        but is this the only possible finite field? We show that
+                        (i) finite fields are always of order $p^n$, (ii) such
+                        finite fields always exist, (iii) two finite fields of
+                        the same order are always isomorphic. In particular,
+                        (ii) and (iii) make notation $\mathbb{F}_{p^n}$ valid.
+                    </div>
+                </div>
+                <div class="list-item-links">
+                    [<a href="files/talks/lecture-notes/finite-fields.pdf" class="item-link" target="_blank">PDF Notes</a>]
+                </div>
+            </li>
+        </ul>
+
+        <h2 class="section-header"><span>Talks & Presentations</span></h2>
+        <ul class="compact-list">
+            <li>
+                <div class="list-item-content">
+                    <h3 class="list-item-title">🌿 Bionetta: Ultimate ZKML Framework</h3>
+                    <p class="list-item-description">Presentation of the client-side ZKML framework based on UltraGroth and R1CS arithmetization.</p>
+                </div>
+                <div class="list-item-links">[<a href="files/talks/presentations/bionetta.pdf" class="item-link">Slides</a>]</div>
+            </li>
+            <li>
+                <div class="list-item-content">
+                    <h3 class="list-item-title">🍁 UltraGroth: Interactive Groth16</h3>
+                    <p class="list-item-description">Overview of the <em>UltraGroth</em> protocol: Groth16 modification that enables lookup checks and sampling randomness.</p>
+                </div>
+                <div class="list-item-links">[<a href="files/talks/presentations/ultragroth.pdf" class="item-link">Slides</a>]</div>
+            </li>
+            <li>
+                <div class="list-item-content">
+                    <h3 class="list-item-title">🐦 Nero: BitVM2-Based Optimistic Verifiable Computation on Bitcoin</h3>
+                    <p class="list-item-description">Research on implementing Bitcoin on-chain public verifiable computation scheme (based on BitVM2 research).</p>
+                </div>
+                <div class="list-item-links">[<a href="files/talks/presentations/nero.pdf" class="item-link">Slides</a>]</div>
+            </li>
+            <li>
+                <div class="list-item-content">
+                    <h3 class="list-item-title">📈 Elliptic Curve Optimizations. EC Pairing.</h3>
+                    <p class="list-item-description">Lecture about implementing Elliptic Curve (EC) operations efficiently. Basics of EC pairing.</p>
+                </div>
+                <div class="list-item-links">[<a href="files/talks/presentations/ec-optimizations.pdf" class="item-link">Slides</a>]</div>
+            </li>
+            <li>
+                <div class="list-item-content">
+                    <h3 class="list-item-title">🧠 Introduction to Deep Learning</h3>
+                    <p class="list-item-description">What are neural networks. Their applications, basic dense neural network, demonstration of MNIST dataset training.</p>
+                </div>
+                <div class="list-item-links">[<a href="files/talks/presentations/deep-learning-intro.pdf" class="item-link">Slides</a>]</div>
+            </li>
+            <li>
+                <div class="list-item-content">
+                    <h3 class="list-item-title">😐 Deep Learning Applications to Biometric Analysis (in Ukrainian)</h3>
+                    <p class="list-item-description">Applications of Deep Learning to Biometric Analysis problem. Triplet Loss function, contrastive learning, face recognition models.</p>
+                </div>
+                <div class="list-item-links">[<a href="files/talks/presentations/biometrics.pdf" class="item-link">Slides</a>]</div>
+            </li>
+        </ul>
+
+        <h2 class="section-header"><span>Blogs</span></h2>
+        <ul class="compact-list">
+            <li>
+                <div class="list-item-content">
+                    <h3 class="list-item-title">UltraGroth Protocol Explained</h3>
+                    <p class="list-item-meta">By Dmytro Zakharov, Lasha Antadze, Oleksandr Kurbatov</p>
+                </div>
+                <div class="list-item-links">[<a href="https://hackmd.io/@ZamDimon/SkFGEXbKgx" class="item-link" target="_blank">HackMD</a>]</div>
+            </li>
+            <li>
+                <div class="list-item-content">
+                    <h3 class="list-item-title">Bionetta: Ultimate Client-Side ZKML. Technical Overview</h3>
+                    <p class="list-item-meta">By Dmytro Zakharov, Lasha Antadze, Oleksandr Kurbatov</p>
+                </div>
+                <div class="list-item-links">[<a href="https://hackmd.io/@rarimo/SkZB2zUxex" class="item-link" target="_blank">HackMD</a>]</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
