@@ -33,7 +33,7 @@
     </div>
 
     <div class="content-section">
-        <h2 class="section-header"><span>Lectures</span></h2>
+        <h2 class="section-header"><span>Courses and Lectures</span></h2>
         <ul class="compact-list">
             <li>
                 <div class="list-item-content">
@@ -48,16 +48,40 @@
             <li>
                 <div class="list-item-content">
                     <h3 class="list-item-title">Cryptography: A Modern Approach</h3>
-                    <p class="list-item-meta">University Course by Distributed Lab</p>
+                    <p class="list-item-meta">University Course by Distributed Lab (in Ukrainian)</p>
                     <p class="list-item-description with-bg">Introductory course in Cryptography for Ukrainian students and professors by Distributed Lab. The course covered all core topic in Cryptography: from basic Mathematics and Symmetric Cryptography to Digital Signatures and Multiparty computing. Composed course's contents and conducted lectures in Mathematics, Security Analysis, and Zero-Knowledge. Composed tests and final project topics.</p>
                 </div>
                 <div class="list-item-links">
                     [<a href="https://github.com/distributed-lab/crypto-lectures" class="item-link" target="_blank">GitHub</a>]
                 </div>
             </li>
+        </ul>
+
+        <h2 class="section-header"><span>Talks & Presentations</span></h2>
+        <ul class="compact-list">
             <li>
                 <div class="list-item-content">
-                    <h3 class="list-item-title">Finite Field Extensions: Existence and Uniqueness</h3>
+                    <h3 class="list-item-title">🔐 Zero-Knowledge Proofs: A Practical Introduction</h3>
+                    <p class="list-item-meta">Student Mathematical Seminar at Kyiv School of Economics</p>
+                    <div class="list-item-abstract with-bg">
+                        Zero-Knowledge (ZK) is a novel active subfield of cryptography that has introduced numerous solutions to privacy and scalability. Use cases of ZK include anonymous national passport verification, fighting disinformation by verifying photo authenticity, ensuring the integrity of generative AI, and scaling public blockchain infrastructure, among others. While useful, the technology is challenging to use and even more difficult to understand, as it requires a deep understanding of mathematics.
+                        In this lecture, we give a technical yet practical overview of zero-knowledge protocols.
+                        Namely, we:
+                        <ul>
+                            <li>Introduce the basic notions of ZK and define the security characteristics of ZK systems.</li>
+                            <li>Demonstrate them using the basic example of an interactive proof of knowledge of the modular square root.</li>
+                            <li>Provide a brief overview of modern ZK and ZK-SNARK (succinct non-interactive argument of knowledge) systems.</li>
+                            <li>Show domain-specific languages used for encoding ZK relations and the performance of real-world ZK systems.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list-item-links">
+                    [<a href="files/talks/lecture-notes/zkp-seminar.pdf" class="item-link" target="_blank">Slides</a>]
+                </div>
+            </li>
+            <li>
+                <div class="list-item-content">
+                    <h3 class="list-item-title">🌾 Finite Field Extensions: Existence and Uniqueness</h3>
                     <p class="list-item-meta">Mathematical Seminar at Kyiv School of Economics</p>
                     <div class="list-item-abstract with-bg">
                         This small lecture is devoted to a quick glance at the
@@ -74,23 +98,19 @@
                     [<a href="files/talks/lecture-notes/finite-fields.pdf" class="item-link" target="_blank">PDF Notes</a>]
                 </div>
             </li>
-        </ul>
-
-        <h2 class="section-header"><span>Talks & Presentations</span></h2>
-        <ul class="compact-list">
-            <li>
-                <div class="list-item-content">
-                    <h3 class="list-item-title">🌿 Bionetta: Ultimate ZKML Framework</h3>
-                    <p class="list-item-description">Presentation of the client-side ZKML framework based on UltraGroth and R1CS arithmetization.</p>
-                </div>
-                <div class="list-item-links">[<a href="files/talks/presentations/bionetta.pdf" class="item-link">Slides</a>]</div>
-            </li>
             <li>
                 <div class="list-item-content">
                     <h3 class="list-item-title">🍁 UltraGroth: Interactive Groth16</h3>
                     <p class="list-item-description">Overview of the <em>UltraGroth</em> protocol: Groth16 modification that enables lookup checks and sampling randomness.</p>
                 </div>
                 <div class="list-item-links">[<a href="files/talks/presentations/ultragroth.pdf" class="item-link">Slides</a>]</div>
+            </li>
+            <li>
+                <div class="list-item-content">
+                    <h3 class="list-item-title">🌿 Bionetta: Ultimate ZKML Framework</h3>
+                    <p class="list-item-description">Presentation of the client-side ZKML framework based on UltraGroth and R1CS arithmetization.</p>
+                </div>
+                <div class="list-item-links">[<a href="files/talks/presentations/bionetta.pdf" class="item-link">Slides</a>]</div>
             </li>
             <li>
                 <div class="list-item-content">
@@ -140,5 +160,26 @@
             </li>
         </ul>
     </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Select all list items content containers
+        const contentItems = document.querySelectorAll('.list-item-content');
+
+        contentItems.forEach(item => {
+            const hiddenSection = item.querySelector('.with-bg');
+            const title = item.querySelector('.list-item-title');
+
+            if (hiddenSection && title) {
+                title.classList.add('has-details');
+
+                title.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    hiddenSection.classList.toggle('show-content');
+                });
+            }
+        });
+    });
+    </script>
 </body>
 </html>

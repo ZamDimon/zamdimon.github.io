@@ -5,104 +5,168 @@
     flex-direction: column;
     row-gap: 25px;
     margin: 0 15% 50px 15%;
+}
 
-    .section-header {
-        font-size: 2em;
-        margin-top: 20px;
-        margin-bottom: 0;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 10px;
-        display: flex;
-        align-items: center;
-        gap: 0.5em;
+.content-section .section-header {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
 
-        span {
-            background: var(--header-gradient);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    }
+.content-section .section-header span {
+    background: var(--header-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    .compact-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+.content-section .compact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        li {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 10px 5px;
-            border-bottom: 1px solid #f0f0f0;
+.content-section .compact-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px 5px;
+    border-bottom: 1px solid #f0f0f0;
+}
 
-            &:last-child {
-                border-bottom: none;
-            }
-        }
-        
-        .list-item-content {
-            flex-grow: 1;
-        }
-        
-        .list-item-title {
-            font-weight: bold;
-            font-size: 1.1em;
-            margin: 0;
-            color: #2c3e50;
-        }
-        
-        .list-item-meta {
-            font-style: italic;
-            margin: 4px 0 0 0;
-            color: #555;
-            font-size: 0.95em;
-        }
+.content-section .compact-list li:last-child {
+    border-bottom: none;
+}
 
-        .list-item-description {
-            margin: 4px 0 0 0;
-            color: #555;
-            font-size: 0.95em;
-        }
-        
-        .list-item-description.with-bg,
-        .list-item-abstract.with-bg {
-            background-color: #f8f9fa;
-            border-left: 4px solid #bdc3c7;
-            padding: 15px 20px;
-            margin-top: 10px;
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-            line-height: 1.6;
-            color: #34495e;
-        }
+.content-section .compact-list .list-item-content {
+    flex-grow: 1;
+}
 
-        .list-item-links {
-            font-family: monospace;
-            font-size: 1.1em;
-            white-space: nowrap;
-            padding-top: 2px;
-        }
-    }
+.content-section .compact-list .list-item-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0;
+    color: #2c3e50;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.content-section .compact-list .list-item-title.has-details {
+    cursor: pointer;
+}
+
+.content-section .compact-list .list-item-title.has-details:hover {
+    color: #3498db;
+}
+
+.content-section .compact-list .list-item-title.has-details::before {
+    content: "▶"; 
+    font-size: 0.7em;
+    margin-right: 8px;
+    color: #bdc3c7;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.content-section .compact-list .list-item-title.has-details.active::before {
+    transform: rotate(90deg);
+    color: #3498db;
+}
+
+.content-section .compact-list .list-item-meta {
+    font-style: italic;
+    margin: 4px 0 0 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.content-section .compact-list .list-item-description {
+    margin: 4px 0 0 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.content-section .compact-list .list-item-title.has-details ~ .list-item-meta,
+.content-section .compact-list .list-item-title.has-details ~ .list-item-description {
+    margin-left: 20px;
+}
+
+.content-section .compact-list .with-bg {
+    display: none;
+    background-color: #f8f9fa;
+    border-left: 4px solid #bdc3c7;
+    padding: 15px 20px;
+    margin-top: 10px;
+    margin-left: 20px; 
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+.content-section .compact-list .with-bg.show-content {
+    display: block !important;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.content-section .compact-list .list-item-abstract ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0;
+}
+
+.content-section .compact-list .list-item-abstract li {
+    display: block;
+    border-bottom: none;
+    padding: 0 0 6px 24px;
+    position: relative;
+    line-height: 1.5;
+    gap: 0;
+}
+
+.content-section .compact-list .list-item-abstract li::before {
+    content: "🔹";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    font-size: 12px;
+}
+
+.content-section .compact-list .list-item-links {
+    font-family: monospace;
+    font-size: 1.1em;
+    white-space: nowrap;
+    padding-top: 2px;
 }
 
 @media only screen and (max-width: 800px) {
     .content-section {
         margin: 0 5% 50px 5%;
-
-        .section-header {
-            font-size: 1.6em;
-        }
-        
-        .compact-list li {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .compact-list .list-item-links {
-            padding-top: 0;
-        }
+    }
+    .content-section .section-header {
+        font-size: 1.6em;
+    }
+    .content-section .compact-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .content-section .compact-list .list-item-abstract li {
+        display: block;
+    }
+    .content-section .compact-list .list-item-links {
+        padding-top: 0;
     }
 }
