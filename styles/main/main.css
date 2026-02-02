@@ -251,6 +251,9 @@
 .work-section #ugs-logo {
   width: 80%;
 }
+.work-section .blockstream {
+  padding-top: 20px;
+}
 .work-section .distributed-lab {
   padding: 0;
   padding-top: 20px;

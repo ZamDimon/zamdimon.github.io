@@ -32,12 +32,16 @@ const timeDivs = [
     ['dl-time', '2021-11-15'],
     ['dl-time-research', '2023-06-01'],
     ['karazin-time', '2021-09-01'],
+    ['blockstream-time', '2026-01-01'],
 ]
 
-for (const [id, startDate] of timeDivs) {
-    const par = document.getElementById(id);
-    let startTime = new Date(startDate);
-    let now = new Date();
-    let daysPassed = dateDifferenceInDays(startTime, now);
-    par.innerHTML = getYearsAndMonthsString(daysPassed);
-}
+document.addEventListener("DOMContentLoaded", () => {
+    for (const [id, startDate] of timeDivs) {
+        const par = document.getElementById(id);
+        if (!par) continue;
+        let startTime = new Date(startDate);
+        let now = new Date();
+        let daysPassed = dateDifferenceInDays(startTime, now);
+        par.innerHTML = getYearsAndMonthsString(daysPassed);
+    }
+});
