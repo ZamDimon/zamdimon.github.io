@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+    <title>Dmytro Zakharov - Blogs</title>
+    <meta name="description" content="A collection of cryptographic blogs and technical write-ups by Dmytro Zakharov.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="styles/blogs/blogs.css">
+</head>
+<body>
+    <div class="navbar"> 
+        <nav class="navbar-container">
+            <ul class="navbar-list">
+                <li><a href="index.html" class="navbar-list-element">Main</a></li>
+                <li><a href="#" class="current">Blogs</a></li>
+                <li><a href="papers.html" class="navbar-list-element">Publications</a></li>
+                <li><a href="talks.html" class="navbar-list-element">Notes & Slides</a></li> 
+            </ul>
+        </nav>  
+    </div>
+
+    <div class="blogs-section">
+        <h1 class="section-header">Technical Write-ups & Blogs</h1>
+
+        <div class="blog-card">
+            <div class="blog-image-container">
+                <img src="images/blogs/ultragroth-preview.png" class="preview" alt="UltraGroth Protocol Preview">
+            </div>
+            <div class="blog-details">
+                <div class="blog-meta">
+                    <span class="date">Sep 1, 2025</span>
+                    <span class="separator">&middot;</span>
+                    <span class="read-time">20 min read</span>
+                </div>
+                
+                <h3 class="title">UltraGroth Protocol Explained</h3>
+                <p class="authors"><strong>Dmytro Zakharov</strong>, Lasha Antadze, Oleksandr Kurbatov</p>
+                
+                <div class="tags-list">
+                    <span class="tag">Zero-Knowledge</span>
+                    <span class="tag">Groth16</span>
+                    <span class="tag">Protocol Design</span>
+                </div>
+
+                <p class="description">
+                    A deep dive into the UltraGroth protocol. We explore how to insignificantly modify the original Groth16 protocol to enable sampling random field elements and conducting lookup checks without sacrificing verification efficiency.
+                </p>
+
+                <div class="blog-footer">
+                    <a href="blogs/ultragroth.html" class="read-link">Read on Website &rarr;</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="https://hackmd.io/@ZamDimon/SkFGEXbKgx" class="read-link" target="_blank">Read on HackMD &nearr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-image-container">
+                <img src="images/blogs/fuzzy-extractors-preview.png" class="preview" alt="Fuzzy Extractors Preview">
+            </div>
+            <div class="blog-details">
+                <div class="blog-meta">
+                    <span class="date">Feb 28, 2026</span>
+                    <span class="separator">&middot;</span>
+                    <span class="read-time">10 min read</span>
+                </div>
+                
+                <h3 class="title">Fuzzy Extractors in a Nutshell</h3>
+                <p class="authors"><strong>Dmytro Zakharov</strong></p>
+
+                <div class="tags-list">
+                    <span class="tag">Biometrics</span>
+                    <span class="tag">Cryptography Theory</span>
+                    <span class="tag">Key Derivation</span>
+                </div>
+
+                <p class="description">
+                    An accessible introduction to Fuzzy Extractors. This blog explains the mathematical mechanics behind reliably deriving strong, uniformly distributed cryptographic keys from noisy, biometric data sources.
+                </p>
+
+                <div class="blog-footer">
+                    <!-- <a href="blogs/fuzzy-extractors.html" class="read-link">Read on Website &rarr;</a>
+                    &nbsp;&nbsp;&nbsp; -->
+                    <a href="https://hackmd.io/@ZamDimon/SkP4Vcanel" class="read-link" target="_blank">Read on HackMD &nearr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-image-container">
+                <img src="images/blogs/bionetta-blog-preview.png" class="preview" alt="Bionetta Framework Preview">
+            </div>
+            <div class="blog-details">
+                <div class="blog-meta">
+                    <span class="date">May 5, 2025</span>
+                    <span class="separator">&middot;</span>
+                    <span class="read-time">15 min read</span>
+                </div>
+                
+                <h3 class="title">Bionetta: Ultimate Client-Side ZKML. Technical Overview</h3>
+                <p class="authors"><strong>Dmytro Zakharov</strong>, Lasha Antadze, Oleksandr Kurbatov</p>
+
+                <div class="tags-list">
+                    <span class="tag">ZKML</span>
+                    <span class="tag">AI Privacy</span>
+                    <span class="tag">R1CS</span>
+                </div>
+
+                <p class="description">
+                    A technical overview of the Bionetta framework. We demonstrate how to leverage UltraGroth to achieve sublinear constraint complexity for non-linear operations like ReLU in neural networks, paving the way for efficient client-side ZKML.
+                </p>
+
+                <div class="blog-footer">
+                    <a href="https://hackmd.io/@rarimo/SkZB2zUxex" class="read-link" target="_blank">Read Article &nearr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

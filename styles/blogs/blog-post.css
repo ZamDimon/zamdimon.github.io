@@ -1,0 +1,211 @@
+@import url("../common/common.css");
+/* Background Setup */
+body {
+  background-color: #FAFAFA !important;
+}
+
+/* Back Link Styling */
+.back-link-container {
+  max-width: 900px;
+  margin: 1.5rem auto 0 auto;
+  padding: 0 1.5em;
+}
+.back-link-container a {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--neutral-text-color, #555555);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.back-link-container a:hover {
+  color: var(--link-color, #2980B9);
+}
+
+/* Typography for the blog content */
+main {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--darker-background-color, #EAEAEA);
+  border-radius: 6px;
+  max-width: 900px;
+  margin: 1.5rem auto 3rem auto;
+  padding: 2em 2.5em 3em 2.5em;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--black-text-color, #1A1A1A);
+}
+main h1, main h2, main h3, main h4 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: var(--main-color, #2C3E50);
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+  font-weight: 700;
+}
+main h1 {
+  font-size: 2.2rem;
+  border-bottom: 1px solid var(--darker-background-color, #EAEAEA);
+  padding-bottom: 0.3em;
+  margin-top: 0.5em;
+}
+main h2 {
+  font-size: 1.7rem;
+  border-bottom: 1px solid var(--darker-background-color, #EAEAEA);
+  padding-bottom: 0.3em;
+}
+main h3 {
+  font-size: 1.35rem;
+}
+main p {
+  margin-bottom: 1.2em;
+}
+main img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2em auto 0.5em auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--darker-background-color, #EAEAEA);
+}
+main em {
+  /* If an italic text is immediately after an image, it usually acts as a caption */
+  font-size: 0.95rem;
+  color: var(--neutral-text-color, #555555);
+}
+main a {
+  color: var(--link-color, #2980B9);
+  text-decoration: none;
+  font-weight: 600;
+}
+main a:hover {
+  text-decoration: underline;
+}
+main ul, main ol {
+  padding-left: 2.5rem !important;
+  margin-bottom: 1.5rem !important;
+  margin-top: 0.5rem !important;
+}
+main ul {
+  list-style-type: disc !important;
+}
+main ol {
+  list-style-type: decimal !important;
+}
+main li {
+  display: list-item !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.6;
+}
+main {
+  /* Standard Blockquote (Unrelated to Custom Alerts) */
+}
+main blockquote {
+  margin: 1.5em 0;
+  padding: 0.5em 1em;
+  color: #57606a;
+  border-left: 4px solid #d0d7de;
+  background-color: transparent;
+}
+main {
+  /* Code styling */
+}
+main code {
+  font-family: "Inter", monospace;
+  background-color: rgba(175, 184, 193, 0.2);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #24292f;
+}
+main pre {
+  background-color: #f6f8fa;
+  padding: 1.25rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 1.5em;
+  border: 1px solid var(--darker-background-color, #EAEAEA);
+  line-height: 1.45;
+}
+main pre code {
+  background: transparent;
+  padding: 0;
+  font-size: 0.9em;
+  color: #24292f;
+}
+
+/* --------------------------------------
+   GitHub-style Custom Markdown Alerts 
+--------------------------------------- */
+.markdown-alert {
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.5rem;
+  color: inherit;
+  border-left: 4px solid;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+}
+.markdown-alert p {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 0 !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.markdown-alert .markdown-alert-title svg {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Individual Alert Themes */
+.markdown-alert-note {
+  border-left-color: #0969da;
+  background-color: #f6f8fa;
+}
+.markdown-alert-note .markdown-alert-title {
+  color: #0969da;
+}
+
+.markdown-alert-warning {
+  border-left-color: #9a6700;
+  background-color: #fff8c5;
+}
+.markdown-alert-warning .markdown-alert-title {
+  color: #9a6700;
+}
+
+.markdown-alert-definition {
+  border-left-color: #8250df;
+  background-color: #f4f0ff;
+}
+.markdown-alert-definition .markdown-alert-title {
+  color: #8250df;
+}
+
+.markdown-alert-remark {
+  border-left-color: #1f883d;
+  background-color: #e6ffec;
+}
+.markdown-alert-remark .markdown-alert-title {
+  color: #1f883d;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 800px) {
+  main {
+    padding: 1.5em;
+    margin: 1rem 1rem 3rem 1rem;
+  }
+}/*# sourceMappingURL=blog-post.css.map */

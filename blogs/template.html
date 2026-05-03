@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Blog Title - Dmytro Zakharov</title>
+    <meta name="description" content="Blog description goes here.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main/main.css">
+    <link rel="stylesheet" href="../styles/blogs/blog-post.css">
+
+    <script src="../scripts/blogs/blog-post-config.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <div class="navbar"> 
+        <nav class="navbar-container">
+            <ul class="navbar-list">
+                <li><a href="../index.html" class="navbar-list-element">Main</a></li>
+                <li><a href="../blogs.html" class="current">Blogs</a></li>
+                <li><a href="../papers.html" class="navbar-list-element">Publications</a></li>
+                <li><a href="../talks.html" class="navbar-list-element">Notes & Slides</a></li> 
+            </ul>
+        </nav>  
+    </div>
+
+    <div class="back-link-container">
+        <a href="../blogs.html">&larr; Back to Blogs</a>
+    </div>
+
+    <main id="blog-content"></main>
+
+    <textarea id="markdown-source" style="display:none;">
+
+</textarea>
+    
+    <script src="../scripts/blogs/blog-post-renderer.js"></script>
+</body>
+</html>

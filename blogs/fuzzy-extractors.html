@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Blog Title - Dmytro Zakharov</title>
+    <meta name="description" content="Blog description goes here.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main/main.css">
+    <link rel="stylesheet" href="../styles/blogs/blog-post.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <script src="../scripts/blogs/blog-post-renderer.js"></script>
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <div class="navbar"> 
+        <nav class="navbar-container">
+            <ul class="navbar-list">
+                <li><a href="../index.html" class="navbar-list-element">Main</a></li>
+                <li><a href="../blogs.html" class="current">Blogs</a></li>
+                <li><a href="../papers.html" class="navbar-list-element">Publications</a></li>
+                <li><a href="../talks.html" class="navbar-list-element">Notes & Slides</a></li> 
+            </ul>
+        </nav>  
+    </div>
+
+    <div class="back-link-container">
+        <a href="../blogs.html">&larr; Back to Blogs</a>
+    </div>
+
+    <main id="blog-content" style="visibility: hidden; opacity: 0;"></main>
+
+    <textarea id="markdown-source" style="display:none;">
+
+# Fuzzy Extractors in a Nutshell
+
+Bridging the gap between biometrics analysis and cryptography is difficult, largely because the probabilistic nature of neural networks seems completely incompatible with the commonly deterministic and precise nature of cryptographic protocols. One construction that can potentially solve this problem is Fuzzy Extractor. Though it has recently found some practical applications like Rarimo's [Unforgettable](https://unforgettable.app/), the core concept was actually introduced over two decades ago by [Yevgeniy Dodis et al.](https://arxiv.org/pdf/cs/0602007). In my opinion, it is one of the most underestimated and poorly explained tools in cryptography today, despite numerous evident potential use-cases in key derivation functions (KDF) and hardware wallets. This blog is addressed to demistify this construction and explain how it works concretely, with a lot of examples.
+
+The main goal of fuzzy extractor is to generate stable cryptographic keys from unstable sources. To understand why we should care, consider the classical cryptographic protocols such as ECDSA or Schnorr Signatures. If during the verification procedure message or public key differs by just a single bit, the whole verification always fails. As is, there are no conceptual problems with this: in fact, this what makes all such constructions secure. However, when we use data from unstable sources such as neural network outputs, we would like to easen the requirement: that is, as long as the new input _does not significantly differ from the initial one_ (we will define this more rigorously later on), the verification still succeeds. This is exactly what _Fuzzy Extractors_ are intended for!
+
+In what follows, we will demonstrate how code-offset Fuzzy Extractor works over facial images. We first define what Fuzzy Extractors are and how we derive data from the biometric images, and then provide a concrete example of how the system functions.
+
+## Fuzzy Extractor Definition
+
+We start with the definition of the fuzzy extractor. Consider the case where the user wants to recover the secret using only facial data. Suppose that we have the neural network that, given the face image, can output the $n$-bit binary string $\mathbf{w} \in \{0,1\}^n$ (in the next section, we give specifics on how such neural networks function and are trained). This neural network will satisfy the following requirement: upon taking the same face image (albeit with possibly different pose/lightning condition), one gets not the same, but _similar_ binary string $\mathbf{w}' \in \{0,1\}^n$. By _similar_ we typically mean that the relative Hamming weight $\Delta(\mathbf{w},\mathbf{w}') \triangleq \frac{1}{n} \cdot \#\{i \in [n]: w_i \neq w_i'\}$ is below $\approx\frac{1}{4}$ (this choice of constant comes from the tedious probabilistic analysis. Also, further denote by $[n]:=\{1,\dots,n\}$). Whereas, if the image comes from the different person, we expect that the derived binary string $\mathbf{w}''$ differs significantly from $\mathbf{w}$: namely, we expect $\Delta(\mathbf{w},\mathbf{w}'') \approx \frac{1}{2}$. 
+
+To give a concrete sense of distributions of distances $\Delta(\mathbf{w},\mathbf{w}')$, one can refer to the figure below from the Unforgettable original paper. After running neural network over ~1 million pairs of people, the distribution for distances between same people is depicted in green, while for different people in red. As can be seen, the mean values of distributions are roughly $0.2$ and $0.48$, respectively (_more concretely, expected values $\mathbb{E}_{(\mathbf{w},\mathbf{w}') \sim \rho}[\Delta(\mathbf{w},\mathbf{w}')]$, where $\rho$ is either distribution of features of the same person or different people_). 
+
+![Screenshot 2025-10-06 at 2.37.06 PM](https://hackmd.io/_uploads/B1ZZc7Zpxe.png)
+_Figure 1. Normalized Hamming distances distribution._
+
+We can finally give the fuzzy extractor definition! 
+
+**Definition [Fuzzy Extractor]**. The Fuzzy Extractor scheme consists of two functions $(\mathsf{Gen},\mathsf{Rep})$ which do the following:
+- $\mathsf{Gen}(1^{\lambda},\mathbf{w}) \to (\mathsf{hs},\mathsf{sk})$. Upon receiving the feature vector $\mathbf{w} \in \{0,1\}^n$, the function outputs the _public helper string_ $\mathsf{hs}$ and _secret value_ $\mathsf{sk}$. As the names suggest, $\mathsf{hs}$ will act as a public key whereas $\mathsf{sk}$ is the secret value from which we will derive wallet key.
+- $\mathsf{Rep}(\mathsf{hs},\mathbf{w}') \to \mathsf{sk}'$. To derive the same secret $\mathsf{sk}$, the user must provide the helper string corresponding to $\mathsf{sk}$ and the new biometric sample $\mathbf{w}'$ with the condition that $\Delta(\mathbf{w},\mathbf{w}')$ is small enough. In such case, $\mathsf{Rep}$ outputs $\mathsf{sk}$. 
+
+Two functions above are illustrated in the Figure below.
+
+![fuzzy-extractors](https://hackmd.io/_uploads/HkMyF7Z6lx.png)
+_Figure 2. Illustration of Fuzzy Extractor scheme, consisting of functions $\mathsf{Gen}$ and $\mathsf{Rep}$. Upon receiving $\mathbf{w} \in \{0,1\}^n$ from the user, the $\mathsf{Gen}$ functions outputs helper string $\mathsf{hs}$ and secret $\mathsf{sk}$. When calling $\mathsf{Rep}$ on this helper string and new sample $\mathbf{w}' \in \{0,1\}^n$ that is close enough, extractor returns $\mathsf{sk}'=\mathsf{sk}$._
+
+In this blog, we will omit all the technicalities with defining correctness and security: for those interested, check [the original Fuzzy Extractors paper](https://www.cs.bu.edu/~reyzin/papers/fuzzysurvey.pdf). Yet, very roughly speaking, we say that Fuzzy Extractor scheme is secure if, given $\mathsf{hs}$, it is infeasible (with a certain very low, yet non-negligible probability) to determine the value of $\mathsf{sk}$ or information on $\mathsf{sk}$.
+
+## Feature Vectors
+
+### Embedding Model Training
+
+I believe before introducing the code-offset construction, it would be helpful to take a step back and explain how exactly we build the neural network that satisfies the properties above. After all, neural networks typically operate over real-valued data, while we assume everywhere that we work with strings over _finite_ alphabet.
+
+At the moment, forget about fuzzy extractors. Suppose I give you another problem: given two $W \times H$ RGB facial images $I,J$ (which is formally written as $I,J \in \mathbb{R}^{W \times H \times C}$ with $C=3$), determine whether they correspond to the same person or not.
+
+While there are a lot of classical methods that try to directly compare two images as is (for instance, by analyzing the structure of the face), the best results are obtained by constructing the _embedding model_ that maps images to the low-dimensional vector space $\mathbb{R}^n$. Let us call such model $f: \mathbb{R}^{W \times H \times C} \to \mathbb{R}^n$. As before, we want this model to satisfy two properties:
+- If $I,J$ come from the same person, the distance $d(f(I),f(J))$ is _small_.
+- If $I,J$ come from different people, the distance $d(f(I),f(J))$ is _large_.
+Here, we canonically use the Euclidean metric: $d(\mathbf{x},\mathbf{y})\triangleq\sqrt{\sum_{i \in [n]}(x_i-y_i)^2}$. 
+
+Surely, modern approaches represent $f$ as a large neural network (consisting of dozens of convolutional and activation layers). However, in such case, what learning metric to use? To answer this question, we need to determine what _small_ and _large_ mean in the properties above.
+
+We give an example of the **Triplet Loss Function**. Its definition of _large_ and _small_ is quite straightforward. Take three images: $(I,I^+,I^-)$, where $(I,I^+)$ are images of the same person (say, Alice), while $I^-$ of some different person (say, Bob). Then, the trained model $f$ is "good" if $d(f(I),f(I^-))>d(f(I),f(I^+))$. In other words, distance between different people is larger than between the same person. This is illustrated in the Figure below.
+
+![Frame 11](https://hackmd.io/_uploads/Bkp5K4bage.png)
+_Figure 3. Illustration of the embedding neural network $f: \mathbb{R}^{W \times H \times C} \to \mathbb{R}^n$._
+
+However, this condition seems insufficient: suppose that it so happens that $d(f(I),f(I^-))=0.5$ while $d(f(I),f(I^+))=0.495$. Can this model be perceived as "good"? Surely not. For that reason, the original paper on Triplet Loss additionally introduces the parameter $\mu>0$ called _margin_ and requires $d(f(I),f(I^-))>d(f(I),f(I^+))+\mu$. For instance, by letting $\mu := 0.3$, the same result $d(f(I),f(I^-))=0.5$ and $d(f(I),f(I^+))=0.495$ would be classified as "bad" since clearly $0.5>0.495+0.3$ does not hold.
+
+Now, when we defined what it means for $f$ to be "good" and "bad", we define the following loss metric:
+$$
+\mathcal{L}(I,I^+,I^-) \triangleq \text{ReLU}\left(d(f(I),f(I^+)) - d(f(I),f(I^-)) + \mu \right),
+$$
+
+where $\text{ReLU}(x)=\max\{0,x\}$ as usual. Here, the loss value (the metric of "badness") is exactly how much distance between same people + margin is larger than the distance between different people. If the model $f$ was "good" on the triplet $(I,I^+,I^-)$, meaning $d(f(I),f(I^-))>d(f(I),f(I^+))+\mu$, we set loss to zero (which is done by means of putting the loss under ReLU). Visually, the training goal is depicted below.
+
+![Screenshot 2025-10-06 at 3.16.57 PM](https://hackmd.io/_uploads/Sy4IXE-plg.png)
+_Figure 4 (taken from the original paper that introduced Triplet Loss - [FaceNet](https://arxiv.org/pdf/1503.03832)). Illustration of the Triplett Loss function._
+
+### Features Quantization
+
+From the previous section, we know how to build the _embedding model_ $f$, that outputs features in the space $\mathbb{R}^n$. This, however, still does not answer the initial question: how do we make $f$ output $\{0,1\}^n$? There are in fact many methods and this question alone gave rise to numerous studies. We provide two most easy-to-understand ways:
+- Upon receiving feature $\mathbf{x}=f(I)$, output $\mathbf{w} \in \{0,1\}^n$ where $w_i$ is the sign of $x_i$ (that is, $1$ if $x_i>0$, and $0$ otherwise). This method might seem too trivial, but in fact it produces nice results as shown in [one of my early papers on Fuzzy Extractors](https://assets-eu.researchsquare.com/files/rs-2913502/v1_covered_1abf8202-2fca-48f9-889e-dfa469c58b57.pdf?c=1710783247).
+- First, generate the random matrix $\Pi \in \mathbb{R}^{n \times n}$ where each element is taken from the standard normal distribution: $\Pi_{i,j} \sim \mathcal{N}(0,1)$. Then, output $\mathbf{w}=\text{sign}(\Pi\mathbf{x})$ where $\mathbf{x}=f(I)$ as before (here, $\text{sign}(\cdot)$ means the same thing as in the first method: set $1$ if the corresponding component is positive and $0$, otherwise).
+
+**Remark 1.** To simplify the discussion, I omitted one essential fact on the output of $f$: in fact, the output $\mathbf{x}$ of $f$ lies on the unit hypersphere: $\mathbf{x} \in \mathbb{S}^{n-1}$. Using regular English language, this means that the length of $\mathbf{x}$ is always $1$: that is, $\sum_{i \in [n]}x_i^2=1$. This fact is required to make second approach work.
+
+**Remark 2.** Note that the first approach is nothing but the particular case of the second with $\Pi$ being the identity matrix of size $n \times n$. 
+
+**Example.** Such quantization rule is so simple that we can easily implement it in Python in a couple of lines of code! Here you go:
+
+```python
+import numpy as np
+
+# Generate the random (L2-normalized) feature vector.
+# NOTE: In the real application, x is an output of the neural network.
+n = 5
+x = np.random.randn(n)
+x /= np.linalg.norm(x)  # normalize to unit length
+
+# Generate the random projection matrix
+Pi = np.random.randn(n, n)
+
+# Embed x into {0, 1}^n
+projection = Pi @ x
+w = (projection > 0).astype(np.uint8)
+```
+
+The example outputs of this program (for $n=5$) is as follows:
+
+\begin{gather*}
+\mathbf{x} = \begin{bmatrix}
+0.306 \\
+0.228 \\
+-0.918 \\
+-0.055 \\
+0.094
+\end{bmatrix}, \; \Pi = \begin{bmatrix}
+0.877 &  0.46 &  -1.664 &  0.063 & 0.511 \\
+ -0.157 &  0.295 & 1.131 & -0.016 & 0.576 \\
+ -0.047 &-1.152 & 1.236 &-0.006 &-0.575 \\
+  0.411 &-0.497 &-2.027  &1.713  &0.560 \\
+ -0.661 &-1.35  &-2.132 &-0.314 &-0.448 \\
+\end{bmatrix}, \\ 
+\Pi\mathbf{x} = \begin{bmatrix}
+    1.946 \\ -0.964 \\ -1.466 \\ 1.831 \\ 1.422
+\end{bmatrix}, \;
+\mathbf{w} = \text{sign}(\Pi \mathbf{x}) = 10011.
+\end{gather*}
+
+## Code-offset Construction
+
+In this section, we finally define the concrete construction for Fuzzy Extractor, called _code-offset Fuzzy Extractor_. Since as the name suggests, this construction utilizes error-correction codes (ECC), we provide the brief introduction to them.
+
+### Error-Correction Codes Basics
+
+The typical setup of the error-correction codes is the following: suppose you have a message $\mathbf{m} \in \Sigma^k$ of length $k$ over some finite alphabet $\Sigma$ (you might think of a binary alphabet where $m_i$ are bits). You want to share this message with Alice, but the communication channel between you and Alice is noisy: there is a small yet non-negligible probability that some letters (or bits if you prefer) of $\mathbf{m}$ will be corrupted. For that reason, you extend message $\mathbf{m}$ to the length of $n>k$ and thus get the codeword $\mathbf{c} \in \Sigma^n$. Denote the space of all codewords by $\mathcal{C} \subseteq \Sigma^n$. Then, after sending $\mathbf{c}$ to Alice, she gets $\mathbf{c}' \not\in \mathcal{C}$ as a result. If the channel is not too noisy, we expect $\Delta(\mathbf{c},\mathbf{c}')$ to be small enough. If that is the case, the Alice should be able to restore $\mathbf{c}$ and decode it back to get $\mathbf{m}$. All in all, this flow is summarized in the image below.
+
+![Screenshot 2025-10-06 at 9.09.06 PM](https://hackmd.io/_uploads/By9Z8KZpgl.png)
+_Figure 5 (taken from [these lectures](https://www.canal-u.tv/chaines/inria/1-error-correcting-codes-and-cryptography)). Motivation and general flow of using Error-Correction Codes._
+
+What exactly is the number of errors that Alice can correct? It is primarily determined by the so-called _distance_ of the code $d(\mathcal{C}) = \max_{\mathbf{c}_0,\mathbf{c}_1 \in \mathcal{C}, \mathbf{c}_0 \neq \mathbf{c}_1} \{n\Delta(\mathbf{c}_0,\mathbf{c}_1)\}$. To simplify the discussion, take for granted that the number of errors that Alice can _detect_ is $d$, while the number of errors that Alice can _correct_ is $\lfloor \frac{d-1}{2}\rfloor$. 
+
+Further always assume $d=2t+1$ for some $t$ (called the _correction capability_). Additionally, we will work over binary alphabets, so $\Sigma=\{0,1\}$.
+
+This way, the code $\mathcal{C}$ is called an $(n,k,2t+1)$-code if messages are of length $k$, codewords are of length $n$, and the number of errors one can correct is $t$. 
+
+I believe up to this point, the analogy to Fuzzy Extractors is clear: instead of a noisy channel with Alice, we have the feature vector generator (in the form of the neural network) $f$ that produces similar, yet non-identical features of the person. If the number of bit-errors does not exceed $t$, we can correct errors and thus restore the corresponding codeword. However, how to specifically define the construction?
+
+### Defining Code-offset Fuzzy Extractor
+
+**Definition[Code-offset Fuzzy Extractor].** Fix the $(n,k,2t+1)$ error-correction code $\mathcal{C}$, hash function $H: \{0,1\}^n \to \{0,1\}^{\lambda}$ and suppose feature vectors lie in $\{0,1\}^n$. Then, such Fuzzy Extractor is defined as follows:
+- $\mathsf{Gen}(1^{\lambda}, \mathbf{w} \in \{0,1\}^n) \to (\mathsf{hs},\mathsf{sk})$. Generate the random codeword $\mathbf{c} \in \{0,1\}^n$ (this is done by first generating the message $\mathbf{m} \in \{0,1\}^k$ and then encoding it using $\mathcal{C}$). Form the helper string as $\mathsf{hs} := \mathbf{c} \oplus \mathbf{w}$ and the secret value as $\mathsf{sk} := H(\mathbf{c})$.
+- $\mathsf{Rep}(\mathsf{hs},\mathbf{w}' \in \{0,1\}^n) \to \mathsf{sk}'$. Upon receiving the new biometric sample $\mathbf{w}'$, compute the corrupted codeword $\mathsf{hs} \oplus \mathbf{w}'$. Decode it through $\mathcal{C}$ to get $\mathbf{c}'$ and if the decoding succeeds, output $\mathsf{sk}' := H(\mathbf{c}')$.
+
+**Why it works?** Assume the number of errors is small: that is, $\Delta(\mathbf{w},\mathbf{w}') \leq t/n$. Then what do we get when computing $\mathsf{hs} \oplus \mathbf{w}'$? Note that:
+$$
+\mathsf{hs} \oplus \mathbf{w}' = (\mathbf{c} \oplus \mathbf{w}) \oplus \mathbf{w}' = \mathbf{c} \oplus (\mathbf{w} \oplus \mathbf{w}')
+$$
+
+Now notice that this is nothing but the codeword added with the error term $\mathbf{e} := \mathbf{w} \oplus \mathbf{w}'$! In the ideal case, $\mathbf{w}=\mathbf{w}'$, so we get that the corrupted codeword is exactly $\mathbf{c}$. However, this is almost always not the case, so instead the corrupted codeword is at distance $\Delta(\mathbf{w},\mathbf{w}')$ from $\mathbf{c}$. Therefore, if $\Delta(\mathbf{w},\mathbf{w}')\leq t/n$, we successfully decode the codeword and thus get the secret value by hashing the result. 
+
+In turn, if the dishonest user tries to authorize and gets $\Delta(\mathbf{w}, \mathbf{w}') > t/n$, there is no way he can get the codeword $\mathbf{c}$. So _informally_, our construction is in fact secure.
+
+## End-to-End Example
+
+In this section, we will demonstrate end-to-end usage of Fuzzy Extractor. We implement the following flow:
+- Feature extraction using [`face_recognition` package](https://github.com/ageitgey/face_recognition).
+- $\mathsf{Gen}(\cdot)$ procedure implementation.
+- $\mathsf{Rep}(\cdot)$ function that restores the same secret value.
+
+### Step 1. Feature Extraction
+
+As mentioned above, we use [`face_recognition` package](https://github.com/ageitgey/face_recognition). Its usage is very straightforward:
+
+```python
+import numpy as np
+import face_recognition
+from PIL import Image
+
+# Generate random projection
+n = 128
+Pi = np.random.randn(n, n)
+
+def get_face_embedding(img_path: str):
+    # Load image
+    image = face_recognition.load_image_file(img_path)
+
+    # Locate faces
+    face_locations = face_recognition.face_locations(image)
+    if not face_locations:
+        raise ValueError("No faces detected in the image.")
+
+    # Take the first face
+    top, right, bottom, left = face_locations[0]
+
+    # Crop face region
+    face_image = image[top:bottom, left:right]
+
+    # Resize to the size needed for face encodings
+    face_image = np.array(Image.fromarray(face_image).resize((150, 150)))
+    
+    # Compute embeddings using cropped image
+    face_encodings = face_recognition.face_encodings(face_image)
+
+    if not face_encodings:
+        raise ValueError("Face detected but no encodings returned.")
+    x = face_encodings[0]
+
+    projected = Pi @ x
+    w = (projected > 0).astype(np.uint8)
+
+    return w
+```
+
+As an example, we will take three faces from the [LFW Dataset](https://www.kaggle.com/datasets/jessicali9530/lfw-dataset):
+
+
+![Group 59-min](https://hackmd.io/_uploads/Hklmtsb6gg.png)
+_Figure 6. Examples images from the LFW Dataset._
+
+Now, let us display what binary strings we get:
+```python
+w0 = get_face_embedding('img_0.jpg')
+w1 = get_face_embedding('img_1.jpg')
+w2 = get_face_embedding('img_2.jpg')
+print(f'Feature vector of img_0: {w0}')
+print(f'Feature vector of img_1: {w1}')
+print(f'Feature vector of img_2: {w2}')
+print(f'Distance between img_0 and img_1: {np.sum(w0 != w1)}')
+print(f'Distance between img_0 and img_2: {np.sum(w0 != w2)}')
+```
+
+As a result, we get the following values (we display the first 64 bits among 128):
+\begin{gather*}
+\mathbf{w}_0=1011101110001011100001010000000101100000100101110101100011110011 \\
+\mathbf{w}_1=1011100110001011100001010000000101101000100101010111100011110001 \\
+\mathbf{w}_2=0010101100000010110000010000000101101100000101110101100001110001
+\end{gather*}
+
+In fact, $\Delta(\mathbf{w}_0,\mathbf{w}_1)=10/128$ and $\Delta(\mathbf{w}_0,\mathbf{w}_2)=25/128$. 
+
+### Step 2. Fuzzy Extractor
+
+Now, let us implement the Fuzzy Extractor! Below, we implement it in _SageMath_ relying on the implementation of _Goppa Codes_. Below, take `GoppaCode` class implementation for granted as its description is well beyond the scope of this blog.
+
+```python
+class CodeOffsetExtractor:
+    def __init__(self, ecc_code: GoppaCode):
+        self.code = ecc_code
+        self.n = ecc_code.n # Codeword length
+        self.k = ecc_code.k # Message length
+        self.t = ecc_code.t # Error-correction capability
+
+
+    def _hash(self, codeword: vector) -> bytes:
+        codeword_str = "".join(map(str, codeword))
+        return hashlib.sha256(codeword_str.encode('utf-8')).digest()
+
+
+    def Gen(self, w: vector) -> tuple[vector, bytes]:
+        assert len(w) == self.n, f"Biometric sample w must be of length n={self.n}"
+
+        # Generate a random message m and encode it to get a random codeword c
+        m = random_vector(GF(2), self.k)
+        c = self.code.encode(m)
+
+        # Form the helper string hs = c XOR w
+        hs = c + w  # In GF(2), addition is XOR
+
+        # Form the secret key sk = H(c)
+        sk = self._hash(c)
+
+        return (hs, sk)
+
+
+    def Rep(self, hs: vector, w: vector) -> bytes | None:
+        assert len(hs) == self.n, f"Helper string hs must be of length n={self.n}"
+        assert len(w) == self.n, f"Biometic sample w' must be of length n={self.n}"
+
+        # Compute the corrupted codeword: c' = hs XOR w'
+        corrupted_c = hs + w
+
+        # Decode the corrupted codeword
+        decoded_c, _ = self.code.decode(corrupted_c)
+
+        # If decoding succeeds, hash the result to get the key
+        if decoded_c is not None:
+            return self._hash(decoded_c[0])
+        
+        # Decoding failed
+        return None
+```
+
+What *is* essential for understanding from the `GoppaCode` class is that the Goppa code has parameters $(2^m,2^m-mt,2t+1)$. Since our binary vectors are of length $128$, we set $m:=7$. Additionally, we set $t := 12$ so that we can correct up to 12 errors. This way, our code parameters are $(128,44,25)$:
+```python
+# 1. Setup the Fuzzy Extractor
+print("Setting up the Fuzzy Extractor...")
+n, m, t = 128, 8, 12 # Code parameters
+goppa_code = GoppaCode(n, m, t)
+extractor = CodeOffsetExtractor(goppa_code)
+```
+
+Now, we will do the following: we will generate the helper data and secret key to $\mathbf{w}_0$: $(\mathsf{hs},\mathsf{sk}_0) \gets \mathsf{Gen}(\mathbf{w}_0)$, and then check whether we can reproduce it using $\mathbf{w}_1$ and $\mathbf{w}_2$. Of course, since the absolute Hamming distance between $\mathbf{w}_0$ and $\mathbf{w}_1$ is $10$, we expect that $\mathsf{Rep}(\mathsf{hs},\mathbf{w}_1)$ would succeed in recovering $\mathsf{sk}_0$ since $t=12$. Similarly, $\mathsf{Rep}(\mathsf{hs}, \mathbf{w}_2)$ should fail since the absolute Hamming distance is $25$, which is well beyond correction capability $t$.
+
+That said, let us do the enrollment:
+```python
+# 2. Enrollment (calling Gen function)
+# Set the same value of w0 as above
+w0 = vector(GF(2), [1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, ...])
+
+hs, sk0 = extractor.Gen(w0)
+print(f"sk: {sk0.hex()}")
+print(f"hs: {str(hs)[:64]}...")
+```
+
+We got the secret value:
+$$
+\mathsf{sk}_0 = \mathsf{0x4140e1a9f6d07f69afe6a82319ba96be6ba203c3e383c481d69f2c267012761f}
+$$
+
+Now let us try to reproduce it!
+
+```python
+# 3. Reproducing using the same biometric
+# Set the same value of w1 as above
+w1 = vector(GF(2), [1, 0, 1, 1, 1, 0, 0, 1, ...])
+sk1 = extractor.Rep(hs, w1)
+assert sk0 == sk1, 'Secret keys do not match'
+```
+
+As a result of running this function, no errors occur. Thus, we have successfully reproduced the same key. Which is not the case for $\mathbf{w}_2$:
+```python
+# 4. Reproducing using fake biometric
+# Again, set w2 as above
+w2 = vector(GF(2), [0, 0, 1, 0, 1, 0, 1, 1, 0, ...])
+sk2 = extractor.Rep(hs, w2)
+assert sk2 is None, 'For some reason Rep worked?'
+```
+
+This function also does not raise any errors, so the Fuzzy Extractor works as expected!
+
+## Final Remarks
+
+Of course, this blog summarizes only one possible construction of the Fuzzy Extractor. In fact, in the literature one can find numerous other constructions: e.g., Fuzzy Vaults, McEliece-based and even [lattice-based approaches](https://arxiv.org/pdf/2112.08658), among others. 
+
+Moreover, this blog only considered a single-factor authentication using biometrics. However, as is, it is completely insecure. In fact, current research in Deep Learning shows that we can expect to have only up to ~20 bits of security using modern neural network constructions. However, the idea presented in Unforgettable seems very reasonable: use many factors such as passwords or photos of objects to derive the secure secret value (ideally, with the entropy equal to the sum of entropies of each individual factor). 
+
+
+</textarea>
+</body>
+</html>
