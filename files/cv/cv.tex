@@ -1,0 +1,181 @@
+%%%%%%%%%%%%%%%%%
+% Updated CV - Dmytro Zakharov
+% Tailored for Academic Applications (TU Darmstadt)
+%%%%%%%%%%%%%%%%%
+
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[10pt,a4paper,ragged2e]{maltacv}
+
+%% XeLaTeX / LuaLaTeX font and icon setup
+\usepackage{academicons}
+\usepackage[T1]{fontenc}
+\usepackage{typicons}
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage{setspace}
+\usepackage{mathpazo}
+\usepackage{textcomp}
+\usepackage{multicol}
+
+\setcolorscheme{blue_claret}
+\setlength\multicolsep{0pt}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+
+\name{Dmytro Zakharov}
+\firstname{Dmytro}
+\familyname{Zakharov}
+
+\begin{document}
+\tagline{Cryptography Engineer | Post-Quantum and Zero-Knowledge Cryptography}
+\personalinfo{%
+  \homepage{zamdimon.github.io}
+  \email{zamdmytro@gmail.com}
+  \printinfo{\faGraduationCap}{\href{https://scholar.google.com/citations?user=WL-8aoAAAAAJ&hl=en}{Google Scholar}}
+  \linkedin{zamdimon}
+  \github{ZamDimon}
+  \phone{+380-97-712-79-77}
+  \location{Valencia, Spain}
+}
+
+\bio{}
+
+\makecvheader
+
+\cvsection{Education}
+\medskip
+\begin{multicols}{2}
+  \cvuniversity{V. N. Karazin Kharkiv National University}{Applied Mathematics, Master's Degree}{Sep 2026 -- Jun 2028 (expected)}{Kharkiv, Ukraine}
+  \begin{itemize}
+      \item Studying Statistics, Optimization and Control Theory, Deep Learning, and Mathematical Modelling.
+  \end{itemize}
+
+  \cvuniversity{V. N. Karazin Kharkiv National University}{Applied Mathematics, Bachelor's Degree}{Sep 2021 -- Jun 2025}{Kharkiv, Ukraine}
+  \begin{itemize}
+      \item Cumulative GPA: \textbf{96/100} (ranked \textbf{Top-1} in cohort).
+      \item \textbf{Thesis:} \href{https://ekhnuir.karazin.ua/items/572c557e-8cb2-4b36-9c8d-e29cc8618e02}{\textit{``Applications of Kolmogorov-Arnold Convolutional Neural Networks to Computer Vision Problems''}}.
+      \item Awarded the \textbf{Supreme Council of Ukraine} and \textbf{Akhiezer Foundation} Scholarships for outstanding research work.
+  \end{itemize}
+
+  \vfill\null
+  \columnbreak
+
+  \cvuniversity{Kyiv School of Economics}{Pure Mathematics, Master's Coursework}{Sep 2025 -- May 2026}{Kyiv, Ukraine}
+  \begin{itemize}
+      \item GPA: \textbf{92/100}.
+      \item Advanced coursework: Algebraic Geometry, Homological Algebra, Sheaf Theory, Commutative Algebra, Algebraic Number Theory, Elliptic Curves, Ergodic Theory.
+  \end{itemize}
+\end{multicols}
+
+\cvsection{Professional Experience}
+
+\cvexperience{Cryptography Researcher}{Blockstream}{January 2026 -- Present}{Remote (Valencia, Spain)}{Post-Quantum Cryptography, Lattice-Based Schemes, ZK-SNARKs, Education}
+\begin{itemize}
+  \item Conducting research on post-quantum cryptography, specifically evaluating the concrete security and efficiency of \textbf{lattice-based signature schemes}.
+  \item Co-authored comprehensive survey on lattice-based signatures for Bitcoin protocol integration.
+  \item Leading academic workshops and seminars on post-quantum zero-knowledge proving systems.
+\end{itemize}
+
+\divider
+
+\cvexperience{R\&D Engineer in Applied Cryptography}{Distributed Lab}{June 2023 -- January 2026 (2 years, 7 months)}{Kyiv, Ukraine}{Zero-Knowledge ML, Circuit Optimization, Rust}
+\begin{itemize}
+  \item Led design and Rust implementation of \textbf{Bionetta}, a client-side Zero-Knowledge Machine Learning (ZKML) framework utilizing UltraGroth and custom R1CS arithmetizations.
+  \item Developed low-level optimizations for zero-knowledge proving systems, including PlonK-based circuits for elliptic curve pairing, addition, and scalar multiplication.
+  \item Researched BitVM2-based optimistic verifiable computation on Bitcoin.
+  \item Programmed and delivered the internal \textbf{ZKDL Camp} lecture series on Modern Algebra, Field Extensions, and zk-SNARK protocols (Groth16, PlonK, GKR).
+\end{itemize}
+
+\divider
+
+\cvexperience{Golang Backend Engineer}{Distributed Lab}{November 2021 -- June 2023 (1 year, 7 months)}{Kyiv, Ukraine}{Golang, PostgreSQL, Docker, Decentralized Systems}
+\begin{itemize}
+  \item Designed and led the development of microservices, statistical backend engines, and cryptographic transaction aggregation tools across 8+ client projects.
+  \item Built secure KYC verification workflows, deposit/withdrawal pipelines, and automated analytics indexers for decentralized marketplaces and crowdfunding platforms.
+  \item Built backend infrastructure interfacing with custom Solidity smart contracts and implemented cross-chain bridge logic using the custom smart contract language.
+\end{itemize}
+
+\cvsection{Publications \& Preprints}
+
+\cvexperience{Lattice-based Signature Schemes for Bitcoin}{}{}{}{Lattice-based Cryptography, Post-Quantum Security, Signatures, Bitcoin}
+\begin{itemize}
+  \item \textbf{Dmytro Zakharov}, Mikhail Kudinov, Viktoria Balatska, Yaroslava Chopa. In: \textit{Cryptology ePrint Archive}, Report 2026/1628 (2026). \texttt{URL:} \href{https://eprint.iacr.org/2026/1628.pdf}{\textcolor{purple}{\texttt{eprint.iacr.org/2026/1628}}}.
+\end{itemize}
+
+\cvexperience{Bionetta: Efficient Client-Side Zero-Knowledge Machine Learning Proving}{}{}{}{ZKML, UltraGroth, Privacy-Preserving AI, R1CS, Succinct Proofs}
+\begin{itemize}
+  \item \textbf{Dmytro Zakharov}, Oleksandr Kurbatov, Lasha Antadze, Lev Soukhanov, Artem Sdobnov, Yevhenii Sekhin, Vitalii Volovyk. In: \textit{arXiv preprint arXiv:2510.06784} (2025). \texttt{URL:} \href{https://arxiv.org/abs/2510.06784}{\textcolor{purple}{\texttt{arXiv:2510.06784}}} (\textbf{in submission}).
+\end{itemize}
+
+\cvexperience{Identifiable Yet Recognizable: Image Distortion with Preserved Embeddings}{}{}{}{Biometric Privacy, Cancelable Biometrics, Siamese Networks, Representation Learning}
+\begin{itemize}
+  \item \textbf{Journal Publication:} \textbf{Dmytro Zakharov}, Oleksandr Kuznetsov, Emanuele Frontoni. In: \textit{Elsevier Engineering Applications of Artificial Intelligence} (2024). \texttt{DOI:} \href{https://doi.org/10.1016/j.engappai.2024.109164}{\textcolor{purple}{\texttt{10.1016/j.engappai.2024.109164}}}.
+  \item \textbf{Conference Paper:} \textbf{Dmytro Zakharov} et al. In: \textit{23rd International Conference on Artificial Intelligence and Soft Computing (ICAISC)}, Springer (2024). \textbf{\textcolor{green!60!black}{Best Paper Award}}. \texttt{DOI:} \href{https://doi.org/10.1007/978-3-031-84356-3_18}{\textcolor{purple}{\texttt{10.1007/978-3-031-84356-3\_18}}}.
+\end{itemize}
+
+\cvexperience{Optimizing Big Integer Multiplication on Bitcoin: Introducing $w$-Windowed Approach}{}{}{}{Arithmetic Optimization, Stack Languages, Bitcoin Script, Low-Level Cryptography}
+\begin{itemize}
+  \item \textbf{Dmytro Zakharov}, Oleksandr Kurbatov, Manish Bist, Belove Bist. In: \textit{Cryptology ePrint Archive}, Report 2024/1236 (2024). \texttt{URL:} \href{https://eprint.iacr.org/2024/1236}{\textcolor{purple}{\texttt{eprint.iacr.org/2024/1236}}}.
+\end{itemize}
+
+\cvexperience{AttackNet: Enhancing Biometric Security via CNNs for Liveness Detection}{}{}{}{Deep Learning, Anti-Spoofing, Cybersecurity, Computer Vision}
+\begin{itemize}
+  \item Oleksandr Kuznetsov, \textbf{Dmytro Zakharov}, Emanuele Frontoni, Andrea Maranesi. In: \textit{Elsevier Computers \& Security}, Vol. 141 (2024). \texttt{DOI:} \href{https://doi.org/10.1016/j.cose.2024.103828}{\textcolor{purple}{\texttt{10.1016/j.cose.2024.103828}}}.
+\end{itemize}
+
+\cvexperience{Deep Learning-Based Biometric Cryptographic Key Generation with Post-Quantum Security}{}{}{}{Fuzzy Extractor, Triplet Loss, Post-Quantum Cryptography, Code-Based Cryptosystems}
+\begin{itemize}
+  \item Oleksandr Kuznetsov, \textbf{Dmytro Zakharov}, Emanuele Frontoni. In: \textit{Springer Multimedia Tools and Applications} (2023). \texttt{DOI:} \href{https://doi.org/10.1007/s11042-023-17714-7}{\textcolor{purple}{\texttt{10.1007/s11042-023-17714-7}}}.
+  \item \textbf{Conference Paper:} IEEE 9th PIC S\&T (2022). \texttt{DOI:} \href{https://doi.org/10.1109/PICST57299.2022.10238643}{\textcolor{purple}{\texttt{10.1109/PICST57299.2022.10238643}}}.
+\end{itemize}
+
+\medskip
+\cvsection{Teaching \& Academic Outreach}
+
+\cvexperience{ZKDL Book: Zero-Knowledge Proofs Course}{Blockstream / Distributed Lab}{2023 -- Present}{}{Textbook, Open-Source, zk-SNARKs}
+\begin{itemize}
+  \item Co-authoring open-source lecture notes and textbook covering theoretical foundations of ZK protocols (Groth16, PlonK, GKR), polynomial commitments, and underlying abstract algebra.
+  \item \textbf{Repository:} \href{https://github.com/BlockstreamResearch/zk-book/releases/tag/latest}{\textcolor{purple}{\texttt{BlockstreamResearch/zk-book}}}.
+\end{itemize}
+
+\divider
+
+\cvexperience{Cryptography: A Modern Approach}{Distributed Lab / University Lectures}{2023 -- 2024}{}{Curriculum Design, Lecturing}
+\begin{itemize}
+  \item Co-designed curriculum and delivered lectures for Ukrainian university students on Symmetric/Asymmetric Cryptography, Finite Field Theory, Digital Signatures, and Zero-Knowledge Proofs.
+  \item \textbf{Repository:} \href{https://github.com/distributed-lab/crypto-lectures}{\textcolor{purple}{\texttt{distributed-lab/crypto-lectures}}}.
+\end{itemize}
+
+\medskip
+\cvsection{Technical \& Mathematical Skills}
+\medskip
+
+\begin{multicols}{2}
+  \cvlistitem{Cryptography}{Lattice-Based Cryptography, Zero-Knowledge Proofs (pairing and lattice-based), Bitcoin, Low-level Optimization.}
+  
+  \cvlistitem{Programming Languages}{Rust (Advanced), Python (PyTorch, NumPy, SciPy), Golang, C++, LaTeX, Wolfram Language.}
+
+  \columnbreak
+
+  \cvlistitem{Machine Learning \& Privacy}{Privacy-Preserving ML, Computer Vision, Triplet Loss, Biometrics, Neural Network Security.}
+
+  \cvlistitem{Developer Tools}{Git, Linux, Docker, PostgreSQL, Amazon AWS, CI/CD Pipelines.}
+\end{multicols}
+
+\cvsection{Languages \& Standardized Tests}
+\medskip
+
+\begin{multicols}{3}
+  \cvlistitem{Ukrainian}{Native}
+  
+  \columnbreak
+  
+  \cvlistitem{English}{\textbf{CEFR C1--C2}\\TOEFL: \textbf{113/120}\\SAT: \textbf{1500/1600} (Math: \textbf{800/800})}
+  
+  \columnbreak
+  
+  \cvlistitem{German}{\textbf{CEFR B2}\\Completed \textit{Das Nürnberger Haus} (Goethe-Institut Partner) courses}
+\end{multicols}
+
+\end{document}

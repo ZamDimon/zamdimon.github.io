@@ -1,2 +1,11 @@
 .vscode/
 .DS_Store/
+
+# Latex intermediate files
+*.aux
+*.bcf
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
